@@ -1,1 +1,13 @@
 .env
+
+__pycache__/
+*.pyc
+venv/
+
+logs/
+output/
+
+data/knowledge_bases/
+
+*.faiss
+*.pkl
