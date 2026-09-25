@@ -1,0 +1,625 @@
+{
+  "schema_version": "1.0",
+  "template": {
+    "name": "Enterprise DRS Template",
+    "is_static": true,
+    "analysis_basis": "Uploaded DRS template PDF"
+  },
+  "execution_model": {
+    "mode": "sequential_queries",
+    "description": "Execute one query at a time against the uploaded source documents. Make dependency results available to dependent queries."
+  },
+  "global_rules": [
+    "The supplied source documents are the only authoritative source for extracted business facts, requirements, and source-supported relationships.",
+    "Do not invent facts, requirements, assumptions, rules, priorities, actors, inputs, outputs, metrics, benefits, relationships, or source references.",
+    "For any scalar field defined as string|null, JSON null is valid when the source does not explicitly support that value. Do not use placeholders such as 'None', 'N/A', 'Unknown', or 'Not provided' unless the source itself contains that wording.",
+    "For array responses, return an empty array when no matching source-supported items exist in the supplied evidence.",
+    "For array item fields defined as string|null, use JSON null when the source does not explicitly provide that attribute; do not invent a value just to complete the object.",
+    "For fields defined as string|array|null, return a string, an array, or JSON null according to the evidence. Do not force a value into the wrong representation.",
+    "Do not confuse a document heading, table-of-contents entry, extraction instruction, prompt rule, schema description, or checklist statement with a source business fact.",
+    "Preserve source terminology, identifiers, measurable values, conditions, and wording where practical.",
+    "Every source_reference must point to evidence supporting the specific returned value or item; use null when no source reference can be established.",
+    "Generated artifacts such as epics, user stories, acceptance criteria, traceability links, review recommendations, and review status may only use the supplied source evidence and dependency results.",
+    "Queries execute sequentially; dependency results are evidence for dependent queries, not permission to invent unsupported facts."
+  ],
+  "queries": [
+    {
+      "query_id": "Q001",
+      "target": "project_metadata",
+      "question": "Extract the project name, document version, preparer, and review status explicitly stated in the source documents.",
+      "response_type": "object",
+      "response_schema": {
+        "project_name": "string|null",
+        "version": "string|null",
+        "prepared_by": "string|null",
+        "review_status": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use only information explicitly supported by the source documents.",
+        "Do not invent missing metadata.",
+        "Use null when a value is not present.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q002",
+      "target": "executive_summary",
+      "question": "Summarize the business initiative, problem or opportunity, proposed solution, and intended outcome as explicitly described in the source documents.",
+      "response_type": "object",
+      "response_schema": {
+        "summary": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Summarize only the initiative, problem/opportunity, proposed solution, and intended outcome explicitly supported by the source.",
+        "Do not manufacture an intended outcome when the source does not state one.",
+        "Use null for summary and source_reference when the supplied evidence contains no support for them.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q003",
+      "target": "business_background",
+      "question": "Extract a dedicated business background mentioned in the given document . If no dedicated business background or current business context is explicitly stated in the source documents, return null.",
+      "response_type": "object",
+      "response_schema": {
+        "background": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicitly stated business background or current business context.",
+        "Do not infer organizational history, motives, causes, or pain points from other sections.",
+        "Do not copy, paraphrase, or reuse the Executive Summary as Business Background.",
+        "Do not use Business Objectives, Scope, Functional Requirements, or Non Functional Requirements as a substitute for missing background.",
+        "If no dedicated business background or current business context is explicitly present, return JSON null for both background and source_reference.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q004",
+      "target": "business_objectives",
+      "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+      "response_type": "array",
+      "response_schema": {
+        "objective_id": "string|null",
+        "objective": "string",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Extract every explicitly stated business objective, goal, or intended business outcome found in the supplied evidence.",
+        "Prefer the dedicated Business Objectives section over secondary mentions in summaries or traceability tables.",
+        "Do not convert success measures, benefits, requirements, or traceability links into separate objectives.",
+        "Do not invent an objective ID when the source does not provide one; use null for objective_id.",
+        "Return [] only when no explicit business objective is present in the supplied evidence.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q005",
+      "target": "scope",
+      "question": "Extract the in-scope capabilities, processes, products, users, systems, or activities explicitly included in the initiative.",
+      "response_type": "object",
+      "response_schema": {
+        "in_scope": "array",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicitly stated in-scope items.",
+        "Do not infer scope from general project context or from requirements.",
+        "Preserve explicit scope boundaries.",
+        "Return [] for in_scope when no explicit in-scope items are supported.",
+        "Use null for source_reference when no supporting source locator is available.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q006",
+      "target": "out_of_scope",
+      "question": "Extract all explicitly stated items, capabilities, processes, users, systems, or activities that are out of scope.",
+      "response_type": "array",
+      "response_schema": {
+        "item_id": "string|null",
+        "item": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicitly stated out-of-scope items.",
+        "Do not invent exclusions.",
+        "Do not invent an item ID when the source does not provide one; use null for item_id.",
+        "Return [] only when no explicit out-of-scope items are present.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q007",
+      "target": "stakeholders",
+      "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+      "response_type": "array",
+      "response_schema": {
+        "stakeholder_id": "string|null",
+        "name_or_role": "string|null",
+        "responsibility": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract stakeholders explicitly identified in the source.",
+        "Use the source's role/title or name when available.",
+        "Do not invent stakeholder identities or responsibilities.",
+        "Use null for stakeholder_id, name_or_role, or responsibility when the corresponding value is not explicitly supported.",
+        "Return [] only when no stakeholders are explicitly identified.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q008",
+      "target": "personas",
+      "question": "Extract all explicitly identified user personas or user roles and describe their relevant needs or responsibilities.",
+      "response_type": "array",
+      "response_schema": {
+        "persona_id": "string|null",
+        "role": "string|null",
+        "needs_or_responsibilities": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicitly identified personas or user roles.",
+        "Use source-supported needs or responsibilities only.",
+        "Do not create a persona from an inferred actor or generic domain knowledge.",
+        "Use null for persona_id, role, needs_or_responsibilities, or source_reference when the source does not explicitly support that field.",
+        "Return [] only when no explicit persona or user role exists.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q009",
+      "target": "current_state_summary",
+      "question": "Extract the current-state processes, systems, pain points, limitations, and existing practices explicitly described in the source documents.",
+      "response_type": "object",
+      "response_schema": {
+        "summary": "string|null",
+        "pain_points": "array",
+        "existing_systems_or_processes": "array",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicitly stated current-state information.",
+        "Keep current-state facts, pain points, and existing practices separate.",
+        "Do not infer a system, process, or pain point from the future state.",
+        "Use null for summary when no explicit current-state summary can be supported.",
+        "Return [] for pain_points or existing_systems_or_processes when no matching source items are present.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q010",
+      "target": "future_state_overview",
+      "question": "Extract the explicitly described future-state capabilities, target operating model, expected behavior, or desired end state.",
+      "response_type": "object",
+      "response_schema": {
+        "overview": "string|null",
+        "capabilities": "array",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Extract every explicitly described future-state capability, expected behavior, target operating model element, or desired end-state item in the supplied evidence.",
+        "Prefer the dedicated Future-State Business Requirements section over general document-purpose text.",
+        "Do not treat current-state problems, objectives, or prompt instructions as future-state capabilities.",
+        "Use null for overview when no distinct prose overview is explicitly supported.",
+        "Return [] for capabilities only when no future-state capability is supported.",
+        "Do not stop after a subset of matching capabilities; scan the full supplied evidence for all relevant source items.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q011",
+      "target": "assumptions",
+      "question": "Extract all assumptions explicitly stated or clearly documented as assumptions in the source documents.",
+      "response_type": "array",
+      "response_schema": {
+        "assumption_id": "string|null",
+        "assumption": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only statements explicitly documented as assumptions or clearly contained in an Assumptions section.",
+        "Do not turn missing information into an assumption.",
+        "Do not invent assumptions or assumption IDs.",
+        "Use null for assumption_id when the source does not provide one.",
+        "Return [] only when no explicit assumptions are present.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q012",
+      "target": "constraints",
+      "question": "Extract all explicitly stated business, technical, regulatory, resource, timing, budget, platform, or other constraints.",
+      "response_type": "array",
+      "response_schema": {
+        "constraint_id": "string|null",
+        "constraint": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicit constraints.",
+        "Do not infer constraints merely from technology choices, architecture, or project context.",
+        "Do not invent constraint IDs.",
+        "Use null for constraint_id when the source does not provide one.",
+        "Return [] only when no explicit constraints are present.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q013",
+      "target": "dependencies",
+      "question": "Extract all explicitly stated dependencies on teams, systems, vendors, data, approvals, integrations, infrastructure, or other external/internal factors.",
+      "response_type": "array",
+      "response_schema": {
+        "dependency_id": "string|null",
+        "dependency": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only explicit dependencies on people, teams, systems, vendors, data, approvals, integrations, infrastructure, or other factors.",
+        "Do not reclassify ordinary constraints or assumptions as dependencies unless the source supports that interpretation.",
+        "Do not invent dependency IDs.",
+        "Use null for dependency_id when the source does not provide one.",
+        "Return [] only when no explicit dependencies are supported.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q014",
+      "target": "risks",
+      "question": "Extract all risks explicitly identified in the source documents, including their descriptions and any stated impacts, likelihoods, or mitigations.",
+      "response_type": "array",
+      "response_schema": {
+        "risk_id": "string|null",
+        "risk": "string",
+        "impact": "string|null",
+        "likelihood": "string|null",
+        "mitigation": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only risks explicitly identified in the source.",
+        "Do not infer risk ratings, impacts, likelihoods, or mitigations.",
+        "Use null for risk_id, impact, likelihood, or mitigation when those values are not supported.",
+        "Return [] only when no explicit risks are identified.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q015",
+      "target": "functional_requirements",
+      "question": "Extract every functional requirement explicitly supported by the source documents. For each requirement, capture the requested behavior, actor, trigger, inputs, business logic, outputs, priority, and source reference. Do not invent details for fields that are not explicitly supported.",
+      "response_type": "array",
+      "response_schema": {
+        "fr_id": "string",
+        "title": "string",
+        "description": "string|null",
+        "actor": "string|null",
+        "trigger": "string|null",
+        "input": "string|array|null",
+        "business_logic": "string|array|null",
+        "output": "string|array|null",
+        "priority": "string|null",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Extract every functional requirement explicitly supported by the source evidence.",
+        "Prefer the dedicated Functional Requirements section and preserve each FR ID, requirement statement, and priority exactly.",
+        "Do not create a requirement from a heading, checklist item, traceability row, or general narrative.",
+        "Use null for description, actor, trigger, input, business_logic, output, priority, or source_reference when the source does not explicitly support that field.",
+        "Do not derive an actor merely because a stakeholder role exists elsewhere.",
+        "Do not expand a requirement into detailed inputs, outputs, workflow steps, or logic that are not explicitly stated.",
+        "Return [] only when no functional requirements are present in the supplied evidence.",
+        "Scan the full supplied evidence and return every matching FR item; do not stop after the first few rows.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q016",
+      "target": "non_functional_requirements",
+      "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+      "response_type": "array",
+      "response_schema": {
+        "nfr_id": "string|null",
+        "category": "string",
+        "requirement": "string",
+        "priority": "string|null",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Extract every explicitly stated non-functional requirement.",
+        "Prefer the dedicated Non-Functional Requirements section.",
+        "Preserve the requirement ID, category, measurable threshold, and wording where supported.",
+        "Use null for nfr_id or priority when the source does not explicitly provide them.",
+        "Return [] only when no explicit non-functional requirements are present.",
+        "Scan the full supplied evidence and return every matching NFR item.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q017",
+      "target": "business_rules",
+      "question": "Extract all explicitly stated business rules",
+      "response_type": "array",
+      "response_schema": {
+        "rule_id": "string|null",
+        "rule_statement": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Extract only actual business rules, or mandatory conditions contained in the source evidence.",
+        "Do not treat prompt instructions, global rules, query rules, schema text, headings, table-of-contents text, or POC checklist statements as business rules.",
+        "Prefer the dedicated Business Rules section when present.",
+        "Do not invent rule IDs; use null when the source does not provide one.",
+        "Return [] only when no actual business rules are present in the supplied evidence.",
+        "Scan the full supplied evidence before deciding that the result is empty.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q018",
+      "target": "epics",
+      "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+      "response_type": "array",
+      "response_schema": {
+        "epic_id": "string",
+        "epic_name": "string",
+        "description": "string|null",
+        "linked_fr_ids": "array",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Create epics only from coherent capability groupings supported by Q015 functional requirements.",
+        "Every linked FR ID must exist in Q015.",
+        "Do not create an epic from a title, checklist item, or unsupported domain assumption.",
+        "Use null for description when the supplied evidence does not support a separate description.",
+        "Return [] only when the extracted functional requirements do not support a coherent epic.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q015"
+      ]
+    },
+    {
+      "query_id": "Q019",
+      "target": "user_stories",
+      "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+      "response_type": "array",
+      "response_schema": {
+        "story_id": "string",
+        "story_title": "string",
+        "role": "string|null",
+        "capability": "string",
+        "benefit": "string|null",
+        "linked_fr_ids": "array",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Create user stories only from functional requirements in Q015.",
+        "Every linked FR ID must exist in Q015.",
+        "Do not invent a role. Use a role only when Q015/dependency evidence explicitly supports that actor relationship; otherwise use null.",
+        "Do not invent a business benefit. Use a benefit only when explicitly supported by the source or dependency results; otherwise use null.",
+        "The capability must be a faithful restatement of the linked functional requirement, without adding unsupported behavior.",
+        "A null role or benefit is valid and must not be replaced with 'None', 'Unknown', or an invented role/benefit.",
+        "Return [] only when no functional requirements are available to support a user story.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q015"
+      ]
+    },
+    {
+      "query_id": "Q020",
+      "target": "acceptance_criteria",
+      "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+      "response_type": "array",
+      "response_schema": {
+        "ac_id": "string",
+        "user_story_id": "string",
+        "given": "string",
+        "when": "string",
+        "then": "string",
+        "source_reference": "string|array"
+      },
+      "rules": [
+        "Create acceptance criteria only from Q019 stories and their linked functional requirements/source evidence.",
+        "Every user_story_id must exist in Q019.",
+        "Each criterion must be directly supported by the relevant requirement or source evidence.",
+        "Do not invent actors, outcomes, conditions, or numerical thresholds.",
+        "Return [] only when no supported acceptance criteria can be created.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array."
+      ],
+      "depends_on": [
+        "Q015",
+        "Q019"
+      ]
+    },
+    {
+      "query_id": "Q021",
+      "target": "missing_information",
+      "question": "Identify information required by the DRS structure that is materially missing from the source documents.",
+      "response_type": "array",
+      "response_schema": {
+        "item_id": "string",
+        "missing_information": "string",
+        "why_needed": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Report information that is materially missing from the source but required by the DRS structure.",
+        "Do not claim information is missing when it is explicitly available elsewhere in the supplied source evidence.",
+        "Do not invent a missing value.",
+        "Use null for source_reference when the missing item cannot be tied to a precise source locator.",
+        "Return [] when no material DRS-required information is missing.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q022",
+      "target": "ambiguous_statements",
+      "question": "Identify statements in the source documents that are ambiguous, contradictory, vague, or insufficiently defined for reliable requirement specification.",
+      "response_type": "array",
+      "response_schema": {
+        "ambiguity_id": "string",
+        "statement": "string",
+        "issue": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Identify only statements that are genuinely ambiguous, contradictory, vague, or insufficiently defined.",
+        "Do not manufacture ambiguity where the source is sufficiently specific.",
+        "Preserve the source statement closely.",
+        "Use null for source_reference when no precise source locator is available.",
+        "Return [] when no material ambiguity or contradiction is found.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "Q023",
+      "target": "clarification_log",
+      "question": "Create clarification questions from the identified missing information and ambiguous statements. Each question should explain why clarification is needed.",
+      "response_type": "array",
+      "response_schema": {
+        "cq_id": "string",
+        "question": "string",
+        "reason": "string",
+        "status": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Create clarification questions only from Q021 missing information and Q022 ambiguity results.",
+        "Do not repeat a clarification that is already resolved by the supplied dependency results.",
+        "Use an initial status such as Open unless the source or dependency results explicitly indicate another status.",
+        "Do not invent requirements while drafting clarification questions.",
+        "Use null for source_reference when no direct supporting locator exists.",
+        "Return [] when no meaningful clarification is required.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q021",
+        "Q022"
+      ]
+    },
+    {
+      "query_id": "Q024",
+      "target": "traceability_matrix",
+      "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+      "response_type": "array",
+      "response_schema": {
+        "trace_id": "string",
+        "business_objective": "string|null",
+        "functional_requirement": "string|null",
+        "user_story": "string|null",
+        "acceptance_criteria": "string|null"
+      },
+      "rules": [
+        "Use only IDs that actually exist in Q004, Q015, Q019, and Q020.",
+        "Create a trace row only when the relationship is supported by the source or directly established by dependency results.",
+        "Do not infer relationships solely because two items sound related.",
+        "Use null for a chain component when no valid ID is available; do not invent IDs.",
+        "Return [] when no supported traceability chain can be established.",
+        "Prefer one row per complete traceable chain.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q004",
+        "Q015",
+        "Q019",
+        "Q020"
+      ]
+    },
+    {
+      "query_id": "Q025",
+      "target": "review_recommendations",
+      "question": "Provide review recommendations based only on missing information, ambiguities, requirement quality issues, traceability gaps, or unsupported elements identified in the source and extracted DRS data.",
+      "response_type": "array",
+      "response_schema": {
+        "recommendation_id": "string",
+        "recommendation": "string",
+        "reason": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Base recommendations only on material issues evidenced by Q021, Q022, Q023, Q024, the source, or validated extracted results.",
+        "Do not invent project problems, risks, gaps, or recommendations.",
+        "Do not repeat the same recommendation in multiple forms.",
+        "Use null for source_reference when a recommendation concerns an extracted validation or dependency issue rather than a single source location.",
+        "Return [] when no material review recommendation is supported.",
+        "Return [] when no matching source-supported items exist; do not fabricate an item just to avoid an empty array.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q021",
+        "Q022",
+        "Q023",
+        "Q024"
+      ]
+    },
+    {
+      "query_id": "Q026",
+      "target": "review_status",
+      "question": "Determine the appropriate review status from the source documents and extracted DRS results, considering unresolved missing information, ambiguities, traceability gaps, validation issues, and review recommendations. Use the extracted results directly; do not invent a review status or assume that missing information is resolved.",
+      "response_type": "object",
+      "response_schema": {
+        "status": "string",
+        "reason": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Determine review status only from the supplied source and dependency results.",
+        "Do not mark the DRS final when material missing information, ambiguities, traceability gaps, validation failures, or review issues remain.",
+        "Do not treat a successful query execution status as proof that the underlying content is complete or validated.",
+        "Do not treat clarification questions as resolved requirements.",
+        "Use the documented project review terminology when available.",
+        "Use null for source_reference when status is determined from multiple dependency results rather than one source location.",
+        "Where the response schema permits null, JSON null is valid for an unsupported field; do not replace null with an invented value or placeholder text."
+      ],
+      "depends_on": [
+        "Q021",
+        "Q022",
+        "Q024",
+        "Q025"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "query_id": "Q024",
+  "target": "traceability_matrix",
+  "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "trace_id": "T-001",
+      "business_objective": "BO-01",
+      "functional_requirement": "FR-005",
+      "user_story": "US-FR-005",
+      "acceptance_criteria": null
+    },
+    {
+      "trace_id": "T-002",
+      "business_objective": "BO-01",
+      "functional_requirement": "FR-007",
+      "user_story": "US-FR-007",
+      "acceptance_criteria": "AC-007"
+    },
+    {
+      "trace_id": "T-003",
+      "business_objective": "BO-01",
+      "functional_requirement": "FR-008",
+      "user_story": "US-FR-008",
+      "acceptance_criteria": "AC-006"
+    },
+    {
+      "trace_id": "T-004",
+      "business_objective": "BO-02",
+      "functional_requirement": "FR-001",
+      "user_story": "US-FR-001",
+      "acceptance_criteria": null
+    },
+    {
+      "trace_id": "T-005",
+      "business_objective": "BO-02",
+      "functional_requirement": "FR-004",
+      "user_story": "US-FR-004",
+      "acceptance_criteria": "AC-010"
+    },
+    {
+      "trace_id": "T-006",
+      "business_objective": "BO-02",
+      "functional_requirement": "FR-005",
+      "user_story": "US-FR-005",
+      "acceptance_criteria": null
+    },
+    {
+      "trace_id": "T-007",
+      "business_objective": "BO-03",
+      "functional_requirement": "FR-007",
+      "user_story": "US-FR-007",
+      "acceptance_criteria": "AC-007"
+    },
+    {
+      "trace_id": "T-008",
+      "business_objective": "BO-03",
+      "functional_requirement": "FR-009",
+      "user_story": "US-FR-009",
+      "acceptance_criteria": "AC-009"
+    },
+    {
+      "trace_id": "T-009",
+      "business_objective": "BO-03",
+      "functional_requirement": "FR-010",
+      "user_story": "US-FR-010",
+      "acceptance_criteria": null
+    },
+    {
+      "trace_id": "T-010",
+      "business_objective": "BO-04",
+      "functional_requirement": "FR-004",
+      "user_story": "US-FR-004",
+      "acceptance_criteria": "AC-010"
+    },
+    {
+      "trace_id": "T-011",
+      "business_objective": "BO-04",
+      "functional_requirement": "FR-006",
+      "user_story": "US-FR-006",
+      "acceptance_criteria": null
+    },
+    {
+      "trace_id": "T-012",
+      "business_objective": "BO-05",
+      "functional_requirement": "FR-012",
+      "user_story": "US-FR-012",
+      "acceptance_criteria": "AC-008"
+    }
+  ]
+}

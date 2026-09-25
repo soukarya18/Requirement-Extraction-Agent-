@@ -1,0 +1,3103 @@
+2026-08-28 21:24:34,826 | INFO | pipeline | ================================================================================
+2026-08-28 21:24:34,826 | INFO | pipeline | QUERY EXECUTION STARTED
+2026-08-28 21:24:34,827 | INFO | pipeline | ================================================================================
+2026-08-28 21:24:34,829 | INFO | pipeline | Knowledge base: C:\workspace\drs_generator\data\knowledge_bases\test_project
+2026-08-28 21:24:34,829 | INFO | pipeline | Queries: C:\workspace\drs_generator\drs_queries\extraction_queries.json
+2026-08-28 21:24:34,829 | INFO | pipeline | Results: C:\workspace\drs_generator\query_results
+2026-08-28 21:24:34,830 | INFO | pipeline | Log: C:\workspace\drs_generator\logs\query_execution.log
+2026-08-28 21:24:34,830 | INFO | pipeline | Loading embedding model...
+2026-08-28 21:24:44,596 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:44,597 | WARNING | huggingface_hub.utils._http | Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-08-28 21:24:44,607 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:44,829 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:44,839 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:44,841 | INFO | sentence_transformers.base.model | Loading SentenceTransformer model from BAAI/bge-small-en-v1.5.
+2026-08-28 21:24:45,051 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:45,061 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:45,269 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:45,281 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/README.md "HTTP/1.1 200 OK"
+2026-08-28 21:24:45,489 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:45,501 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/modules.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:45,718 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:45,730 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:45,954 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:46,163 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:46,176 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:46,604 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:46,824 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:47,035 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:47,249 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:47,521 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:47,532 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:47,792 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:47,803 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:48,015 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:48,026 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:48,257 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:48,269 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:48,487 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:48,701 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-08-28 21:24:48,964 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-08-28 21:24:48,975 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/BAAI/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-08-28 21:24:49,186 | INFO | httpx | HTTP Request: HEAD https://huggingface.co/BAAI/bge-small-en-v1.5/resolve/main/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-08-28 21:24:49,408 | INFO | httpx | HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-small-en-v1.5 "HTTP/1.1 200 OK"
+2026-08-28 21:24:49,420 | INFO | pipeline | Embedding model loaded.
+2026-08-28 21:24:49,420 | INFO | pipeline | Loading knowledge base...
+2026-08-28 21:24:49,422 | INFO | faiss.loader | Loading faiss with AVX2 support.
+2026-08-28 21:24:49,423 | INFO | faiss.loader | Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-08-28 21:24:49,423 | INFO | faiss.loader | Loading faiss.
+2026-08-28 21:24:49,451 | INFO | faiss.loader | Successfully loaded faiss.
+2026-08-28 21:24:49,461 | INFO | knowledge_base | Loaded knowledge base from C:\workspace\drs_generator\data\knowledge_bases\test_project
+2026-08-28 21:24:49,462 | INFO | pipeline | Knowledge base loaded.
+2026-08-28 21:24:50,078 | INFO | query_executor | Loaded 26 extraction queries from C:\workspace\drs_generator\drs_queries\extraction_queries.json
+2026-08-28 21:24:50,078 | INFO | pipeline | Query executor initialized with top_k=3.
+2026-08-28 21:24:50,078 | INFO | query_executor | Starting sequential execution of 26 queries
+2026-08-28 21:24:50,079 | INFO | query_executor | [1/26] Q001 START | target=project_metadata
+2026-08-28 21:24:50,079 | INFO | query_executor | Q001 | retrieval started
+2026-08-28 21:24:50,079 | INFO | query_executor | Q001 | RETRIEVAL START
+2026-08-28 21:24:50,155 | INFO | query_executor | Q001 | RETRIEVED 3 CHUNKS
+2026-08-28 21:24:50,155 | INFO | query_executor | Q001 | CHUNK 1 | score=0.797294
+2026-08-28 21:24:50,156 | INFO | query_executor | Q001 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:50,156 | INFO | query_executor | Q001 | CHUNK 1 | source_type=pdf
+2026-08-28 21:24:50,156 | INFO | query_executor | Q001 | CHUNK 1 | chunk_index=0
+2026-08-28 21:24:50,156 | INFO | query_executor | Q001 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:24:50,158 | INFO | query_executor | Q001 | CHUNK 2 | score=0.970821
+2026-08-28 21:24:50,158 | INFO | query_executor | Q001 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:50,158 | INFO | query_executor | Q001 | CHUNK 2 | source_type=pdf
+2026-08-28 21:24:50,158 | INFO | query_executor | Q001 | CHUNK 2 | chunk_index=3
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 3 | score=1.003190
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 3 | source_type=pdf
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 3 | chunk_index=2
+2026-08-28 21:24:50,159 | INFO | query_executor | Q001 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:24:50,160 | INFO | query_executor | Q001 | RETRIEVAL COMPLETE
+2026-08-28 21:24:50,160 | INFO | query_executor | Q001 | LLM attempt 1/3
+2026-08-28 21:24:51,161 | INFO | query_executor | Q001 | LLM call started | attempt=1
+2026-08-28 21:24:51,985 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:24:52,000 | INFO | query_executor | Q001 | LLM response received | attempt=1
+2026-08-28 21:24:52,000 | INFO | query_executor | Q001 | JSON parsing successful | attempt=1
+2026-08-28 21:24:52,001 | INFO | query_executor | Q001 | Pydantic validation successful | attempt=1
+2026-08-28 21:24:53,004 | INFO | query_executor | [1/26] Q001 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q001.json
+2026-08-28 21:24:53,004 | INFO | query_executor | [2/26] Q002 START | target=executive_summary
+2026-08-28 21:24:53,004 | INFO | query_executor | Q002 | retrieval started
+2026-08-28 21:24:53,004 | INFO | query_executor | Q002 | RETRIEVAL START
+2026-08-28 21:24:53,040 | INFO | query_executor | Q002 | RETRIEVED 3 CHUNKS
+2026-08-28 21:24:53,041 | INFO | query_executor | Q002 | CHUNK 1 | score=0.778574
+2026-08-28 21:24:53,041 | INFO | query_executor | Q002 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:53,041 | INFO | query_executor | Q002 | CHUNK 1 | source_type=pdf
+2026-08-28 21:24:53,041 | INFO | query_executor | Q002 | CHUNK 1 | chunk_index=1
+2026-08-28 21:24:53,042 | INFO | query_executor | Q002 | CHUNK 1 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:24:53,042 | INFO | query_executor | Q002 | CHUNK 2 | score=0.806216
+2026-08-28 21:24:53,043 | INFO | query_executor | Q002 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:53,043 | INFO | query_executor | Q002 | CHUNK 2 | source_type=pdf
+2026-08-28 21:24:53,043 | INFO | query_executor | Q002 | CHUNK 2 | chunk_index=0
+2026-08-28 21:24:53,043 | INFO | query_executor | Q002 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:24:53,044 | INFO | query_executor | Q002 | CHUNK 3 | score=0.909852
+2026-08-28 21:24:53,044 | INFO | query_executor | Q002 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:53,044 | INFO | query_executor | Q002 | CHUNK 3 | source_type=pdf
+2026-08-28 21:24:53,044 | INFO | query_executor | Q002 | CHUNK 3 | chunk_index=2
+2026-08-28 21:24:53,044 | INFO | query_executor | Q002 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:24:53,045 | INFO | query_executor | Q002 | RETRIEVAL COMPLETE
+2026-08-28 21:24:53,045 | INFO | query_executor | Q002 | LLM attempt 1/3
+2026-08-28 21:24:54,046 | INFO | query_executor | Q002 | LLM call started | attempt=1
+2026-08-28 21:24:55,964 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:24:55,966 | INFO | query_executor | Q002 | LLM response received | attempt=1
+2026-08-28 21:24:55,966 | INFO | query_executor | Q002 | JSON parsing successful | attempt=1
+2026-08-28 21:24:55,968 | INFO | query_executor | Q002 | Pydantic validation successful | attempt=1
+2026-08-28 21:24:56,970 | INFO | query_executor | [2/26] Q002 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q002.json
+2026-08-28 21:24:56,971 | INFO | query_executor | [3/26] Q003 START | target=business_background
+2026-08-28 21:24:56,971 | INFO | query_executor | Q003 | retrieval started
+2026-08-28 21:24:56,971 | INFO | query_executor | Q003 | RETRIEVAL START
+2026-08-28 21:24:57,019 | INFO | query_executor | Q003 | RETRIEVED 3 CHUNKS
+2026-08-28 21:24:57,023 | INFO | query_executor | Q003 | CHUNK 1 | score=0.602347
+2026-08-28 21:24:57,026 | INFO | query_executor | Q003 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:57,027 | INFO | query_executor | Q003 | CHUNK 1 | source_type=pdf
+2026-08-28 21:24:57,028 | INFO | query_executor | Q003 | CHUNK 1 | chunk_index=2
+2026-08-28 21:24:57,029 | INFO | query_executor | Q003 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:24:57,030 | INFO | query_executor | Q003 | CHUNK 2 | score=0.692151
+2026-08-28 21:24:57,030 | INFO | query_executor | Q003 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:57,030 | INFO | query_executor | Q003 | CHUNK 2 | source_type=pdf
+2026-08-28 21:24:57,031 | INFO | query_executor | Q003 | CHUNK 2 | chunk_index=1
+2026-08-28 21:24:57,031 | INFO | query_executor | Q003 | CHUNK 2 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:24:57,031 | INFO | query_executor | Q003 | CHUNK 3 | score=0.706846
+2026-08-28 21:24:57,031 | INFO | query_executor | Q003 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:24:57,032 | INFO | query_executor | Q003 | CHUNK 3 | source_type=pdf
+2026-08-28 21:24:57,032 | INFO | query_executor | Q003 | CHUNK 3 | chunk_index=0
+2026-08-28 21:24:57,032 | INFO | query_executor | Q003 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:24:57,032 | INFO | query_executor | Q003 | RETRIEVAL COMPLETE
+2026-08-28 21:24:57,033 | INFO | query_executor | Q003 | LLM attempt 1/3
+2026-08-28 21:24:58,033 | INFO | query_executor | Q003 | LLM call started | attempt=1
+2026-08-28 21:24:59,146 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:24:59,148 | INFO | query_executor | Q003 | LLM response received | attempt=1
+2026-08-28 21:24:59,149 | INFO | query_executor | Q003 | JSON parsing successful | attempt=1
+2026-08-28 21:24:59,150 | INFO | query_executor | Q003 | Pydantic validation successful | attempt=1
+2026-08-28 21:25:00,153 | INFO | query_executor | [3/26] Q003 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q003.json
+2026-08-28 21:25:00,153 | INFO | query_executor | [4/26] Q004 START | target=business_objectives
+2026-08-28 21:25:00,154 | INFO | query_executor | Q004 | retrieval started
+2026-08-28 21:25:00,154 | INFO | query_executor | Q004 | RETRIEVAL START
+2026-08-28 21:25:00,187 | INFO | query_executor | Q004 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:00,187 | INFO | query_executor | Q004 | CHUNK 1 | score=0.708996
+2026-08-28 21:25:00,187 | INFO | query_executor | Q004 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:00,187 | INFO | query_executor | Q004 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:00,188 | INFO | query_executor | Q004 | CHUNK 1 | chunk_index=1
+2026-08-28 21:25:00,188 | INFO | query_executor | Q004 | CHUNK 1 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:25:00,188 | INFO | query_executor | Q004 | CHUNK 2 | score=0.744813
+2026-08-28 21:25:00,189 | INFO | query_executor | Q004 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:00,189 | INFO | query_executor | Q004 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:00,189 | INFO | query_executor | Q004 | CHUNK 2 | chunk_index=0
+2026-08-28 21:25:00,190 | INFO | query_executor | Q004 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:00,190 | INFO | query_executor | Q004 | CHUNK 3 | score=0.749274
+2026-08-28 21:25:00,190 | INFO | query_executor | Q004 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:00,190 | INFO | query_executor | Q004 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:00,190 | INFO | query_executor | Q004 | CHUNK 3 | chunk_index=2
+2026-08-28 21:25:00,191 | INFO | query_executor | Q004 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:25:00,191 | INFO | query_executor | Q004 | RETRIEVAL COMPLETE
+2026-08-28 21:25:00,191 | INFO | query_executor | Q004 | LLM attempt 1/3
+2026-08-28 21:25:01,192 | INFO | query_executor | Q004 | LLM call started | attempt=1
+2026-08-28 21:25:02,521 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:02,523 | INFO | query_executor | Q004 | LLM response received | attempt=1
+2026-08-28 21:25:02,524 | INFO | query_executor | Q004 | JSON parsing successful | attempt=1
+2026-08-28 21:25:02,525 | INFO | query_executor | Q004 | Pydantic validation successful | attempt=1
+2026-08-28 21:25:03,528 | INFO | query_executor | [4/26] Q004 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q004.json
+2026-08-28 21:25:03,528 | INFO | query_executor | [5/26] Q005 START | target=scope
+2026-08-28 21:25:03,529 | INFO | query_executor | Q005 | retrieval started
+2026-08-28 21:25:03,529 | INFO | query_executor | Q005 | RETRIEVAL START
+2026-08-28 21:25:03,578 | INFO | query_executor | Q005 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:03,578 | INFO | query_executor | Q005 | CHUNK 1 | score=0.799815
+2026-08-28 21:25:03,579 | INFO | query_executor | Q005 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:03,579 | INFO | query_executor | Q005 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:03,582 | INFO | query_executor | Q005 | CHUNK 1 | chunk_index=2
+2026-08-28 21:25:03,586 | INFO | query_executor | Q005 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:25:03,590 | INFO | query_executor | Q005 | CHUNK 2 | score=0.872538
+2026-08-28 21:25:03,596 | INFO | query_executor | Q005 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:03,597 | INFO | query_executor | Q005 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:03,597 | INFO | query_executor | Q005 | CHUNK 2 | chunk_index=1
+2026-08-28 21:25:03,599 | INFO | query_executor | Q005 | CHUNK 2 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:25:03,601 | INFO | query_executor | Q005 | CHUNK 3 | score=0.906385
+2026-08-28 21:25:03,601 | INFO | query_executor | Q005 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:03,601 | INFO | query_executor | Q005 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:03,601 | INFO | query_executor | Q005 | CHUNK 3 | chunk_index=0
+2026-08-28 21:25:03,601 | INFO | query_executor | Q005 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:03,602 | INFO | query_executor | Q005 | RETRIEVAL COMPLETE
+2026-08-28 21:25:03,602 | INFO | query_executor | Q005 | LLM attempt 1/3
+2026-08-28 21:25:04,603 | INFO | query_executor | Q005 | LLM call started | attempt=1
+2026-08-28 21:25:07,038 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:07,039 | INFO | query_executor | Q005 | LLM response received | attempt=1
+2026-08-28 21:25:07,040 | INFO | query_executor | Q005 | JSON parsing successful | attempt=1
+2026-08-28 21:25:07,041 | INFO | query_executor | Q005 | Pydantic validation successful | attempt=1
+2026-08-28 21:25:08,044 | INFO | query_executor | [5/26] Q005 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q005.json
+2026-08-28 21:25:08,044 | INFO | query_executor | [6/26] Q006 START | target=out_of_scope
+2026-08-28 21:25:08,045 | INFO | query_executor | Q006 | retrieval started
+2026-08-28 21:25:08,045 | INFO | query_executor | Q006 | RETRIEVAL START
+2026-08-28 21:25:08,077 | INFO | query_executor | Q006 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:08,077 | INFO | query_executor | Q006 | CHUNK 1 | score=0.835354
+2026-08-28 21:25:08,078 | INFO | query_executor | Q006 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:08,078 | INFO | query_executor | Q006 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:08,078 | INFO | query_executor | Q006 | CHUNK 1 | chunk_index=3
+2026-08-28 21:25:08,078 | INFO | query_executor | Q006 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:25:08,079 | INFO | query_executor | Q006 | CHUNK 2 | score=0.867460
+2026-08-28 21:25:08,080 | INFO | query_executor | Q006 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:08,080 | INFO | query_executor | Q006 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:08,082 | INFO | query_executor | Q006 | CHUNK 2 | chunk_index=2
+2026-08-28 21:25:08,082 | INFO | query_executor | Q006 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:25:08,083 | INFO | query_executor | Q006 | CHUNK 3 | score=0.914074
+2026-08-28 21:25:08,083 | INFO | query_executor | Q006 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:08,083 | INFO | query_executor | Q006 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:08,084 | INFO | query_executor | Q006 | CHUNK 3 | chunk_index=0
+2026-08-28 21:25:08,084 | INFO | query_executor | Q006 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:08,084 | INFO | query_executor | Q006 | RETRIEVAL COMPLETE
+2026-08-28 21:25:08,084 | INFO | query_executor | Q006 | LLM attempt 1/3
+2026-08-28 21:25:09,085 | INFO | query_executor | Q006 | LLM call started | attempt=1
+2026-08-28 21:25:10,319 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:10,321 | INFO | query_executor | Q006 | LLM response received | attempt=1
+2026-08-28 21:25:10,322 | INFO | query_executor | Q006 | JSON parsing successful | attempt=1
+2026-08-28 21:25:10,323 | INFO | query_executor | Q006 | Pydantic validation successful | attempt=1
+2026-08-28 21:25:11,326 | INFO | query_executor | [6/26] Q006 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q006.json
+2026-08-28 21:25:11,327 | INFO | query_executor | [7/26] Q007 START | target=stakeholders
+2026-08-28 21:25:11,327 | INFO | query_executor | Q007 | retrieval started
+2026-08-28 21:25:11,327 | INFO | query_executor | Q007 | RETRIEVAL START
+2026-08-28 21:25:11,357 | INFO | query_executor | Q007 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:11,357 | INFO | query_executor | Q007 | CHUNK 1 | score=0.918966
+2026-08-28 21:25:11,357 | INFO | query_executor | Q007 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:11,358 | INFO | query_executor | Q007 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:11,358 | INFO | query_executor | Q007 | CHUNK 1 | chunk_index=1
+2026-08-28 21:25:11,358 | INFO | query_executor | Q007 | CHUNK 1 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:25:11,358 | INFO | query_executor | Q007 | CHUNK 2 | score=0.965430
+2026-08-28 21:25:11,359 | INFO | query_executor | Q007 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:11,359 | INFO | query_executor | Q007 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:11,360 | INFO | query_executor | Q007 | CHUNK 2 | chunk_index=0
+2026-08-28 21:25:11,360 | INFO | query_executor | Q007 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:11,360 | INFO | query_executor | Q007 | CHUNK 3 | score=0.974963
+2026-08-28 21:25:11,360 | INFO | query_executor | Q007 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:11,360 | INFO | query_executor | Q007 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:11,361 | INFO | query_executor | Q007 | CHUNK 3 | chunk_index=2
+2026-08-28 21:25:11,361 | INFO | query_executor | Q007 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:25:11,363 | INFO | query_executor | Q007 | RETRIEVAL COMPLETE
+2026-08-28 21:25:11,363 | INFO | query_executor | Q007 | LLM attempt 1/3
+2026-08-28 21:25:12,364 | INFO | query_executor | Q007 | LLM call started | attempt=1
+2026-08-28 21:25:13,832 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:13,833 | INFO | query_executor | Q007 | LLM response received | attempt=1
+2026-08-28 21:25:13,834 | INFO | query_executor | Q007 | JSON parsing successful | attempt=1
+2026-08-28 21:25:13,836 | ERROR | query_executor | Q007 | Pydantic validation failed | attempt=1 | error=Q007: Pydantic validation failed for array item 0: 1 validation error for Q007Item
+stakeholder_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:25:13,836 | INFO | query_executor | Q007 | LLM attempt 2/3
+2026-08-28 21:25:13,836 | INFO | query_executor | Q007 | retry delay 2.0 seconds
+2026-08-28 21:25:15,837 | INFO | query_executor | Q007 | LLM call started | attempt=2
+2026-08-28 21:25:15,863 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:25:15,864 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-08-28 21:25:28,808 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:28,810 | INFO | query_executor | Q007 | LLM response received | attempt=2
+2026-08-28 21:25:28,810 | INFO | query_executor | Q007 | JSON parsing successful | attempt=2
+2026-08-28 21:25:28,813 | INFO | query_executor | Q007 | Pydantic validation successful | attempt=2
+2026-08-28 21:25:29,815 | INFO | query_executor | [7/26] Q007 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q007.json
+2026-08-28 21:25:29,816 | INFO | query_executor | [8/26] Q008 START | target=personas
+2026-08-28 21:25:29,816 | INFO | query_executor | Q008 | retrieval started
+2026-08-28 21:25:29,816 | INFO | query_executor | Q008 | RETRIEVAL START
+2026-08-28 21:25:29,849 | INFO | query_executor | Q008 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:29,849 | INFO | query_executor | Q008 | CHUNK 1 | score=0.786071
+2026-08-28 21:25:29,849 | INFO | query_executor | Q008 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:29,849 | INFO | query_executor | Q008 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:29,850 | INFO | query_executor | Q008 | CHUNK 1 | chunk_index=2
+2026-08-28 21:25:29,850 | INFO | query_executor | Q008 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:25:29,850 | INFO | query_executor | Q008 | CHUNK 2 | score=0.894916
+2026-08-28 21:25:29,851 | INFO | query_executor | Q008 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:29,852 | INFO | query_executor | Q008 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:29,852 | INFO | query_executor | Q008 | CHUNK 2 | chunk_index=3
+2026-08-28 21:25:29,852 | INFO | query_executor | Q008 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:25:29,852 | INFO | query_executor | Q008 | CHUNK 3 | score=0.915200
+2026-08-28 21:25:29,852 | INFO | query_executor | Q008 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:29,853 | INFO | query_executor | Q008 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:29,853 | INFO | query_executor | Q008 | CHUNK 3 | chunk_index=0
+2026-08-28 21:25:29,853 | INFO | query_executor | Q008 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:29,853 | INFO | query_executor | Q008 | RETRIEVAL COMPLETE
+2026-08-28 21:25:29,853 | INFO | query_executor | Q008 | LLM attempt 1/3
+2026-08-28 21:25:30,854 | INFO | query_executor | Q008 | LLM call started | attempt=1
+2026-08-28 21:25:30,877 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:25:30,877 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-08-28 21:25:45,586 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:45,588 | INFO | query_executor | Q008 | LLM response received | attempt=1
+2026-08-28 21:25:45,589 | INFO | query_executor | Q008 | JSON parsing successful | attempt=1
+2026-08-28 21:25:45,590 | ERROR | query_executor | Q008 | Pydantic validation failed | attempt=1 | error=Q008: Pydantic validation failed for array item 0: 1 validation error for Q008Item
+persona_id
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:25:45,591 | INFO | query_executor | Q008 | LLM attempt 2/3
+2026-08-28 21:25:45,591 | INFO | query_executor | Q008 | retry delay 2.0 seconds
+2026-08-28 21:25:47,592 | INFO | query_executor | Q008 | LLM call started | attempt=2
+2026-08-28 21:25:47,616 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:25:47,616 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-08-28 21:25:54,783 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:25:54,783 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-08-28 21:25:58,340 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:25:58,341 | INFO | query_executor | Q008 | LLM response received | attempt=2
+2026-08-28 21:25:58,341 | INFO | query_executor | Q008 | JSON parsing successful | attempt=2
+2026-08-28 21:25:58,344 | INFO | query_executor | Q008 | Pydantic validation successful | attempt=2
+2026-08-28 21:25:59,347 | INFO | query_executor | [8/26] Q008 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q008.json
+2026-08-28 21:25:59,347 | INFO | query_executor | [9/26] Q009 START | target=current_state_summary
+2026-08-28 21:25:59,347 | INFO | query_executor | Q009 | retrieval started
+2026-08-28 21:25:59,348 | INFO | query_executor | Q009 | RETRIEVAL START
+2026-08-28 21:25:59,385 | INFO | query_executor | Q009 | RETRIEVED 3 CHUNKS
+2026-08-28 21:25:59,386 | INFO | query_executor | Q009 | CHUNK 1 | score=0.899699
+2026-08-28 21:25:59,386 | INFO | query_executor | Q009 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:59,386 | INFO | query_executor | Q009 | CHUNK 1 | source_type=pdf
+2026-08-28 21:25:59,386 | INFO | query_executor | Q009 | CHUNK 1 | chunk_index=0
+2026-08-28 21:25:59,386 | INFO | query_executor | Q009 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:25:59,388 | INFO | query_executor | Q009 | CHUNK 2 | score=1.018428
+2026-08-28 21:25:59,388 | INFO | query_executor | Q009 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:59,388 | INFO | query_executor | Q009 | CHUNK 2 | source_type=pdf
+2026-08-28 21:25:59,389 | INFO | query_executor | Q009 | CHUNK 2 | chunk_index=3
+2026-08-28 21:25:59,389 | INFO | query_executor | Q009 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:25:59,389 | INFO | query_executor | Q009 | CHUNK 3 | score=1.019348
+2026-08-28 21:25:59,390 | INFO | query_executor | Q009 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:25:59,390 | INFO | query_executor | Q009 | CHUNK 3 | source_type=pdf
+2026-08-28 21:25:59,390 | INFO | query_executor | Q009 | CHUNK 3 | chunk_index=1
+2026-08-28 21:25:59,390 | INFO | query_executor | Q009 | CHUNK 3 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:25:59,391 | INFO | query_executor | Q009 | RETRIEVAL COMPLETE
+2026-08-28 21:25:59,391 | INFO | query_executor | Q009 | LLM attempt 1/3
+2026-08-28 21:26:00,391 | INFO | query_executor | Q009 | LLM call started | attempt=1
+2026-08-28 21:26:00,414 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:00,414 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 6.000000 seconds
+2026-08-28 21:26:08,446 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:26:08,447 | INFO | query_executor | Q009 | LLM response received | attempt=1
+2026-08-28 21:26:08,448 | INFO | query_executor | Q009 | JSON parsing successful | attempt=1
+2026-08-28 21:26:08,450 | INFO | query_executor | Q009 | Pydantic validation successful | attempt=1
+2026-08-28 21:26:09,452 | INFO | query_executor | [9/26] Q009 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q009.json
+2026-08-28 21:26:09,453 | INFO | query_executor | [10/26] Q010 START | target=future_state_overview
+2026-08-28 21:26:09,453 | INFO | query_executor | Q010 | retrieval started
+2026-08-28 21:26:09,453 | INFO | query_executor | Q010 | RETRIEVAL START
+2026-08-28 21:26:09,483 | INFO | query_executor | Q010 | RETRIEVED 3 CHUNKS
+2026-08-28 21:26:09,484 | INFO | query_executor | Q010 | CHUNK 1 | score=0.751109
+2026-08-28 21:26:09,484 | INFO | query_executor | Q010 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:09,484 | INFO | query_executor | Q010 | CHUNK 1 | source_type=pdf
+2026-08-28 21:26:09,484 | INFO | query_executor | Q010 | CHUNK 1 | chunk_index=0
+2026-08-28 21:26:09,485 | INFO | query_executor | Q010 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:26:09,485 | INFO | query_executor | Q010 | CHUNK 2 | score=0.851473
+2026-08-28 21:26:09,485 | INFO | query_executor | Q010 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:09,485 | INFO | query_executor | Q010 | CHUNK 2 | source_type=pdf
+2026-08-28 21:26:09,485 | INFO | query_executor | Q010 | CHUNK 2 | chunk_index=3
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 3 | score=0.855517
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 3 | source_type=pdf
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 3 | chunk_index=2
+2026-08-28 21:26:09,486 | INFO | query_executor | Q010 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:26:09,487 | INFO | query_executor | Q010 | RETRIEVAL COMPLETE
+2026-08-28 21:26:09,489 | INFO | query_executor | Q010 | LLM attempt 1/3
+2026-08-28 21:26:10,490 | INFO | query_executor | Q010 | LLM call started | attempt=1
+2026-08-28 21:26:10,512 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:10,513 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-08-28 21:26:23,654 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:26:23,655 | INFO | query_executor | Q010 | LLM response received | attempt=1
+2026-08-28 21:26:23,656 | INFO | query_executor | Q010 | JSON parsing successful | attempt=1
+2026-08-28 21:26:23,658 | INFO | query_executor | Q010 | Pydantic validation successful | attempt=1
+2026-08-28 21:26:24,660 | INFO | query_executor | [10/26] Q010 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q010.json
+2026-08-28 21:26:24,661 | INFO | query_executor | [11/26] Q011 START | target=assumptions
+2026-08-28 21:26:24,661 | INFO | query_executor | Q011 | retrieval started
+2026-08-28 21:26:24,661 | INFO | query_executor | Q011 | RETRIEVAL START
+2026-08-28 21:26:24,693 | INFO | query_executor | Q011 | RETRIEVED 3 CHUNKS
+2026-08-28 21:26:24,693 | INFO | query_executor | Q011 | CHUNK 1 | score=0.956213
+2026-08-28 21:26:24,693 | INFO | query_executor | Q011 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:24,693 | INFO | query_executor | Q011 | CHUNK 1 | source_type=pdf
+2026-08-28 21:26:24,694 | INFO | query_executor | Q011 | CHUNK 1 | chunk_index=0
+2026-08-28 21:26:24,694 | INFO | query_executor | Q011 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:26:24,694 | INFO | query_executor | Q011 | CHUNK 2 | score=0.978134
+2026-08-28 21:26:24,695 | INFO | query_executor | Q011 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:24,695 | INFO | query_executor | Q011 | CHUNK 2 | source_type=pdf
+2026-08-28 21:26:24,696 | INFO | query_executor | Q011 | CHUNK 2 | chunk_index=3
+2026-08-28 21:26:24,696 | INFO | query_executor | Q011 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:26:24,696 | INFO | query_executor | Q011 | CHUNK 3 | score=1.021398
+2026-08-28 21:26:24,696 | INFO | query_executor | Q011 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:24,697 | INFO | query_executor | Q011 | CHUNK 3 | source_type=pdf
+2026-08-28 21:26:24,697 | INFO | query_executor | Q011 | CHUNK 3 | chunk_index=1
+2026-08-28 21:26:24,697 | INFO | query_executor | Q011 | CHUNK 3 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:26:24,697 | INFO | query_executor | Q011 | RETRIEVAL COMPLETE
+2026-08-28 21:26:24,697 | INFO | query_executor | Q011 | LLM attempt 1/3
+2026-08-28 21:26:25,698 | INFO | query_executor | Q011 | LLM call started | attempt=1
+2026-08-28 21:26:25,722 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:25,723 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-08-28 21:26:34,769 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:34,770 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-08-28 21:26:36,617 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:26:36,618 | INFO | query_executor | Q011 | LLM response received | attempt=1
+2026-08-28 21:26:36,619 | INFO | query_executor | Q011 | JSON parsing successful | attempt=1
+2026-08-28 21:26:36,621 | INFO | query_executor | Q011 | Pydantic validation successful | attempt=1
+2026-08-28 21:26:37,624 | INFO | query_executor | [11/26] Q011 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q011.json
+2026-08-28 21:26:37,624 | INFO | query_executor | [12/26] Q012 START | target=constraints
+2026-08-28 21:26:37,624 | INFO | query_executor | Q012 | retrieval started
+2026-08-28 21:26:37,624 | INFO | query_executor | Q012 | RETRIEVAL START
+2026-08-28 21:26:37,655 | INFO | query_executor | Q012 | RETRIEVED 3 CHUNKS
+2026-08-28 21:26:37,656 | INFO | query_executor | Q012 | CHUNK 1 | score=0.682532
+2026-08-28 21:26:37,656 | INFO | query_executor | Q012 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:37,656 | INFO | query_executor | Q012 | CHUNK 1 | source_type=pdf
+2026-08-28 21:26:37,659 | INFO | query_executor | Q012 | CHUNK 1 | chunk_index=0
+2026-08-28 21:26:37,660 | INFO | query_executor | Q012 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:26:37,661 | INFO | query_executor | Q012 | CHUNK 2 | score=0.752210
+2026-08-28 21:26:37,661 | INFO | query_executor | Q012 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:37,661 | INFO | query_executor | Q012 | CHUNK 2 | source_type=pdf
+2026-08-28 21:26:37,661 | INFO | query_executor | Q012 | CHUNK 2 | chunk_index=1
+2026-08-28 21:26:37,661 | INFO | query_executor | Q012 | CHUNK 2 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | CHUNK 3 | score=0.767089
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | CHUNK 3 | source_type=pdf
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | CHUNK 3 | chunk_index=2
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:26:37,662 | INFO | query_executor | Q012 | RETRIEVAL COMPLETE
+2026-08-28 21:26:37,663 | INFO | query_executor | Q012 | LLM attempt 1/3
+2026-08-28 21:26:38,663 | INFO | query_executor | Q012 | LLM call started | attempt=1
+2026-08-28 21:26:38,688 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:38,689 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 3.000000 seconds
+2026-08-28 21:26:41,712 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:41,713 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-08-28 21:26:45,532 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:26:45,533 | INFO | query_executor | Q012 | LLM response received | attempt=1
+2026-08-28 21:26:45,534 | INFO | query_executor | Q012 | JSON parsing successful | attempt=1
+2026-08-28 21:26:45,535 | INFO | query_executor | Q012 | Pydantic validation successful | attempt=1
+2026-08-28 21:26:46,538 | INFO | query_executor | [12/26] Q012 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q012.json
+2026-08-28 21:26:46,538 | INFO | query_executor | [13/26] Q013 START | target=dependencies
+2026-08-28 21:26:46,538 | INFO | query_executor | Q013 | retrieval started
+2026-08-28 21:26:46,539 | INFO | query_executor | Q013 | RETRIEVAL START
+2026-08-28 21:26:46,572 | INFO | query_executor | Q013 | RETRIEVED 3 CHUNKS
+2026-08-28 21:26:46,573 | INFO | query_executor | Q013 | CHUNK 1 | score=0.843674
+2026-08-28 21:26:46,573 | INFO | query_executor | Q013 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:46,573 | INFO | query_executor | Q013 | CHUNK 1 | source_type=pdf
+2026-08-28 21:26:46,573 | INFO | query_executor | Q013 | CHUNK 1 | chunk_index=0
+2026-08-28 21:26:46,574 | INFO | query_executor | Q013 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:26:46,574 | INFO | query_executor | Q013 | CHUNK 2 | score=0.895518
+2026-08-28 21:26:46,574 | INFO | query_executor | Q013 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:46,574 | INFO | query_executor | Q013 | CHUNK 2 | source_type=pdf
+2026-08-28 21:26:46,574 | INFO | query_executor | Q013 | CHUNK 2 | chunk_index=3
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 3 | score=0.903515
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 3 | source_type=pdf
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 3 | chunk_index=2
+2026-08-28 21:26:46,575 | INFO | query_executor | Q013 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:26:46,576 | INFO | query_executor | Q013 | RETRIEVAL COMPLETE
+2026-08-28 21:26:46,576 | INFO | query_executor | Q013 | LLM attempt 1/3
+2026-08-28 21:26:47,577 | INFO | query_executor | Q013 | LLM call started | attempt=1
+2026-08-28 21:26:47,604 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:47,605 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-08-28 21:26:56,822 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:26:56,823 | INFO | query_executor | Q013 | LLM response received | attempt=1
+2026-08-28 21:26:56,824 | INFO | query_executor | Q013 | JSON parsing successful | attempt=1
+2026-08-28 21:26:56,826 | INFO | query_executor | Q013 | Pydantic validation successful | attempt=1
+2026-08-28 21:26:57,829 | INFO | query_executor | [13/26] Q013 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q013.json
+2026-08-28 21:26:57,829 | INFO | query_executor | [14/26] Q014 START | target=risks
+2026-08-28 21:26:57,829 | INFO | query_executor | Q014 | retrieval started
+2026-08-28 21:26:57,830 | INFO | query_executor | Q014 | RETRIEVAL START
+2026-08-28 21:26:57,872 | INFO | query_executor | Q014 | RETRIEVED 3 CHUNKS
+2026-08-28 21:26:57,873 | INFO | query_executor | Q014 | CHUNK 1 | score=0.955063
+2026-08-28 21:26:57,873 | INFO | query_executor | Q014 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:57,873 | INFO | query_executor | Q014 | CHUNK 1 | source_type=pdf
+2026-08-28 21:26:57,873 | INFO | query_executor | Q014 | CHUNK 1 | chunk_index=0
+2026-08-28 21:26:57,873 | INFO | query_executor | Q014 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:26:57,875 | INFO | query_executor | Q014 | CHUNK 2 | score=1.016559
+2026-08-28 21:26:57,875 | INFO | query_executor | Q014 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:57,875 | INFO | query_executor | Q014 | CHUNK 2 | source_type=pdf
+2026-08-28 21:26:57,875 | INFO | query_executor | Q014 | CHUNK 2 | chunk_index=3
+2026-08-28 21:26:57,876 | INFO | query_executor | Q014 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:26:57,876 | INFO | query_executor | Q014 | CHUNK 3 | score=1.061220
+2026-08-28 21:26:57,876 | INFO | query_executor | Q014 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:26:57,876 | INFO | query_executor | Q014 | CHUNK 3 | source_type=pdf
+2026-08-28 21:26:57,876 | INFO | query_executor | Q014 | CHUNK 3 | chunk_index=1
+2026-08-28 21:26:57,877 | INFO | query_executor | Q014 | CHUNK 3 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:26:57,877 | INFO | query_executor | Q014 | RETRIEVAL COMPLETE
+2026-08-28 21:26:57,877 | INFO | query_executor | Q014 | LLM attempt 1/3
+2026-08-28 21:26:58,878 | INFO | query_executor | Q014 | LLM call started | attempt=1
+2026-08-28 21:26:58,899 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:26:58,900 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-08-28 21:27:09,451 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:27:09,452 | INFO | query_executor | Q014 | LLM response received | attempt=1
+2026-08-28 21:27:09,453 | INFO | query_executor | Q014 | JSON parsing successful | attempt=1
+2026-08-28 21:27:09,455 | INFO | query_executor | Q014 | Pydantic validation successful | attempt=1
+2026-08-28 21:27:10,458 | INFO | query_executor | [14/26] Q014 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q014.json
+2026-08-28 21:27:10,459 | INFO | query_executor | [15/26] Q015 START | target=functional_requirements
+2026-08-28 21:27:10,459 | INFO | query_executor | Q015 | retrieval started
+2026-08-28 21:27:10,459 | INFO | query_executor | Q015 | RETRIEVAL START
+2026-08-28 21:27:10,499 | INFO | query_executor | Q015 | RETRIEVED 3 CHUNKS
+2026-08-28 21:27:10,499 | INFO | query_executor | Q015 | CHUNK 1 | score=0.662475
+2026-08-28 21:27:10,500 | INFO | query_executor | Q015 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:10,500 | INFO | query_executor | Q015 | CHUNK 1 | source_type=pdf
+2026-08-28 21:27:10,500 | INFO | query_executor | Q015 | CHUNK 1 | chunk_index=2
+2026-08-28 21:27:10,500 | INFO | query_executor | Q015 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:27:10,500 | INFO | query_executor | Q015 | CHUNK 2 | score=0.666057
+2026-08-28 21:27:10,501 | INFO | query_executor | Q015 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:10,501 | INFO | query_executor | Q015 | CHUNK 2 | source_type=pdf
+2026-08-28 21:27:10,502 | INFO | query_executor | Q015 | CHUNK 2 | chunk_index=3
+2026-08-28 21:27:10,502 | INFO | query_executor | Q015 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:27:10,502 | INFO | query_executor | Q015 | CHUNK 3 | score=0.729096
+2026-08-28 21:27:10,502 | INFO | query_executor | Q015 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:10,502 | INFO | query_executor | Q015 | CHUNK 3 | source_type=pdf
+2026-08-28 21:27:10,503 | INFO | query_executor | Q015 | CHUNK 3 | chunk_index=0
+2026-08-28 21:27:10,503 | INFO | query_executor | Q015 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:27:10,503 | INFO | query_executor | Q015 | RETRIEVAL COMPLETE
+2026-08-28 21:27:10,503 | INFO | query_executor | Q015 | LLM attempt 1/3
+2026-08-28 21:27:11,504 | INFO | query_executor | Q015 | LLM call started | attempt=1
+2026-08-28 21:27:11,524 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:27:11,525 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 8.000000 seconds
+2026-08-28 21:27:21,331 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:27:21,333 | INFO | query_executor | Q015 | LLM response received | attempt=1
+2026-08-28 21:27:21,334 | INFO | query_executor | Q015 | JSON parsing successful | attempt=1
+2026-08-28 21:27:21,337 | INFO | query_executor | Q015 | Pydantic validation successful | attempt=1
+2026-08-28 21:27:22,340 | INFO | query_executor | [15/26] Q015 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q015.json
+2026-08-28 21:27:22,340 | INFO | query_executor | [16/26] Q016 START | target=non_functional_requirements
+2026-08-28 21:27:22,341 | INFO | query_executor | Q016 | retrieval started
+2026-08-28 21:27:22,341 | INFO | query_executor | Q016 | RETRIEVAL START
+2026-08-28 21:27:22,373 | INFO | query_executor | Q016 | RETRIEVED 3 CHUNKS
+2026-08-28 21:27:22,374 | INFO | query_executor | Q016 | CHUNK 1 | score=0.614514
+2026-08-28 21:27:22,374 | INFO | query_executor | Q016 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:22,374 | INFO | query_executor | Q016 | CHUNK 1 | source_type=pdf
+2026-08-28 21:27:22,374 | INFO | query_executor | Q016 | CHUNK 1 | chunk_index=3
+2026-08-28 21:27:22,375 | INFO | query_executor | Q016 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:27:22,376 | INFO | query_executor | Q016 | CHUNK 2 | score=0.810180
+2026-08-28 21:27:22,376 | INFO | query_executor | Q016 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:22,377 | INFO | query_executor | Q016 | CHUNK 2 | source_type=pdf
+2026-08-28 21:27:22,377 | INFO | query_executor | Q016 | CHUNK 2 | chunk_index=0
+2026-08-28 21:27:22,377 | INFO | query_executor | Q016 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:27:22,377 | INFO | query_executor | Q016 | CHUNK 3 | score=0.812657
+2026-08-28 21:27:22,377 | INFO | query_executor | Q016 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:22,378 | INFO | query_executor | Q016 | CHUNK 3 | source_type=pdf
+2026-08-28 21:27:22,378 | INFO | query_executor | Q016 | CHUNK 3 | chunk_index=2
+2026-08-28 21:27:22,378 | INFO | query_executor | Q016 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:27:22,378 | INFO | query_executor | Q016 | RETRIEVAL COMPLETE
+2026-08-28 21:27:22,378 | INFO | query_executor | Q016 | LLM attempt 1/3
+2026-08-28 21:27:23,379 | INFO | query_executor | Q016 | LLM call started | attempt=1
+2026-08-28 21:27:23,403 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:27:23,404 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-08-28 21:27:32,444 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:27:32,444 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-08-28 21:27:35,221 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:27:35,222 | INFO | query_executor | Q016 | LLM response received | attempt=1
+2026-08-28 21:27:35,223 | INFO | query_executor | Q016 | JSON parsing successful | attempt=1
+2026-08-28 21:27:35,224 | INFO | query_executor | Q016 | Pydantic validation successful | attempt=1
+2026-08-28 21:27:36,227 | INFO | query_executor | [16/26] Q016 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q016.json
+2026-08-28 21:27:36,228 | INFO | query_executor | [17/26] Q017 START | target=business_rules
+2026-08-28 21:27:36,228 | INFO | query_executor | Q017 | retrieval started
+2026-08-28 21:27:36,228 | INFO | query_executor | Q017 | RETRIEVAL START
+2026-08-28 21:27:36,268 | INFO | query_executor | Q017 | RETRIEVED 3 CHUNKS
+2026-08-28 21:27:36,268 | INFO | query_executor | Q017 | CHUNK 1 | score=0.759260
+2026-08-28 21:27:36,272 | INFO | query_executor | Q017 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:36,273 | INFO | query_executor | Q017 | CHUNK 1 | source_type=pdf
+2026-08-28 21:27:36,274 | INFO | query_executor | Q017 | CHUNK 1 | chunk_index=0
+2026-08-28 21:27:36,274 | INFO | query_executor | Q017 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:27:36,274 | INFO | query_executor | Q017 | CHUNK 2 | score=0.817413
+2026-08-28 21:27:36,276 | INFO | query_executor | Q017 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:36,278 | INFO | query_executor | Q017 | CHUNK 2 | source_type=pdf
+2026-08-28 21:27:36,278 | INFO | query_executor | Q017 | CHUNK 2 | chunk_index=2
+2026-08-28 21:27:36,279 | INFO | query_executor | Q017 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:27:36,279 | INFO | query_executor | Q017 | CHUNK 3 | score=0.828428
+2026-08-28 21:27:36,279 | INFO | query_executor | Q017 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:36,279 | INFO | query_executor | Q017 | CHUNK 3 | source_type=pdf
+2026-08-28 21:27:36,279 | INFO | query_executor | Q017 | CHUNK 3 | chunk_index=1
+2026-08-28 21:27:36,280 | INFO | query_executor | Q017 | CHUNK 3 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:27:36,280 | INFO | query_executor | Q017 | RETRIEVAL COMPLETE
+2026-08-28 21:27:36,280 | INFO | query_executor | Q017 | LLM attempt 1/3
+2026-08-28 21:27:37,281 | INFO | query_executor | Q017 | LLM call started | attempt=1
+2026-08-28 21:27:37,307 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:27:37,307 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-08-28 21:27:46,696 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:27:46,697 | INFO | query_executor | Q017 | LLM response received | attempt=1
+2026-08-28 21:27:46,698 | INFO | query_executor | Q017 | JSON parsing successful | attempt=1
+2026-08-28 21:27:46,699 | INFO | query_executor | Q017 | Pydantic validation successful | attempt=1
+2026-08-28 21:27:47,702 | INFO | query_executor | [17/26] Q017 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q017.json
+2026-08-28 21:27:47,703 | INFO | query_executor | [18/26] Q018 START | target=epics
+2026-08-28 21:27:47,703 | INFO | query_executor | Q018 | retrieval started
+2026-08-28 21:27:47,703 | INFO | query_executor | Q018 | RETRIEVAL START
+2026-08-28 21:27:47,746 | INFO | query_executor | Q018 | RETRIEVED 3 CHUNKS
+2026-08-28 21:27:47,746 | INFO | query_executor | Q018 | CHUNK 1 | score=0.803765
+2026-08-28 21:27:47,746 | INFO | query_executor | Q018 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:47,746 | INFO | query_executor | Q018 | CHUNK 1 | source_type=pdf
+2026-08-28 21:27:47,747 | INFO | query_executor | Q018 | CHUNK 1 | chunk_index=3
+2026-08-28 21:27:47,747 | INFO | query_executor | Q018 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:27:47,748 | INFO | query_executor | Q018 | CHUNK 2 | score=0.854317
+2026-08-28 21:27:47,749 | INFO | query_executor | Q018 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:47,749 | INFO | query_executor | Q018 | CHUNK 2 | source_type=pdf
+2026-08-28 21:27:47,749 | INFO | query_executor | Q018 | CHUNK 2 | chunk_index=2
+2026-08-28 21:27:47,750 | INFO | query_executor | Q018 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:27:47,750 | INFO | query_executor | Q018 | CHUNK 3 | score=0.921508
+2026-08-28 21:27:47,750 | INFO | query_executor | Q018 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:27:47,751 | INFO | query_executor | Q018 | CHUNK 3 | source_type=pdf
+2026-08-28 21:27:47,751 | INFO | query_executor | Q018 | CHUNK 3 | chunk_index=0
+2026-08-28 21:27:47,751 | INFO | query_executor | Q018 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:27:47,751 | INFO | query_executor | Q018 | RETRIEVAL COMPLETE
+2026-08-28 21:27:47,751 | INFO | query_executor | Q018 | dependencies: ['Q015']
+2026-08-28 21:27:47,752 | INFO | query_executor | Q018 | LLM attempt 1/3
+2026-08-28 21:27:48,752 | INFO | query_executor | Q018 | LLM call started | attempt=1
+2026-08-28 21:27:48,780 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:27:48,780 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-08-28 21:28:01,828 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:28:01,829 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-08-28 21:28:04,940 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:28:04,941 | INFO | query_executor | Q018 | LLM response received | attempt=1
+2026-08-28 21:28:04,942 | INFO | query_executor | Q018 | JSON parsing successful | attempt=1
+2026-08-28 21:28:04,944 | ERROR | query_executor | Q018 | Pydantic validation failed | attempt=1 | error=Q018: Pydantic validation failed for array item 0: 1 validation error for Q018Item
+description
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:28:04,944 | INFO | query_executor | Q018 | LLM attempt 2/3
+2026-08-28 21:28:04,944 | INFO | query_executor | Q018 | retry delay 2.0 seconds
+2026-08-28 21:28:06,945 | INFO | query_executor | Q018 | LLM call started | attempt=2
+2026-08-28 21:28:06,972 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:28:06,973 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-08-28 21:28:21,760 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:28:21,761 | INFO | query_executor | Q018 | LLM response received | attempt=2
+2026-08-28 21:28:21,761 | INFO | query_executor | Q018 | JSON parsing successful | attempt=2
+2026-08-28 21:28:21,763 | ERROR | query_executor | Q018 | Pydantic validation failed | attempt=2 | error=Q018: Pydantic validation failed for array item 0: 1 validation error for Q018Item
+description
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:28:21,763 | INFO | query_executor | Q018 | LLM attempt 3/3
+2026-08-28 21:28:21,763 | INFO | query_executor | Q018 | retry delay 4.0 seconds
+2026-08-28 21:28:25,765 | INFO | query_executor | Q018 | LLM call started | attempt=3
+2026-08-28 21:28:25,787 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:28:25,788 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-08-28 21:28:39,057 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:28:39,058 | INFO | query_executor | Q018 | LLM response received | attempt=3
+2026-08-28 21:28:39,059 | INFO | query_executor | Q018 | JSON parsing successful | attempt=3
+2026-08-28 21:28:39,060 | ERROR | query_executor | Q018 | Pydantic validation failed | attempt=3 | error=Q018: Pydantic validation failed for array item 0: 1 validation error for Q018Item
+description
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:28:40,063 | INFO | query_executor | [18/26] Q018 COMPLETE | status=failed | file=C:\workspace\drs_generator\query_results\Q018.json
+2026-08-28 21:28:40,064 | INFO | query_executor | [19/26] Q019 START | target=user_stories
+2026-08-28 21:28:40,065 | INFO | query_executor | Q019 | retrieval started
+2026-08-28 21:28:40,065 | INFO | query_executor | Q019 | RETRIEVAL START
+2026-08-28 21:28:40,106 | INFO | query_executor | Q019 | RETRIEVED 3 CHUNKS
+2026-08-28 21:28:40,107 | INFO | query_executor | Q019 | CHUNK 1 | score=0.766040
+2026-08-28 21:28:40,107 | INFO | query_executor | Q019 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:28:40,107 | INFO | query_executor | Q019 | CHUNK 1 | source_type=pdf
+2026-08-28 21:28:40,107 | INFO | query_executor | Q019 | CHUNK 1 | chunk_index=3
+2026-08-28 21:28:40,108 | INFO | query_executor | Q019 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:28:40,108 | INFO | query_executor | Q019 | CHUNK 2 | score=0.837507
+2026-08-28 21:28:40,108 | INFO | query_executor | Q019 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:28:40,109 | INFO | query_executor | Q019 | CHUNK 2 | source_type=pdf
+2026-08-28 21:28:40,109 | INFO | query_executor | Q019 | CHUNK 2 | chunk_index=2
+2026-08-28 21:28:40,109 | INFO | query_executor | Q019 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:28:40,110 | INFO | query_executor | Q019 | CHUNK 3 | score=0.879518
+2026-08-28 21:28:40,110 | INFO | query_executor | Q019 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:28:40,110 | INFO | query_executor | Q019 | CHUNK 3 | source_type=pdf
+2026-08-28 21:28:40,110 | INFO | query_executor | Q019 | CHUNK 3 | chunk_index=0
+2026-08-28 21:28:40,111 | INFO | query_executor | Q019 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:28:40,111 | INFO | query_executor | Q019 | RETRIEVAL COMPLETE
+2026-08-28 21:28:40,111 | INFO | query_executor | Q019 | dependencies: ['Q015']
+2026-08-28 21:28:40,111 | INFO | query_executor | Q019 | LLM attempt 1/3
+2026-08-28 21:28:41,112 | INFO | query_executor | Q019 | LLM call started | attempt=1
+2026-08-28 21:28:41,134 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:28:41,134 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-08-28 21:28:56,188 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:28:56,190 | INFO | query_executor | Q019 | LLM response received | attempt=1
+2026-08-28 21:28:56,191 | INFO | query_executor | Q019 | JSON parsing successful | attempt=1
+2026-08-28 21:28:56,192 | ERROR | query_executor | Q019 | Pydantic validation failed | attempt=1 | error=Q019: Pydantic validation failed for array item 0: 3 validation errors for Q019Item
+role
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+capability
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+benefit
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:28:56,193 | INFO | query_executor | Q019 | LLM attempt 2/3
+2026-08-28 21:28:56,193 | INFO | query_executor | Q019 | retry delay 2.0 seconds
+2026-08-28 21:28:58,194 | INFO | query_executor | Q019 | LLM call started | attempt=2
+2026-08-28 21:28:58,216 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:28:58,216 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-08-28 21:29:14,058 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:29:14,060 | INFO | query_executor | Q019 | LLM response received | attempt=2
+2026-08-28 21:29:14,060 | INFO | query_executor | Q019 | JSON parsing successful | attempt=2
+2026-08-28 21:29:14,063 | ERROR | query_executor | Q019 | Pydantic validation failed | attempt=2 | error=Q019: Pydantic validation failed for array item 0: 3 validation errors for Q019Item
+role
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+capability
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+benefit
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:29:14,063 | INFO | query_executor | Q019 | LLM attempt 3/3
+2026-08-28 21:29:14,063 | INFO | query_executor | Q019 | retry delay 4.0 seconds
+2026-08-28 21:29:18,064 | INFO | query_executor | Q019 | LLM call started | attempt=3
+2026-08-28 21:29:18,089 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:29:18,089 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-08-28 21:29:29,188 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:29:29,189 | INFO | query_executor | Q019 | LLM response received | attempt=3
+2026-08-28 21:29:29,190 | INFO | query_executor | Q019 | JSON parsing successful | attempt=3
+2026-08-28 21:29:29,191 | ERROR | query_executor | Q019 | Pydantic validation failed | attempt=3 | error=Q019: Pydantic validation failed for array item 0: 2 validation errors for Q019Item
+role
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+benefit
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-08-28 21:29:30,194 | INFO | query_executor | [19/26] Q019 COMPLETE | status=failed | file=C:\workspace\drs_generator\query_results\Q019.json
+2026-08-28 21:29:30,195 | INFO | query_executor | [20/26] Q020 START | target=acceptance_criteria
+2026-08-28 21:29:30,195 | INFO | query_executor | Q020 | retrieval started
+2026-08-28 21:29:30,195 | INFO | query_executor | Q020 | RETRIEVAL START
+2026-08-28 21:29:30,238 | INFO | query_executor | Q020 | RETRIEVED 3 CHUNKS
+2026-08-28 21:29:30,238 | INFO | query_executor | Q020 | CHUNK 1 | score=0.647254
+2026-08-28 21:29:30,238 | INFO | query_executor | Q020 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:30,238 | INFO | query_executor | Q020 | CHUNK 1 | source_type=pdf
+2026-08-28 21:29:30,239 | INFO | query_executor | Q020 | CHUNK 1 | chunk_index=3
+2026-08-28 21:29:30,239 | INFO | query_executor | Q020 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:29:30,239 | INFO | query_executor | Q020 | CHUNK 2 | score=0.765350
+2026-08-28 21:29:30,241 | INFO | query_executor | Q020 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:30,241 | INFO | query_executor | Q020 | CHUNK 2 | source_type=pdf
+2026-08-28 21:29:30,242 | INFO | query_executor | Q020 | CHUNK 2 | chunk_index=0
+2026-08-28 21:29:30,243 | INFO | query_executor | Q020 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:29:30,243 | INFO | query_executor | Q020 | CHUNK 3 | score=0.812213
+2026-08-28 21:29:30,243 | INFO | query_executor | Q020 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:30,243 | INFO | query_executor | Q020 | CHUNK 3 | source_type=pdf
+2026-08-28 21:29:30,243 | INFO | query_executor | Q020 | CHUNK 3 | chunk_index=2
+2026-08-28 21:29:30,244 | INFO | query_executor | Q020 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:29:30,244 | INFO | query_executor | Q020 | RETRIEVAL COMPLETE
+2026-08-28 21:29:30,244 | INFO | query_executor | Q020 | dependencies: ['Q015', 'Q019']
+2026-08-28 21:29:30,244 | INFO | query_executor | Q020 | LLM attempt 1/3
+2026-08-28 21:29:31,245 | INFO | query_executor | Q020 | LLM call started | attempt=1
+2026-08-28 21:29:31,268 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:29:31,269 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 18.000000 seconds
+2026-08-28 21:29:50,181 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:29:50,183 | INFO | query_executor | Q020 | LLM response received | attempt=1
+2026-08-28 21:29:50,183 | INFO | query_executor | Q020 | JSON parsing successful | attempt=1
+2026-08-28 21:29:50,185 | INFO | query_executor | Q020 | Pydantic validation successful | attempt=1
+2026-08-28 21:29:51,188 | INFO | query_executor | [20/26] Q020 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q020.json
+2026-08-28 21:29:51,188 | INFO | query_executor | [21/26] Q021 START | target=missing_information
+2026-08-28 21:29:51,189 | INFO | query_executor | Q021 | retrieval started
+2026-08-28 21:29:51,189 | INFO | query_executor | Q021 | RETRIEVAL START
+2026-08-28 21:29:51,266 | INFO | query_executor | Q021 | RETRIEVED 3 CHUNKS
+2026-08-28 21:29:51,268 | INFO | query_executor | Q021 | CHUNK 1 | score=0.727023
+2026-08-28 21:29:51,272 | INFO | query_executor | Q021 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:51,275 | INFO | query_executor | Q021 | CHUNK 1 | source_type=pdf
+2026-08-28 21:29:51,278 | INFO | query_executor | Q021 | CHUNK 1 | chunk_index=0
+2026-08-28 21:29:51,278 | INFO | query_executor | Q021 | CHUNK 1 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:29:51,279 | INFO | query_executor | Q021 | CHUNK 2 | score=0.804100
+2026-08-28 21:29:51,280 | INFO | query_executor | Q021 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:51,280 | INFO | query_executor | Q021 | CHUNK 2 | source_type=pdf
+2026-08-28 21:29:51,281 | INFO | query_executor | Q021 | CHUNK 2 | chunk_index=2
+2026-08-28 21:29:51,281 | INFO | query_executor | Q021 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:29:51,283 | INFO | query_executor | Q021 | CHUNK 3 | score=0.835368
+2026-08-28 21:29:51,284 | INFO | query_executor | Q021 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:29:51,284 | INFO | query_executor | Q021 | CHUNK 3 | source_type=pdf
+2026-08-28 21:29:51,284 | INFO | query_executor | Q021 | CHUNK 3 | chunk_index=3
+2026-08-28 21:29:51,285 | INFO | query_executor | Q021 | CHUNK 3 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:29:51,285 | INFO | query_executor | Q021 | RETRIEVAL COMPLETE
+2026-08-28 21:29:51,286 | INFO | query_executor | Q021 | LLM attempt 1/3
+2026-08-28 21:29:52,286 | INFO | query_executor | Q021 | LLM call started | attempt=1
+2026-08-28 21:29:52,307 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:29:52,308 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 7.000000 seconds
+2026-08-28 21:30:01,830 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:30:01,832 | INFO | query_executor | Q021 | LLM response received | attempt=1
+2026-08-28 21:30:01,834 | INFO | query_executor | Q021 | JSON parsing successful | attempt=1
+2026-08-28 21:30:01,837 | INFO | query_executor | Q021 | Pydantic validation successful | attempt=1
+2026-08-28 21:30:02,841 | INFO | query_executor | [21/26] Q021 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q021.json
+2026-08-28 21:30:02,841 | INFO | query_executor | [22/26] Q022 START | target=ambiguous_statements
+2026-08-28 21:30:02,841 | INFO | query_executor | Q022 | retrieval started
+2026-08-28 21:30:02,842 | INFO | query_executor | Q022 | RETRIEVAL START
+2026-08-28 21:30:02,883 | INFO | query_executor | Q022 | RETRIEVED 3 CHUNKS
+2026-08-28 21:30:02,884 | INFO | query_executor | Q022 | CHUNK 1 | score=0.760416
+2026-08-28 21:30:02,884 | INFO | query_executor | Q022 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:02,885 | INFO | query_executor | Q022 | CHUNK 1 | source_type=pdf
+2026-08-28 21:30:02,886 | INFO | query_executor | Q022 | CHUNK 1 | chunk_index=3
+2026-08-28 21:30:02,887 | INFO | query_executor | Q022 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:30:02,887 | INFO | query_executor | Q022 | CHUNK 2 | score=0.774101
+2026-08-28 21:30:02,888 | INFO | query_executor | Q022 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:02,888 | INFO | query_executor | Q022 | CHUNK 2 | source_type=pdf
+2026-08-28 21:30:02,888 | INFO | query_executor | Q022 | CHUNK 2 | chunk_index=0
+2026-08-28 21:30:02,888 | INFO | query_executor | Q022 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:30:02,888 | INFO | query_executor | Q022 | CHUNK 3 | score=0.874371
+2026-08-28 21:30:02,889 | INFO | query_executor | Q022 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:02,889 | INFO | query_executor | Q022 | CHUNK 3 | source_type=pdf
+2026-08-28 21:30:02,889 | INFO | query_executor | Q022 | CHUNK 3 | chunk_index=2
+2026-08-28 21:30:02,889 | INFO | query_executor | Q022 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:30:02,889 | INFO | query_executor | Q022 | RETRIEVAL COMPLETE
+2026-08-28 21:30:02,890 | INFO | query_executor | Q022 | LLM attempt 1/3
+2026-08-28 21:30:03,891 | INFO | query_executor | Q022 | LLM call started | attempt=1
+2026-08-28 21:30:03,917 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:30:03,918 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 10.000000 seconds
+2026-08-28 21:30:13,959 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:30:13,960 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-08-28 21:30:15,981 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:30:15,982 | ERROR | query_executor | Q022 | LLM call failed | attempt=1 | error=Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m14h5s7zesyb2a1ppyecadda` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5892, Requested 2166. Please try again in 435ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-08-28 21:30:15,982 | INFO | query_executor | Q022 | LLM attempt 2/3
+2026-08-28 21:30:15,982 | INFO | query_executor | Q022 | retry delay 2.0 seconds
+2026-08-28 21:30:17,983 | INFO | query_executor | Q022 | LLM call started | attempt=2
+2026-08-28 21:30:23,059 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:30:23,061 | INFO | query_executor | Q022 | LLM response received | attempt=2
+2026-08-28 21:30:23,061 | INFO | query_executor | Q022 | JSON parsing successful | attempt=2
+2026-08-28 21:30:23,063 | INFO | query_executor | Q022 | Pydantic validation successful | attempt=2
+2026-08-28 21:30:24,067 | INFO | query_executor | [22/26] Q022 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q022.json
+2026-08-28 21:30:24,067 | INFO | query_executor | [23/26] Q023 START | target=clarification_log
+2026-08-28 21:30:24,067 | INFO | query_executor | Q023 | retrieval started
+2026-08-28 21:30:24,067 | INFO | query_executor | Q023 | RETRIEVAL START
+2026-08-28 21:30:24,111 | INFO | query_executor | Q023 | RETRIEVED 3 CHUNKS
+2026-08-28 21:30:24,111 | INFO | query_executor | Q023 | CHUNK 1 | score=0.879055
+2026-08-28 21:30:24,111 | INFO | query_executor | Q023 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:24,111 | INFO | query_executor | Q023 | CHUNK 1 | source_type=pdf
+2026-08-28 21:30:24,111 | INFO | query_executor | Q023 | CHUNK 1 | chunk_index=2
+2026-08-28 21:30:24,112 | INFO | query_executor | Q023 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:30:24,112 | INFO | query_executor | Q023 | CHUNK 2 | score=0.901048
+2026-08-28 21:30:24,112 | INFO | query_executor | Q023 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:24,113 | INFO | query_executor | Q023 | CHUNK 2 | source_type=pdf
+2026-08-28 21:30:24,114 | INFO | query_executor | Q023 | CHUNK 2 | chunk_index=3
+2026-08-28 21:30:24,116 | INFO | query_executor | Q023 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:30:24,116 | INFO | query_executor | Q023 | CHUNK 3 | score=0.966789
+2026-08-28 21:30:24,116 | INFO | query_executor | Q023 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:24,116 | INFO | query_executor | Q023 | CHUNK 3 | source_type=pdf
+2026-08-28 21:30:24,117 | INFO | query_executor | Q023 | CHUNK 3 | chunk_index=0
+2026-08-28 21:30:24,117 | INFO | query_executor | Q023 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:30:24,117 | INFO | query_executor | Q023 | RETRIEVAL COMPLETE
+2026-08-28 21:30:24,118 | INFO | query_executor | Q023 | dependencies: ['Q021', 'Q022']
+2026-08-28 21:30:24,118 | INFO | query_executor | Q023 | LLM attempt 1/3
+2026-08-28 21:30:25,120 | INFO | query_executor | Q023 | LLM call started | attempt=1
+2026-08-28 21:30:25,146 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:30:25,147 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 21.000000 seconds
+2026-08-28 21:30:54,557 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:30:54,559 | INFO | query_executor | Q023 | LLM response received | attempt=1
+2026-08-28 21:30:54,560 | INFO | query_executor | Q023 | JSON parsing successful | attempt=1
+2026-08-28 21:30:54,561 | INFO | query_executor | Q023 | Pydantic validation successful | attempt=1
+2026-08-28 21:30:55,565 | INFO | query_executor | [23/26] Q023 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q023.json
+2026-08-28 21:30:55,565 | INFO | query_executor | [24/26] Q024 START | target=traceability_matrix
+2026-08-28 21:30:55,565 | INFO | query_executor | Q024 | retrieval started
+2026-08-28 21:30:55,566 | INFO | query_executor | Q024 | RETRIEVAL START
+2026-08-28 21:30:55,605 | INFO | query_executor | Q024 | RETRIEVED 3 CHUNKS
+2026-08-28 21:30:55,605 | INFO | query_executor | Q024 | CHUNK 1 | score=0.650119
+2026-08-28 21:30:55,606 | INFO | query_executor | Q024 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:55,606 | INFO | query_executor | Q024 | CHUNK 1 | source_type=pdf
+2026-08-28 21:30:55,606 | INFO | query_executor | Q024 | CHUNK 1 | chunk_index=2
+2026-08-28 21:30:55,606 | INFO | query_executor | Q024 | CHUNK 1 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:30:55,607 | INFO | query_executor | Q024 | CHUNK 2 | score=0.727193
+2026-08-28 21:30:55,608 | INFO | query_executor | Q024 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:55,608 | INFO | query_executor | Q024 | CHUNK 2 | source_type=pdf
+2026-08-28 21:30:55,608 | INFO | query_executor | Q024 | CHUNK 2 | chunk_index=3
+2026-08-28 21:30:55,608 | INFO | query_executor | Q024 | CHUNK 2 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | CHUNK 3 | score=0.811856
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | CHUNK 3 | source_type=pdf
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | CHUNK 3 | chunk_index=1
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | CHUNK 3 | CONTENT START
+[Page 2]
+Executive Summary 
+The Inventory Management System will centralize inventory tracking, purchasing, 
+warehouse operations, and reporting. 
+Business Objectives 
+Improve inventory accuracy, reduce stock-outs, and increase operational efficiency. 
+Document Control 
+Version 
+Date 
+Author 
+Description 
+1.0 
+26-Aug-2026 
+Business Analyst 
+Initial Draft 
+Stakeholders 
+Stakeholder 
+Role 
+Priority 
+Operations Manager 
+Business Owner 
+High 
+Warehouse Supervisor 
+Key User 
+High 
+IT Manager 
+Technical Sponsor 
+Medium 
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2%
+CONTENT END
+2026-08-28 21:30:55,609 | INFO | query_executor | Q024 | RETRIEVAL COMPLETE
+2026-08-28 21:30:55,610 | INFO | query_executor | Q024 | dependencies: ['Q004', 'Q015', 'Q019', 'Q020']
+2026-08-28 21:30:55,610 | INFO | query_executor | Q024 | LLM attempt 1/3
+2026-08-28 21:30:56,611 | INFO | query_executor | Q024 | LLM call started | attempt=1
+2026-08-28 21:30:56,635 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:30:56,636 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 24.000000 seconds
+2026-08-28 21:31:20,738 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:31:20,738 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2026-08-28 21:31:40,567 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:31:40,568 | INFO | query_executor | Q024 | LLM response received | attempt=1
+2026-08-28 21:31:40,569 | INFO | query_executor | Q024 | JSON parsing successful | attempt=1
+2026-08-28 21:31:40,571 | INFO | query_executor | Q024 | Pydantic validation successful | attempt=1
+2026-08-28 21:31:41,573 | INFO | query_executor | [24/26] Q024 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q024.json
+2026-08-28 21:31:41,574 | INFO | query_executor | [25/26] Q025 START | target=review_recommendations
+2026-08-28 21:31:41,574 | INFO | query_executor | Q025 | retrieval started
+2026-08-28 21:31:41,574 | INFO | query_executor | Q025 | RETRIEVAL START
+2026-08-28 21:31:41,636 | INFO | query_executor | Q025 | RETRIEVED 3 CHUNKS
+2026-08-28 21:31:41,636 | INFO | query_executor | Q025 | CHUNK 1 | score=0.921125
+2026-08-28 21:31:41,636 | INFO | query_executor | Q025 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:31:41,636 | INFO | query_executor | Q025 | CHUNK 1 | source_type=pdf
+2026-08-28 21:31:41,637 | INFO | query_executor | Q025 | CHUNK 1 | chunk_index=3
+2026-08-28 21:31:41,637 | INFO | query_executor | Q025 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:31:41,637 | INFO | query_executor | Q025 | CHUNK 2 | score=0.978441
+2026-08-28 21:31:41,638 | INFO | query_executor | Q025 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:31:41,638 | INFO | query_executor | Q025 | CHUNK 2 | source_type=pdf
+2026-08-28 21:31:41,639 | INFO | query_executor | Q025 | CHUNK 2 | chunk_index=0
+2026-08-28 21:31:41,639 | INFO | query_executor | Q025 | CHUNK 2 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:31:41,639 | INFO | query_executor | Q025 | CHUNK 3 | score=1.000869
+2026-08-28 21:31:41,640 | INFO | query_executor | Q025 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:31:41,640 | INFO | query_executor | Q025 | CHUNK 3 | source_type=pdf
+2026-08-28 21:31:41,640 | INFO | query_executor | Q025 | CHUNK 3 | chunk_index=2
+2026-08-28 21:31:41,640 | INFO | query_executor | Q025 | CHUNK 3 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:31:41,640 | INFO | query_executor | Q025 | RETRIEVAL COMPLETE
+2026-08-28 21:31:41,641 | INFO | query_executor | Q025 | dependencies: ['Q021', 'Q022', 'Q023', 'Q024']
+2026-08-28 21:31:41,641 | INFO | query_executor | Q025 | LLM attempt 1/3
+2026-08-28 21:31:42,642 | INFO | query_executor | Q025 | LLM call started | attempt=1
+2026-08-28 21:31:42,669 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:31:42,670 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 22.000000 seconds
+2026-08-28 21:32:09,130 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:32:09,131 | INFO | query_executor | Q025 | LLM response received | attempt=1
+2026-08-28 21:32:09,132 | INFO | query_executor | Q025 | JSON parsing successful | attempt=1
+2026-08-28 21:32:09,134 | INFO | query_executor | Q025 | Pydantic validation successful | attempt=1
+2026-08-28 21:32:10,137 | INFO | query_executor | [25/26] Q025 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q025.json
+2026-08-28 21:32:10,137 | INFO | query_executor | [26/26] Q026 START | target=review_status
+2026-08-28 21:32:10,138 | INFO | query_executor | Q026 | retrieval started
+2026-08-28 21:32:10,138 | INFO | query_executor | Q026 | RETRIEVAL START
+2026-08-28 21:32:10,190 | INFO | query_executor | Q026 | RETRIEVED 3 CHUNKS
+2026-08-28 21:32:10,190 | INFO | query_executor | Q026 | CHUNK 1 | score=0.810886
+2026-08-28 21:32:10,191 | INFO | query_executor | Q026 | CHUNK 1 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:32:10,193 | INFO | query_executor | Q026 | CHUNK 1 | source_type=pdf
+2026-08-28 21:32:10,194 | INFO | query_executor | Q026 | CHUNK 1 | chunk_index=3
+2026-08-28 21:32:10,194 | INFO | query_executor | Q026 | CHUNK 1 | CONTENT START
+[Page 3]
+View Reports 
+Yes 
+Yes 
+Limited 
+Non Functional Requirements 
+Category 
+Requirement 
+Availability 
+99.9% uptime 
+Performance 
+<3 second response 
+Security 
+MFA support 
+Risk Register 
+Risk 
+Impact 
+Mitigation 
+Data migration issues 
+High 
+Validation and testing 
+User adoption 
+Medium 
+Training program 
+Acceptance Criteria 
+All critical requirements must pass UAT and inventory transactions must be accurately 
+recorded.
+CONTENT END
+2026-08-28 21:32:10,195 | INFO | query_executor | Q026 | CHUNK 2 | score=0.876219
+2026-08-28 21:32:10,195 | INFO | query_executor | Q026 | CHUNK 2 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:32:10,195 | INFO | query_executor | Q026 | CHUNK 2 | source_type=pdf
+2026-08-28 21:32:10,195 | INFO | query_executor | Q026 | CHUNK 2 | chunk_index=2
+2026-08-28 21:32:10,195 | INFO | query_executor | Q026 | CHUNK 2 | CONTENT START
+Business Objectives 
+ID 
+Objective 
+KPI 
+BO-001 
+Reduce stock-outs 
+<2% 
+BO-002 
+Improve inventory accuracy 
+99% 
+Scope Matrix 
+In Scope 
+Out of Scope 
+Inventory tracking 
+Payroll 
+Purchase orders 
+HR management 
+Functional Requirements 
+Req ID 
+Requirement 
+Priority 
+FR-001 
+User Login 
+High 
+FR-002 
+Inventory Tracking 
+High 
+FR-003 
+Purchase Orders 
+Medium 
+FR-004 
+Reporting Dashboard 
+High 
+Role Permission Matrix 
+Feature 
+Admin 
+Manager 
+User 
+Create Item 
+Yes 
+Yes 
+No 
+Approve PO 
+Yes 
+Yes 
+No
+CONTENT END
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | CHUNK 3 | score=0.888943
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | CHUNK 3 | source=BRD_Inventory_Management_System.pdf
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | CHUNK 3 | source_type=pdf
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | CHUNK 3 | chunk_index=0
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | CHUNK 3 | CONTENT START
+[Page 1]
+Business Requirements Document​
+Inventory Management System 
+Version 1.0​
+Prepared by: M365 Copilot​
+Date: 26 Aug 2026
+CONTENT END
+2026-08-28 21:32:10,196 | INFO | query_executor | Q026 | RETRIEVAL COMPLETE
+2026-08-28 21:32:10,197 | INFO | query_executor | Q026 | dependencies: ['Q021', 'Q022', 'Q024', 'Q025']
+2026-08-28 21:32:10,197 | INFO | query_executor | Q026 | LLM attempt 1/3
+2026-08-28 21:32:11,198 | INFO | query_executor | Q026 | LLM call started | attempt=1
+2026-08-28 21:32:11,227 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-08-28 21:32:11,228 | INFO | groq._base_client | Retrying request to /openai/v1/chat/completions in 55.000000 seconds
+2026-08-28 21:33:08,445 | INFO | httpx | HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-08-28 21:33:08,446 | INFO | query_executor | Q026 | LLM response received | attempt=1
+2026-08-28 21:33:08,447 | INFO | query_executor | Q026 | JSON parsing successful | attempt=1
+2026-08-28 21:33:08,449 | INFO | query_executor | Q026 | Pydantic validation successful | attempt=1
+2026-08-28 21:33:09,452 | INFO | query_executor | [26/26] Q026 COMPLETE | status=success | file=C:\workspace\drs_generator\query_results\Q026.json
+2026-08-28 21:33:09,452 | INFO | query_executor | Sequential query execution completed: 26/26
+2026-08-28 21:33:09,453 | INFO | pipeline | ================================================================================
+2026-08-28 21:33:09,453 | INFO | pipeline | QUERY EXECUTION COMPLETED
+2026-08-28 21:33:09,453 | INFO | pipeline | Total: 26 | Successful: 24 | Failed: 2
+2026-08-28 21:33:09,454 | INFO | pipeline | ================================================================================

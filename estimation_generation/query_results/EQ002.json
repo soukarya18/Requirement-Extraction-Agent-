@@ -1,0 +1,39 @@
+{
+  "query_id": "EQ002",
+  "target": "business_requirements",
+  "question": "Extract every Future State Business Requirements mentioned in the document .",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "rule_id": "BR-001",
+      "rule_statement": "The solution shall allow authorized Hiring Managers and HR Operations users to create, save and submit a new employee onboarding request through a web-based interface.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    },
+    {
+      "rule_id": "BR-002",
+      "rule_statement": "The solution shall support upload of identity evidence, employment contracts, tax documents, certifications and other configured onboarding documents.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    },
+    {
+      "rule_id": "BR-003",
+      "rule_statement": "The solution shall verify that mandatory identity and employment documents for the selected employee type and jurisdiction are available before verification can be completed.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    },
+    {
+      "rule_id": "BR-004",
+      "rule_statement": "The solution shall route onboarding tasks to HR Operations, Compliance, IT Access and Facilities according to configured role, location and employment rules.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    },
+    {
+      "rule_id": "BR-005",
+      "rule_statement": "Authorized approvers shall be able to approve, reject or return an onboarding request for additional information, with mandatory comments where configured.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    },
+    {
+      "rule_id": "BR-006",
+      "rule_statement": "Onboarding Notifications",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 8. Future-State Business Requirements"
+    }
+  ]
+}

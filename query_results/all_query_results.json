@@ -1,0 +1,1345 @@
+{
+  "Q001": {
+    "query_id": "Q001",
+    "target": "project_metadata",
+    "question": "Extract the project name, document version, preparer, and review status explicitly stated in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "project_name": "Loan Processing Automation",
+      "version": "1.0",
+      "prepared_by": "Business Analysis Team",
+      "review_status": null,
+      "source_reference": [
+        "loan_processing_automation_BRS.docx - Document Control section (Context 1)",
+        "loan_processing_automation_BRS.docx - 1. Project Information section (Context 2)"
+      ]
+    }
+  },
+  "Q002": {
+    "query_id": "Q002",
+    "target": "executive_summary",
+    "question": "Summarize the business initiative, problem or opportunity, proposed solution, and intended outcome as explicitly described in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "summary": "The initiative is a proof‑of‑concept using a pre‑filled Business Requirements Specification (BRS) to demonstrate extraction of business requirements, generation of a Detailed Requirement Specification (DRS), creation of user stories and acceptance criteria, and traceability from business objectives to implementation‑ready backlog items. The problem is that the current loan processing workflow requires duplicate data entry, manual exchange of financial statements and documents via email or shared folders, analysts spending time chasing missing information, separate tracking of risk and credit approvals, manual follow‑up of approval conditions, and an inability to reliably identify applications approaching their processing SLA. The proposed solution is to extract and generate these requirement artifacts as described, establishing traceability to implementation‑ready backlog items. The intended outcome is a set of automated artifacts (DRS, user stories, acceptance criteria) and traceable backlog items that address the identified limitations.",
+      "source_reference": [
+        "loan_processing_automation_BRS.docx - Document Purpose",
+        "loan_processing_automation_BRS.docx - 3. Business Problem Statement"
+      ]
+    }
+  },
+  "Q003": {
+    "query_id": "Q003",
+    "target": "business_background",
+    "question": "Extract a dedicated business background mentioned in the given document . If no dedicated business background or current business context is explicitly stated in the source documents, return null.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "background": "The organization currently processes corporate and institutional loan requests through email, spreadsheets and manual credit work queues. Relationship Managers collect borrower information and financial documents, after which Operations, Credit, Risk, Compliance and Loan Administration perform separate checks before a facility can be approved and set up. Information is repeatedly keyed into downstream records.\nA typical loan request takes twelve business days from initial submission to facility setup. Delays are concentrated around incomplete borrower packs, financial spreading, credit review, risk approval and follow-up on approval conditions. Management has limited real-time visibility of where an application is waiting.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 2. Business Background"
+    }
+  },
+  "Q004": {
+    "query_id": "Q004",
+    "target": "business_objectives",
+    "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "objective_id": "BO-01",
+        "objective": "Reduce end-to-end loan processing cycle time.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+      },
+      {
+        "objective_id": "BO-02",
+        "objective": "Reduce manual operational effort.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+      },
+      {
+        "objective_id": "BO-03",
+        "objective": "Improve application status visibility.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+      },
+      {
+        "objective_id": "BO-04",
+        "objective": "Strengthen credit and risk control adherence.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+      },
+      {
+        "objective_id": "BO-05",
+        "objective": "Provide full auditability.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+      }
+    ]
+  },
+  "Q005": {
+    "query_id": "Q005",
+    "target": "scope",
+    "question": "Extract the in-scope capabilities, processes, products, users, systems, or activities explicitly included in the initiative.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "in_scope": [],
+      "source_reference": null
+    }
+  },
+  "Q006": {
+    "query_id": "Q006",
+    "target": "out_of_scope",
+    "question": "Extract all explicitly stated items, capabilities, processes, users, systems, or activities that are out of scope.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "item_id": null,
+        "item": "Changes to core lending product configuration.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+      },
+      {
+        "item_id": null,
+        "item": "Automated calculation of interest, fees or repayment schedules.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+      },
+      {
+        "item_id": null,
+        "item": "Maintenance of historical loan master data.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+      },
+      {
+        "item_id": null,
+        "item": "Migration of historical loan applications beyond the agreed POC sample set.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+      }
+    ]
+  },
+  "Q007": {
+    "query_id": "Q007",
+    "target": "stakeholders",
+    "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Business Sponsor",
+        "responsibility": "Funding, business outcome and executive decisions.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Business Owner",
+        "responsibility": "Process ownership, priorities and acceptance.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Relationship Manager",
+        "responsibility": "Borrower intake and application completeness.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Credit Lead",
+        "responsibility": "Credit assessment and recommendation quality.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Risk Manager",
+        "responsibility": "Risk classification and approval authority.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Loan Administration Lead",
+        "responsibility": "Facility setup and operational completion.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "stakeholder_id": null,
+        "name_or_role": "Business Analyst",
+        "responsibility": "Requirement quality, traceability and clarification.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      }
+    ]
+  },
+  "Q008": {
+    "query_id": "Q008",
+    "target": "personas",
+    "question": "Extract all explicitly identified user personas or user roles and describe their relevant needs or responsibilities.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "persona_id": null,
+        "role": "Business Sponsor",
+        "needs_or_responsibilities": "Funding, business outcome and executive decisions.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Business Owner",
+        "needs_or_responsibilities": "Process ownership, priorities and acceptance.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Relationship Manager",
+        "needs_or_responsibilities": "Borrower intake and application completeness.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Credit Lead",
+        "needs_or_responsibilities": "Credit assessment and recommendation quality.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Risk Manager",
+        "needs_or_responsibilities": "Risk classification and approval authority.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Loan Administration Lead",
+        "needs_or_responsibilities": "Facility setup and operational completion.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      },
+      {
+        "persona_id": null,
+        "role": "Business Analyst",
+        "needs_or_responsibilities": "Requirement quality, traceability and clarification.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+      }
+    ]
+  },
+  "Q009": {
+    "query_id": "Q009",
+    "target": "current_state_summary",
+    "question": "Extract the current-state processes, systems, pain points, limitations, and existing practices explicitly described in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "summary": "The current loan processing workflow requires manual re‑entry of borrower and facility data across intake, credit, and loan administration; documents are exchanged via email or shared folders; credit analysts spend time chasing missing information; risk and credit approvals are tracked separately, making dependencies hard to see; approval conditions are followed up manually, causing delays; and operations cannot reliably identify applications nearing SLA.",
+      "pain_points": [
+        "Borrower and facility data are re-entered between intake, credit and loan administration.",
+        "Financial statements and supporting documents are exchanged through email or shared folders.",
+        "Credit analysts spend time chasing missing information instead of analysing complete applications.",
+        "Risk and credit approvals are tracked separately, making approval dependencies difficult to see.",
+        "Approval conditions are followed up manually and can delay facility setup.",
+        "Operations cannot reliably identify applications approaching their processing SLA."
+      ],
+      "existing_systems_or_processes": [],
+      "source_reference": [
+        "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      ]
+    }
+  },
+  "Q010": {
+    "query_id": "Q010",
+    "target": "future_state_overview",
+    "question": "Extract the explicitly described future-state capabilities, target operating model, expected behavior, or desired end state.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "overview": null,
+      "capabilities": [
+        "The solution shall notify relevant users when an application is assigned, returned, approved, rejected, conditionally approved, overdue or completed.",
+        "Authorized users shall be able to view application stage, responsible owner, outstanding conditions, aging and next action.",
+        "The solution shall maintain an immutable history of application submissions, financial-data changes, document actions, credit decisions, conditions and status transitions.",
+        "Users shall be able to search loan applications and generate standard reports by status, product, borrower type, risk class, age and owning team.",
+        "The solution shall place an application on hold when mandatory information is missing, a validation fails or an approval condition remains unresolved, and shall record the reason."
+      ],
+      "source_reference": [
+        "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-006)",
+        "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-007)",
+        "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-008)",
+        "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-009)",
+        "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-010)"
+      ]
+    }
+  },
+  "Q011": {
+    "query_id": "Q011",
+    "target": "assumptions",
+    "question": "Extract all assumptions explicitly stated or clearly documented as assumptions in the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "assumption_id": null,
+        "assumption": "All POC users have valid corporate identities.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+      },
+      {
+        "assumption_id": null,
+        "assumption": "Credit scoring, KYC and risk services can be represented by mock services if live APIs are unavailable.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+      },
+      {
+        "assumption_id": null,
+        "assumption": "Email notification infrastructure is available for integration or simulation.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+      },
+      {
+        "assumption_id": null,
+        "assumption": "POC loan documents use synthetic or anonymized data only.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+      },
+      {
+        "assumption_id": null,
+        "assumption": "Business users will provide feedback and acceptance decisions for the POC scenarios.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+      }
+    ]
+  },
+  "Q012": {
+    "query_id": "Q012",
+    "target": "constraints",
+    "question": "Extract all explicitly stated business, technical, regulatory, resource, timing, budget, platform, or other constraints.",
+    "response_type": "array",
+    "status": "success",
+    "answer": []
+  },
+  "Q013": {
+    "query_id": "Q013",
+    "target": "dependencies",
+    "question": "Extract all explicitly stated dependencies on teams, systems, vendors, data, approvals, integrations, infrastructure, or other external/internal factors.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "dependency_id": null,
+        "dependency": "Email",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Shared folders",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Approved Azure services",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Approved data regions and repositories",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "SharePoint",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Teams",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Jira",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Azure DevOps",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Human review",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+      },
+      {
+        "dependency_id": null,
+        "dependency": "Risk and credit approvals",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      }
+    ]
+  },
+  "Q014": {
+    "query_id": "Q014",
+    "target": "risks",
+    "question": "Extract all risks explicitly identified in the source documents, including their descriptions and any stated impacts, likelihoods, or mitigations.",
+    "response_type": "array",
+    "status": "success",
+    "answer": []
+  },
+  "Q015": {
+    "query_id": "Q015",
+    "target": "functional_requirements",
+    "question": "Extract every functional requirement explicitly supported by the source documents. For each requirement, capture the requested behavior, actor, trigger, inputs, business logic, outputs, priority, and source reference. Do not invent details for fields that are not explicitly supported.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "fr_id": "FR-001",
+        "title": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-002",
+        "title": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-003",
+        "title": "Upload, classify, preview, replace and download loan supporting documents.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-004",
+        "title": "Validate mandatory borrower data and required credit documents before submission.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-005",
+        "title": "Assign and reassign credit workflow tasks to authorized users or groups.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-006",
+        "title": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-007",
+        "title": "Display application stage, pending conditions, owner and aging.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-008",
+        "title": "Send email notifications based on configured loan workflow events.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Should",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-009",
+        "title": "Search applications using application ID, borrower, product, status and date range.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-010",
+        "title": "Generate loan volume, status, aging, risk and SLA reports.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Should",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-011",
+        "title": "Export authorized loan report results to a standard downloadable format.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Could",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "fr_id": "FR-012",
+        "title": "Capture a complete audit history for each loan application.",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Must",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      }
+    ]
+  },
+  "Q016": {
+    "query_id": "Q016",
+    "target": "non_functional_requirements",
+    "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "nfr_id": "NFR-001",
+        "category": "Availability",
+        "requirement": "The production solution shall target 99.9% monthly service availability, excluding agreed maintenance windows.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-002",
+        "category": "Performance",
+        "requirement": "For normal operating load, standard application pages shall respond within 3 seconds for 95% of requests.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-003",
+        "category": "Capacity",
+        "requirement": "The solution shall support up to 500 concurrent users and allow future scaling.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-004",
+        "category": "Security",
+        "requirement": "Access shall use corporate authentication and role-based authorization with least-privilege principles.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-005",
+        "category": "Privacy",
+        "requirement": "Borrower, financial and collateral information shall be handled in accordance with applicable data protection and organizational privacy requirements.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-006",
+        "category": "Auditability",
+        "requirement": "Credit and workflow events shall be logged with user, timestamp, action, decision and outcome.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-007",
+        "category": "Retention",
+        "requirement": "Loan processing records shall be retained for seven years unless a different approved schedule applies.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      },
+      {
+        "nfr_id": "NFR-008",
+        "category": "Accessibility",
+        "requirement": "Core user journeys shall support accessible keyboard navigation and readable screen content.",
+        "priority": null,
+        "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+      }
+    ]
+  },
+  "Q017": {
+    "query_id": "Q017",
+    "target": "business_rules",
+    "question": "Extract all explicitly stated business rules",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "rule_id": "RULE-001",
+        "rule_statement": "All mandatory borrower and credit documents must be present before credit review can be completed.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-002",
+        "rule_statement": "A High Risk loan requires Risk Manager approval in addition to the applicable Credit approval.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-003",
+        "rule_statement": "An application with missing mandatory information shall be placed on hold and returned to the requestor.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-004",
+        "rule_statement": "Every approval, rejection, return and conditional approval shall include timestamp, decision-maker identity and decision details.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-005",
+        "rule_statement": "Loan facility setup shall not begin until required Credit, Risk and Compliance approvals are recorded and mandatory conditions are satisfied.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-006",
+        "rule_statement": "A rejection shall require a reason and shall close the active workflow unless reopened by an authorized role.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-007",
+        "rule_statement": "Only authorized users may view or download borrower financial and collateral documents.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      },
+      {
+        "rule_id": "RULE-008",
+        "rule_statement": "Overdue credit and approval tasks shall trigger reminders according to the configured SLA schedule.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+      }
+    ]
+  },
+  "Q018": {
+    "query_id": "Q018",
+    "target": "epics",
+    "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "epic_id": "EPIC-001",
+        "epic_name": "Loan Application Processing",
+        "description": null,
+        "linked_fr_ids": [
+          "FR-001",
+          "FR-002",
+          "FR-004"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "epic_id": "EPIC-002",
+        "epic_name": "Loan Document Management",
+        "description": null,
+        "linked_fr_ids": [
+          "FR-003"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "epic_id": "EPIC-003",
+        "epic_name": "Credit Workflow Management",
+        "description": null,
+        "linked_fr_ids": [
+          "FR-005",
+          "FR-006",
+          "FR-007",
+          "FR-008"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "epic_id": "EPIC-004",
+        "epic_name": "Application Search and Reporting",
+        "description": null,
+        "linked_fr_ids": [
+          "FR-009",
+          "FR-010",
+          "FR-011"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "epic_id": "EPIC-005",
+        "epic_name": "Audit History Capture",
+        "description": null,
+        "linked_fr_ids": [
+          "FR-012"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      }
+    ]
+  },
+  "Q019": {
+    "query_id": "Q019",
+    "target": "user_stories",
+    "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "story_id": "US-FR-001",
+        "story_title": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+        "role": null,
+        "capability": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-001"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-002",
+        "story_title": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+        "role": null,
+        "capability": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-002"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-003",
+        "story_title": "Upload, classify, preview, replace and download loan supporting documents.",
+        "role": null,
+        "capability": "Upload, classify, preview, replace and download loan supporting documents.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-003"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-004",
+        "story_title": "Validate mandatory borrower data and required credit documents before submission.",
+        "role": null,
+        "capability": "Validate mandatory borrower data and required credit documents before submission.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-004"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-005",
+        "story_title": "Assign and reassign credit workflow tasks to authorized users or groups.",
+        "role": null,
+        "capability": "Assign and reassign credit workflow tasks to authorized users or groups.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-005"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-006",
+        "story_title": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+        "role": null,
+        "capability": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-006"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-007",
+        "story_title": "Display application stage, pending conditions, owner and aging.",
+        "role": null,
+        "capability": "Display application stage, pending conditions, owner and aging.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-007"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-008",
+        "story_title": "Send email notifications based on configured loan workflow events.",
+        "role": null,
+        "capability": "Send email notifications based on configured loan workflow events.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-008"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-009",
+        "story_title": "Search applications using application ID, borrower, product, status and date range.",
+        "role": null,
+        "capability": "Search applications using application ID, borrower, product, status and date range.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-009"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-010",
+        "story_title": "Generate loan volume, status, aging, risk and SLA reports.",
+        "role": null,
+        "capability": "Generate loan volume, status, aging, risk and SLA reports.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-010"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-011",
+        "story_title": "Export authorized loan report results to a standard downloadable format.",
+        "role": null,
+        "capability": "Export authorized loan report results to a standard downloadable format.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-011"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      },
+      {
+        "story_id": "US-FR-012",
+        "story_title": "Capture a complete audit history for each loan application.",
+        "role": null,
+        "capability": "Capture a complete audit history for each loan application.",
+        "benefit": null,
+        "linked_fr_ids": [
+          "FR-012"
+        ],
+        "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+      }
+    ]
+  },
+  "Q020": {
+    "query_id": "Q020",
+    "target": "acceptance_criteria",
+    "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "ac_id": "AC-006",
+        "user_story_id": "US-FR-008",
+        "given": "a configured approval event",
+        "when": "the event occurs",
+        "then": "the intended recipient receives a notification containing the loan application identifier and required action.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+      },
+      {
+        "ac_id": "AC-007",
+        "user_story_id": "US-FR-007",
+        "given": "an authorized user",
+        "when": "the loan application is opened",
+        "then": "stage, owner, aging and outstanding conditions are visible.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+      },
+      {
+        "ac_id": "AC-008",
+        "user_story_id": "US-FR-012",
+        "given": "a saved credit decision",
+        "when": "the audit history is opened",
+        "then": "the user, timestamp, decision and outcome are displayed.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+      },
+      {
+        "ac_id": "AC-009",
+        "user_story_id": "US-FR-009",
+        "given": "search criteria",
+        "when": "the user searches loans",
+        "then": "matching authorized applications are returned and can be filtered.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+      },
+      {
+        "ac_id": "AC-010",
+        "user_story_id": "US-FR-004",
+        "given": "an unresolved approval condition",
+        "when": "the application is placed on hold",
+        "then": "the hold reason, condition and responsible owner are recorded.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+      }
+    ]
+  },
+  "Q021": {
+    "query_id": "Q021",
+    "target": "missing_information",
+    "question": "Identify information required by the DRS structure that is materially missing from the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "item_id": "M1",
+        "missing_information": "Business context and problem statement",
+        "why_needed": "Required to define the business background and the problem the loan processing automation aims to solve, forming the foundation for all downstream requirements.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M2",
+        "missing_information": "Objectives and measurable outcomes",
+        "why_needed": "Needed to establish clear goals and success criteria that can be validated against the solution.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M3",
+        "missing_information": "In-scope and out-of-scope items",
+        "why_needed": "Defines the boundaries of the solution, preventing scope creep and guiding requirement prioritization.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M4",
+        "missing_information": "Stakeholders and roles",
+        "why_needed": "Identifies who is involved, their responsibilities, and who must approve or use the system.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M5",
+        "missing_information": "Business requirements",
+        "why_needed": "Specifies the high‑level capabilities the solution must deliver to meet business needs.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M6",
+        "missing_information": "Functional requirements",
+        "why_needed": "Describes detailed system behavior needed to implement the business requirements.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M7",
+        "missing_information": "Non‑functional requirements",
+        "why_needed": "Defines quality attributes such as performance, security, and usability that the solution must satisfy.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M8",
+        "missing_information": "Business rules",
+        "why_needed": "Provides the decision logic and constraints that govern loan processing.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M9",
+        "missing_information": "Assumptions",
+        "why_needed": "Documents conditions presumed true that affect requirement interpretation and implementation.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M10",
+        "missing_information": "Constraints",
+        "why_needed": "Identifies technical, regulatory, or operational limits that shape solution design.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M11",
+        "missing_information": "User stories",
+        "why_needed": "Translates requirements into actionable development items aligned with stakeholder needs.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M12",
+        "missing_information": "Source‑linked traceability from BRS sections to DRS requirements and backlog items",
+        "why_needed": "Ensures each requirement can be traced back to its origin for validation, impact analysis, and compliance.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "item_id": "M13",
+        "missing_information": "Ambiguities, missing information, conflicts and duplicates requiring human review",
+        "why_needed": "Highlights areas that need clarification before finalizing the DRS to avoid defects and rework.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      }
+    ]
+  },
+  "Q022": {
+    "query_id": "Q022",
+    "target": "ambiguous_statements",
+    "question": "Identify statements in the source documents that are ambiguous, contradictory, vague, or insufficiently defined for reliable requirement specification.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "ambiguity_id": "A1",
+        "statement": "Risk and credit approvals are tracked separately, making approval dependencies difficult to see.",
+        "issue": "Vague description of how approvals are tracked separately and what specific approval dependencies are difficult to see.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "ambiguity_id": "A2",
+        "statement": "Approval conditions are followed up manually and can delay facility setup.",
+        "issue": "Insufficient detail on what constitutes \"approval conditions\", how manual follow‑up is performed, and the criteria that cause delays.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "ambiguity_id": "A3",
+        "statement": "Operations cannot reliably identify applications approaching their processing SLA.",
+        "issue": "Ambiguous definition of \"cannot reliably identify\"; lacks metrics or thresholds for reliability and method of identification.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "ambiguity_id": "A4",
+        "statement": "Financial statements and supporting documents are exchanged through email or shared folders.",
+        "issue": "Vague about the security, format, and governance of document exchange; does not specify acceptable methods or controls.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      }
+    ]
+  },
+  "Q023": {
+    "query_id": "Q023",
+    "target": "clarification_log",
+    "question": "Create clarification questions from the identified missing information and ambiguous statements. Each question should explain why clarification is needed.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "cq_id": "CQ-M1",
+        "question": "What is the business context and problem statement for the loan processing automation?",
+        "reason": "Required to define the business background and the problem the loan processing automation aims to solve, forming the foundation for all downstream requirements.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M2",
+        "question": "What are the objectives and measurable outcomes for this loan processing automation project?",
+        "reason": "Needed to establish clear goals and success criteria that can be validated against the solution.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M3",
+        "question": "What items are in‑scope and out‑of‑scope for the loan processing automation solution?",
+        "reason": "Defines the boundaries of the solution, preventing scope creep and guiding requirement prioritization.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M4",
+        "question": "Who are the stakeholders and what are their roles in the loan processing automation initiative?",
+        "reason": "Identifies who is involved, their responsibilities, and who must approve or use the system.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M5",
+        "question": "What are the high‑level business requirements that the solution must deliver?",
+        "reason": "Specifies the high‑level capabilities the solution must deliver to meet business needs.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M6",
+        "question": "What functional requirements describe the detailed system behavior needed to implement the business requirements?",
+        "reason": "Describes detailed system behavior needed to implement the business requirements.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M7",
+        "question": "What non‑functional requirements (e.g., performance, security, usability) must the solution satisfy?",
+        "reason": "Defines quality attributes such as performance, security, and usability that the solution must satisfy.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M8",
+        "question": "What business rules govern loan processing and decision making?",
+        "reason": "Provides the decision logic and constraints that govern loan processing.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M9",
+        "question": "What assumptions are being made about the loan processing environment and stakeholders?",
+        "reason": "Documents conditions presumed true that affect requirement interpretation and implementation.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M10",
+        "question": "What constraints (technical, regulatory, operational) limit the design of the solution?",
+        "reason": "Identifies technical, regulatory, or operational limits that shape solution design.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M11",
+        "question": "What user stories should be created to translate requirements into actionable development items?",
+        "reason": "Translates requirements into actionable development items aligned with stakeholder needs.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M12",
+        "question": "How should traceability be established from BRS sections to DRS requirements and backlog items?",
+        "reason": "Ensures each requirement can be traced back to its origin for validation, impact analysis, and compliance.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-M13",
+        "question": "Are there any ambiguities, missing information, conflicts, or duplicates that need human review?",
+        "reason": "Highlights areas that need clarification before finalizing the DRS to avoid defects and rework.",
+        "status": "Open",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "cq_id": "CQ-A1",
+        "question": "Can you clarify how risk and credit approvals are currently tracked separately and which approval dependencies are difficult to see?",
+        "reason": "Vague description of how approvals are tracked separately and what specific approval dependencies are difficult to see.",
+        "status": "Open",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "cq_id": "CQ-A2",
+        "question": "What specific \"approval conditions\" exist, how are they followed up manually, and which criteria cause delays in facility setup?",
+        "reason": "Insufficient detail on what constitutes \"approval conditions\", how manual follow‑up is performed, and the criteria that cause delays.",
+        "status": "Open",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "cq_id": "CQ-A3",
+        "question": "What metrics or thresholds define \"cannot reliably identify\" applications approaching their processing SLA, and how is reliability currently measured?",
+        "reason": "Ambiguous definition of \"cannot reliably identify\"; lacks metrics or thresholds for reliability and method of identification.",
+        "status": "Open",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "cq_id": "CQ-A4",
+        "question": "What are the security, format, and governance requirements for exchanging financial statements and supporting documents, and which methods are considered acceptable?",
+        "reason": "Vague about the security, format, and governance of document exchange; does not specify acceptable methods or controls.",
+        "status": "Open",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      }
+    ]
+  },
+  "Q024": {
+    "query_id": "Q024",
+    "target": "traceability_matrix",
+    "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "trace_id": "T-001",
+        "business_objective": "BO-01",
+        "functional_requirement": "FR-005",
+        "user_story": "US-FR-005",
+        "acceptance_criteria": null
+      },
+      {
+        "trace_id": "T-002",
+        "business_objective": "BO-01",
+        "functional_requirement": "FR-007",
+        "user_story": "US-FR-007",
+        "acceptance_criteria": "AC-007"
+      },
+      {
+        "trace_id": "T-003",
+        "business_objective": "BO-01",
+        "functional_requirement": "FR-008",
+        "user_story": "US-FR-008",
+        "acceptance_criteria": "AC-006"
+      },
+      {
+        "trace_id": "T-004",
+        "business_objective": "BO-02",
+        "functional_requirement": "FR-001",
+        "user_story": "US-FR-001",
+        "acceptance_criteria": null
+      },
+      {
+        "trace_id": "T-005",
+        "business_objective": "BO-02",
+        "functional_requirement": "FR-004",
+        "user_story": "US-FR-004",
+        "acceptance_criteria": "AC-010"
+      },
+      {
+        "trace_id": "T-006",
+        "business_objective": "BO-02",
+        "functional_requirement": "FR-005",
+        "user_story": "US-FR-005",
+        "acceptance_criteria": null
+      },
+      {
+        "trace_id": "T-007",
+        "business_objective": "BO-03",
+        "functional_requirement": "FR-007",
+        "user_story": "US-FR-007",
+        "acceptance_criteria": "AC-007"
+      },
+      {
+        "trace_id": "T-008",
+        "business_objective": "BO-03",
+        "functional_requirement": "FR-009",
+        "user_story": "US-FR-009",
+        "acceptance_criteria": "AC-009"
+      },
+      {
+        "trace_id": "T-009",
+        "business_objective": "BO-03",
+        "functional_requirement": "FR-010",
+        "user_story": "US-FR-010",
+        "acceptance_criteria": null
+      },
+      {
+        "trace_id": "T-010",
+        "business_objective": "BO-04",
+        "functional_requirement": "FR-004",
+        "user_story": "US-FR-004",
+        "acceptance_criteria": "AC-010"
+      },
+      {
+        "trace_id": "T-011",
+        "business_objective": "BO-04",
+        "functional_requirement": "FR-006",
+        "user_story": "US-FR-006",
+        "acceptance_criteria": null
+      },
+      {
+        "trace_id": "T-012",
+        "business_objective": "BO-05",
+        "functional_requirement": "FR-012",
+        "user_story": "US-FR-012",
+        "acceptance_criteria": "AC-008"
+      }
+    ]
+  },
+  "Q025": {
+    "query_id": "Q025",
+    "target": "review_recommendations",
+    "question": "Provide review recommendations based only on missing information, ambiguities, requirement quality issues, traceability gaps, or unsupported elements identified in the source and extracted DRS data.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "recommendation_id": "R1",
+        "recommendation": "Provide the Business context and problem statement for the loan processing automation.",
+        "reason": "The source checklist requires a business context and problem statement, but it is not present in the extracted DRS.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R2",
+        "recommendation": "Define the Objectives and measurable outcomes for the project.",
+        "reason": "The checklist lists objectives and measurable outcomes as required, yet they are missing from the current documentation.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R3",
+        "recommendation": "Specify In‑scope and out‑of‑scope items for the solution.",
+        "reason": "In‑scope and out‑of‑scope items are identified as needed in the checklist but are absent from the extracted data.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R4",
+        "recommendation": "Identify all Stakeholders and their roles in the initiative.",
+        "reason": "Stakeholder identification is required by the checklist and is currently missing.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R5",
+        "recommendation": "Document the high‑level Business requirements the solution must deliver.",
+        "reason": "Business requirements are listed as a required output but are not present in the DRS.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R6",
+        "recommendation": "Capture detailed Functional requirements describing system behavior.",
+        "reason": "Functional requirements are required by the checklist and are missing from the current artefacts.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R7",
+        "recommendation": "Specify Non‑functional requirements such as performance, security, and usability.",
+        "reason": "The checklist calls for non‑functional requirements, which are not provided in the extracted data.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R8",
+        "recommendation": "Record the Business rules governing loan processing and decision making.",
+        "reason": "Business rules are required by the checklist but are absent from the DRS.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R9",
+        "recommendation": "Document Assumptions underlying the loan processing environment and stakeholder expectations.",
+        "reason": "Assumptions are listed as needed in the checklist and are currently missing.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R10",
+        "recommendation": "Capture all Constraints (technical, regulatory, operational) that limit solution design.",
+        "reason": "Constraints are required by the checklist; only a subset is present in Context 3, indicating gaps.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R11",
+        "recommendation": "Create User stories that translate requirements into actionable development items.",
+        "reason": "User stories are a required output per the checklist but are not present in the current artefacts.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R12",
+        "recommendation": "Establish source‑linked traceability from BRS sections to DRS requirements and backlog items.",
+        "reason": "The checklist mandates source‑linked traceability, which is not demonstrated in the existing traceability matrix.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      },
+      {
+        "recommendation_id": "R13",
+        "recommendation": "Clarify the ambiguous statements identified as A1‑A4 in the Business Problem Statement.",
+        "reason": "Ambiguities regarding approval tracking, manual follow‑up, SLA identification, and document exchange were flagged as needing clarification.",
+        "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+      },
+      {
+        "recommendation_id": "R14",
+        "recommendation": "Add testable Acceptance Criteria for traceability entries where it is currently null (e.g., T‑001, T‑004, T‑006, T‑009, T‑011).",
+        "reason": "The traceability matrix shows missing acceptance criteria for several trace IDs, which are required for validation.",
+        "source_reference": "Q024 traceability matrix"
+      },
+      {
+        "recommendation_id": "R15",
+        "recommendation": "Link each Functional requirement in the traceability matrix to the specific BRS section it originates from.",
+        "reason": "The current matrix lacks explicit references to BRS sections, violating the checklist requirement for source‑linked traceability.",
+        "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+      }
+    ]
+  },
+  "Q026": {
+    "query_id": "Q026",
+    "target": "review_status",
+    "question": "Determine the appropriate review status from the source documents and extracted DRS results, considering unresolved missing information, ambiguities, traceability gaps, validation issues, and review recommendations. Use the extracted results directly; do not invent a review status or assume that missing information is resolved.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "status": "Requires Human Review",
+      "reason": "The DRS still has multiple missing information items, ambiguous statements, traceability gaps, and unmet review recommendations, indicating that the artefacts are not yet complete or validated.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    }
+  }
+}

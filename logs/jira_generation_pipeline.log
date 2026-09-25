@@ -1,0 +1,220 @@
+2026-08-29 11:29:37,358 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 11:29:37,358 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-08-29 11:29:37,358 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 11:29:37,362 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-08-29 11:29:42,171 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\drs_generator\data\knowledge_bases\active
+2026-08-29 11:29:42,173 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-08-29 11:29:42,173 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-08-29 11:29:42,648 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-08-29 11:33:39,751 | INFO | jira_generation_pipeline | Jira query execution complete | total=6 | success=1 | failed=5
+2026-08-29 11:33:39,793 | INFO | jira_generation_pipeline | Merged 6 Jira query results into C:\workspace\drs_generator\jira_query_results\all_jira_query_results.json
+2026-08-29 11:33:39,794 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-08-29 12:19:00,873 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 12:19:00,874 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-08-29 12:19:00,874 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 12:19:00,874 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\drs_generator\jira_query_results
+2026-08-29 12:19:00,880 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-08-29 12:19:05,665 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\drs_generator\data\knowledge_bases\active
+2026-08-29 12:19:05,668 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-08-29 12:19:05,668 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-08-29 12:19:06,240 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-08-29 12:29:37,975 | INFO | jira_generation_pipeline | Jira query execution complete | total=19 | success=18 | failed=1
+2026-08-29 12:29:37,987 | INFO | jira_generation_pipeline | Merged 19 Jira query results into C:\workspace\drs_generator\jira_query_results\all_jira_query_results.json
+2026-08-29 12:29:37,988 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-08-29 12:29:38,352 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\drs_generator\output\generated_jira_user_stories.docx
+2026-08-29 12:29:38,353 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 12:29:38,353 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-08-29 12:29:38,353 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 13:20:24,636 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 13:20:24,636 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-08-29 13:20:24,637 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 13:20:24,637 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\drs_generator\jira_query_results
+2026-08-29 13:20:24,651 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-08-29 13:20:29,494 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\drs_generator\data\knowledge_bases\active
+2026-08-29 13:20:29,496 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-08-29 13:20:29,497 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-08-29 13:20:30,076 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-08-29 13:27:45,217 | INFO | jira_generation_pipeline | Jira query execution complete | total=20 | success=18 | failed=2
+2026-08-29 13:27:45,231 | INFO | jira_generation_pipeline | Merged 20 Jira query results into C:\workspace\drs_generator\jira_query_results\all_jira_query_results.json
+2026-08-29 13:27:45,231 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-08-29 13:27:45,630 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\drs_generator\output\generated_jira_user_stories.docx
+2026-08-29 13:27:45,630 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 13:27:45,630 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-08-29 13:27:45,631 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 15:29:01,054 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 15:29:01,054 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-08-29 15:29:01,054 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 15:29:01,055 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\drs_generator\jira_query_results
+2026-08-29 15:29:01,069 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-08-29 15:29:05,826 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\drs_generator\data\knowledge_bases\active
+2026-08-29 15:29:05,829 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-08-29 15:29:05,829 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-08-29 15:29:06,425 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-08-29 15:48:16,245 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=37 | failed=4
+2026-08-29 15:48:16,274 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\drs_generator\jira_query_results\all_jira_query_results.json
+2026-08-29 15:48:16,275 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-08-29 19:44:26,375 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 19:44:26,378 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-08-29 19:44:26,378 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 19:44:26,379 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\drs_generator\jira_query_results
+2026-08-29 19:44:26,419 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-08-29 19:44:31,156 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\drs_generator\data\knowledge_bases\active
+2026-08-29 19:44:31,159 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-08-29 19:44:31,159 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-08-29 19:44:32,201 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-08-29 19:59:00,439 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=37 | failed=4
+2026-08-29 19:59:00,458 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\drs_generator\jira_query_results\all_jira_query_results.json
+2026-08-29 19:59:00,458 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-08-29 19:59:00,812 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\drs_generator\output\generated_jira_user_stories.docx
+2026-08-29 19:59:00,812 | INFO | jira_generation_pipeline | ================================================================================
+2026-08-29 19:59:00,812 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-08-29 19:59:00,812 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:02:21,988 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:02:21,994 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-07 12:02:21,994 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:02:21,994 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-07 12:02:22,024 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-07 12:02:26,892 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-07 12:02:26,895 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-07 12:02:26,895 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-07 12:02:27,485 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-07 12:17:20,670 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=39 | failed=2
+2026-09-07 12:17:20,690 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-07 12:17:20,690 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-07 12:17:20,691 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-07 12:17:20,691 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-07 12:26:04,665 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:26:04,665 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-07 12:26:04,666 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:26:04,666 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-07 12:26:04,689 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-07 12:26:09,612 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-07 12:26:09,614 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-07 12:26:09,614 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-07 12:26:10,179 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-07 12:36:42,994 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=31 | failed=10
+2026-09-07 12:36:43,012 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-07 12:36:43,012 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-07 12:36:43,012 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-07 12:36:43,013 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-07 12:36:43,075 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-07 12:36:43,075 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 12:36:43,075 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-07 12:36:43,075 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 13:59:58,247 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 13:59:58,248 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-07 13:59:58,248 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 13:59:58,248 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-07 13:59:58,274 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-07 14:00:03,279 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-07 14:00:03,281 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-07 14:00:03,282 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-07 14:00:03,873 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-07 14:15:29,916 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=39 | failed=2
+2026-09-07 14:15:29,936 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-07 14:15:29,936 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-07 14:15:29,937 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-07 14:15:29,937 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-07 14:15:30,371 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-07 14:15:30,371 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 14:15:30,372 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-07 14:15:30,372 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 14:42:47,470 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 14:42:47,471 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-07 14:42:47,471 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 14:42:47,472 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-07 14:42:47,501 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-07 14:42:52,396 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-07 14:42:52,401 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-07 14:42:52,401 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-07 14:42:52,979 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-07 14:59:23,021 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=38 | failed=3
+2026-09-07 14:59:23,040 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-07 14:59:23,040 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-07 14:59:23,041 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-07 14:59:23,041 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-07 14:59:23,460 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-07 14:59:23,461 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-07 14:59:23,461 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-07 14:59:23,461 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-08 21:11:40,940 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-08 21:11:40,941 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-08 21:11:40,941 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-08 21:11:40,941 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-08 21:11:40,968 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-08 21:11:45,819 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-08 21:11:45,821 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-08 21:11:45,822 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-08 21:11:46,421 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-08 21:26:11,946 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=39 | failed=2
+2026-09-08 21:26:11,965 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-08 21:26:11,965 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-08 21:26:11,966 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-08 21:26:11,966 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-08 21:26:12,294 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-08 21:26:12,294 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-08 21:26:12,294 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-08 21:26:12,294 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 15:23:48,955 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 15:23:49,187 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-10 15:23:49,190 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 15:23:49,221 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-10 15:23:49,267 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-10 15:23:55,115 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-10 15:23:55,118 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-10 15:23:55,118 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-10 15:23:59,852 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-10 15:40:54,453 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=38 | failed=3
+2026-09-10 15:40:54,493 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-10 15:40:54,494 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-10 15:40:54,495 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-10 15:40:54,495 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-10 15:40:54,939 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-10 15:40:54,940 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 15:40:54,940 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-10 15:40:54,940 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 19:23:19,474 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 19:23:19,725 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-10 19:23:19,736 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 19:23:19,751 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-10 19:23:20,066 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-10 19:23:25,135 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-10 19:23:25,140 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-10 19:23:25,150 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-10 19:23:31,446 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-10 19:42:45,410 | INFO | jira_generation_pipeline | Jira query execution complete | total=41 | success=38 | failed=3
+2026-09-10 19:42:45,431 | INFO | jira_generation_pipeline | Merged 41 Jira query results into C:\workspace\requirement_extraction\jira_query_results\all_jira_query_results.json
+2026-09-10 19:42:45,431 | INFO | jira_generation_pipeline | Assembling Jira document...
+2026-09-10 19:42:45,431 | INFO | jira_generation_pipeline | BRS name: loan_processing_automation_BRS
+2026-09-10 19:42:45,432 | INFO | jira_generation_pipeline | Output directory: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS
+2026-09-10 19:42:45,893 | INFO | jira_generation_pipeline | Jira document generated: C:\workspace\requirement_extraction\output\loan_processing_automation_BRS\generated_jira_user_stories.docx
+2026-09-10 19:42:45,893 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-10 19:42:45,893 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE COMPLETED
+2026-09-10 19:42:45,893 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-11 15:21:24,955 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-11 15:21:25,213 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-11 15:21:25,214 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-11 15:21:25,217 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-11 15:21:25,255 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-11 15:21:30,956 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-11 15:21:30,959 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-11 15:21:30,960 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-11 15:21:35,683 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-23 11:57:09,016 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-23 11:57:09,021 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-23 11:57:09,022 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-23 11:57:09,022 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-23 11:57:09,027 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-23 11:57:14,235 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-23 11:57:14,238 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-23 11:57:14,241 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-23 11:57:22,357 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...
+2026-09-23 12:59:34,651 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-23 12:59:34,652 | INFO | jira_generation_pipeline | JIRA GENERATION PIPELINE STARTED
+2026-09-23 12:59:34,653 | INFO | jira_generation_pipeline | ================================================================================
+2026-09-23 12:59:34,655 | INFO | jira_generation_pipeline | Clearing previous Jira query results: C:\workspace\requirement_extraction\jira_query_results
+2026-09-23 12:59:34,667 | INFO | jira_generation_pipeline | Loading embedding model...
+2026-09-23 12:59:39,762 | INFO | jira_generation_pipeline | Loading active knowledge base: C:\workspace\requirement_extraction\data\knowledge_bases\active
+2026-09-23 12:59:39,765 | INFO | jira_generation_pipeline | Knowledge base loaded successfully.
+2026-09-23 12:59:39,766 | INFO | jira_generation_pipeline | Initializing Jira QueryExecutor | top_k=5
+2026-09-23 12:59:46,480 | INFO | jira_generation_pipeline | Executing Jira queries sequentially...

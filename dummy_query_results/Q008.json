@@ -1,0 +1,43 @@
+{
+  "query_id": "Q008",
+  "target": "personas",
+  "question": "Extract all explicitly identified user personas or user roles and describe their relevant needs or responsibilities.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "persona_id": null,
+      "role": "Admin",
+      "needs_or_responsibilities": [
+        "Create Item",
+        "Approve PO",
+        "View Reports"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+      ]
+    },
+    {
+      "persona_id": null,
+      "role": "Manager",
+      "needs_or_responsibilities": [
+        "Create Item",
+        "Approve PO",
+        "View Reports"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+      ]
+    },
+    {
+      "persona_id": null,
+      "role": "User",
+      "needs_or_responsibilities": [
+        "View Reports (Limited)"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+      ]
+    }
+  ]
+}

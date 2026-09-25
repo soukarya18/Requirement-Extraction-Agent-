@@ -1,0 +1,49 @@
+{
+  "query_id": "Q020",
+  "target": "acceptance_criteria",
+  "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "ac_id": "AC-006",
+      "user_story_id": "US-FR-008",
+      "given": "a configured approval event",
+      "when": "the event occurs",
+      "then": "the intended recipient receives a notification containing the loan application identifier and required action.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+    },
+    {
+      "ac_id": "AC-007",
+      "user_story_id": "US-FR-007",
+      "given": "an authorized user",
+      "when": "the loan application is opened",
+      "then": "stage, owner, aging and outstanding conditions are visible.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+    },
+    {
+      "ac_id": "AC-008",
+      "user_story_id": "US-FR-012",
+      "given": "a saved credit decision",
+      "when": "the audit history is opened",
+      "then": "the user, timestamp, decision and outcome are displayed.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+    },
+    {
+      "ac_id": "AC-009",
+      "user_story_id": "US-FR-009",
+      "given": "search criteria",
+      "when": "the user searches loans",
+      "then": "matching authorized applications are returned and can be filtered.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+    },
+    {
+      "ac_id": "AC-010",
+      "user_story_id": "US-FR-004",
+      "given": "an unresolved approval condition",
+      "when": "the application is placed on hold",
+      "then": "the hold reason, condition and responsible owner are recorded.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 14. Acceptance Criteria"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "query_id": "Q018",
+  "target": "epics",
+  "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "epic_id": "EP-001",
+      "epic_name": "User Authentication and Inventory Management",
+      "description": "This epic encompasses the core functionality of user login and inventory tracking, ensuring secure access and accurate record-keeping.",
+      "linked_fr_ids": [
+        "FR-001",
+        "FR-002"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "epic_id": "EP-002",
+      "epic_name": "Procurement and Order Management",
+      "description": "This epic covers the purchase order functionality, streamlining the procurement process.",
+      "linked_fr_ids": [
+        "FR-003"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "epic_id": "EP-003",
+      "epic_name": "Reporting and Analytics",
+      "description": "This epic includes the reporting dashboard functionality, providing insights into inventory data.",
+      "linked_fr_ids": [
+        "FR-004"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    }
+  ]
+}

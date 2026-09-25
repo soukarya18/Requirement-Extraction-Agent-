@@ -1,0 +1,129 @@
+{
+  "query_id": "EQ003",
+  "target": "functional_requirements",
+  "question": "Extract every explicit functional requirement from the BRD. Capture the requested capability, actor when stated, workflow or trigger when stated, integrations or APIs when stated, and source reference.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "requirement_id": "FR-001",
+      "capability": "Create, save as draft, edit and submit an employee onboarding request.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-002",
+      "capability": "Capture employee, employment, manager, location, start date, role and department information.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-003",
+      "capability": "Upload, classify, preview, replace and download onboarding supporting documents.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-004",
+      "capability": "Validate mandatory employee fields and required identity or employment documents before submission.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-005",
+      "capability": "Assign and reassign onboarding tasks to authorized users or groups.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-006",
+      "capability": "Record approve, reject, return and request-information decisions.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-007",
+      "capability": "Display onboarding stage, pending tasks, owner and aging.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-008",
+      "capability": "Send email notifications based on configurable onboarding events.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-009",
+      "capability": "Search onboarding requests using request ID, employee name, department, status and date range.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-010",
+      "capability": "Generate onboarding volume, status, aging and SLA reports.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-011",
+      "capability": "Export authorized onboarding report results to a standard downloadable format.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    },
+    {
+      "requirement_id": "FR-012",
+      "capability": "Capture a complete audit history for each onboarding request.",
+      "actor": null,
+      "workflow_or_trigger": null,
+      "integration_or_api": null,
+      "source_reference": [
+        "employee_onboarding_automation_BRS.docx - Section 9. Functional Requirements"
+      ]
+    }
+  ]
+}

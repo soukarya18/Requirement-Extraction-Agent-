@@ -1,0 +1,671 @@
+[
+  {
+    "query_id": "Q004",
+    "target": "business_objectives",
+    "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+    "depends_on": [],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.5389841198921204,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 2,
+        "score": 0.5669547319412231,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 3,
+        "score": 0.6444201469421387,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 4,
+        "score": 0.6700210571289062,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "4. Business Objectives",
+          "section_level": 1,
+          "chunk_index": 6,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 4. Business Objectives\n4. Business Objectives\nID | Objective | Success Measure\nBO-01 | Reduce end-to-end loan processing cycle time. | Reduce average cycle time from 12 business days to 4 business days.\nBO-02 | Reduce manual operational effort. | Achieve at least 60% reduction in manual processing effort.\nBO-03 | Improve application status visibility. | Provide role-based, near-real-time status, owner and aging views.\nBO-04 | Strengthen credit and risk control adherence. | Prevent facility setup when required credit, risk or compliance approvals are incomplete.\nBO-05 | Provide full auditability. | Capture timestamped application changes, document actions, decisions and approval conditions."
+      },
+      {
+        "rank": 5,
+        "score": 0.7007693648338318,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      }
+    ]
+  },
+  {
+    "query_id": "Q007",
+    "target": "stakeholders",
+    "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+    "depends_on": [],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.719367504119873,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "6. Stakeholders",
+          "section_level": 1,
+          "chunk_index": 10,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 6. Stakeholders\n6. Stakeholders\nRole | Sample Representative | Interest / Responsibility | Influence\nBusiness Sponsor | COO | Funding, business outcome and executive decisions. | High\nBusiness Owner | Head of Lending Operations | Process ownership, priorities and acceptance. | High\nRelationship Manager | John Smith | Borrower intake and application completeness. | High\nCredit Lead | Sarah Brown | Credit assessment and recommendation quality. | High\nRisk Manager | David Wilson | Risk classification and approval authority. | High\nLoan Administration Lead | Operations Team | Facility setup and operational completion. | Medium\nBusiness Analyst | POC BA | Requirement quality, traceability and clarification. | Medium"
+      },
+      {
+        "rank": 2,
+        "score": 0.7303494811058044,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 3,
+        "score": 0.7897339463233948,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 4,
+        "score": 0.8167425990104675,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "13. Constraints",
+          "section_level": 1,
+          "chunk_index": 18,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts."
+      },
+      {
+        "rank": 5,
+        "score": 0.8368339538574219,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "7. Current Process",
+          "section_level": 1,
+          "chunk_index": 11,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 7. Current Process\n7. Current Process\nStep | Current Activity\n1 | Relationship Manager collects borrower, facility and financial information and emails the application pack to Operations.\n2 | Operations checks completeness and re-enters borrower and facility details into working spreadsheets.\n3 | Credit analyst reviews financial information and prepares the credit assessment.\n4 | Risk team determines borrower or facility risk classification and required approval level.\n5 | Credit and authorized approvers communicate approval, rejection or conditions through email.\n6 | Operations follows up outstanding conditions and creates the approved facility in the lending process.\n7 | Relationship Manager is notified when the facility is ready or the request is rejected."
+      }
+    ]
+  },
+  {
+    "query_id": "Q015",
+    "target": "functional_requirements",
+    "question": "Extract every functional requirement explicitly supported by the source documents. For each requirement, capture the requested behavior, actor, trigger, inputs, business logic, outputs, priority, and source reference. Do not invent details for fields that are not explicitly supported.",
+    "depends_on": [],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.510421097278595,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 2,
+        "score": 0.5560099482536316,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      },
+      {
+        "rank": 3,
+        "score": 0.5583748817443848,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 4,
+        "score": 0.572472333908081,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "9. Functional Requirements",
+          "section_level": 1,
+          "chunk_index": 14,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 9. Functional Requirements\n9. Functional Requirements\nID | Functional Requirement | Priority\nFR-001 | Create, save as draft, edit and submit a corporate or institutional loan application. | Must\nFR-002 | Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information. | Must\nFR-003 | Upload, classify, preview, replace and download loan supporting documents. | Must\nFR-004 | Validate mandatory borrower data and required credit documents before submission. | Must\nFR-005 | Assign and reassign credit workflow tasks to authorized users or groups. | Must\nFR-006 | Record approve, reject, return and conditional-approval decisions with approval conditions. | Must\nFR-007 | Display application stage, pending conditions, owner and aging. | Must\nFR-008 | Send email notifications based on configured loan workflow events. | Should\nFR-009 | Search applications using application ID, borrower, product, status and date range. | Must\nFR-010 | Generate loan volume, status, aging, risk and SLA reports. | Should\nFR-011 | Export authorized loan report results to a standard downloadable format. | Could\nFR-012 | Capture a complete audit history for each loan application. | Must"
+      },
+      {
+        "rank": 5,
+        "score": 0.5796281099319458,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      }
+    ]
+  },
+  {
+    "query_id": "Q016",
+    "target": "non_functional_requirements",
+    "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+    "depends_on": [],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.6583749055862427,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 2,
+        "score": 0.6914957761764526,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 3,
+        "score": 0.703648567199707,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      },
+      {
+        "rank": 4,
+        "score": 0.727571964263916,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "10. Non-Functional Requirements",
+          "section_level": 1,
+          "chunk_index": 15,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 10. Non-Functional Requirements\n10. Non-Functional Requirements\nID | Category | Requirement\nNFR-001 | Availability | The production solution shall target 99.9% monthly service availability, excluding agreed maintenance windows.\nNFR-002 | Performance | For normal operating load, standard application pages shall respond within 3 seconds for 95% of requests.\nNFR-003 | Capacity | The solution shall support up to 500 concurrent users and allow future scaling.\nNFR-004 | Security | Access shall use corporate authentication and role-based authorization with least-privilege principles.\nNFR-005 | Privacy | Borrower, financial and collateral information shall be handled in accordance with applicable data protection and organizational privacy requirements.\nNFR-006 | Auditability | Credit and workflow events shall be logged with user, timestamp, action, decision and outcome.\nNFR-007 | Retention | Loan processing records shall be retained for seven years unless a different approved schedule applies.\nNFR-008 | Accessibility | Core user journeys shall support accessible keyboard navigation and readable screen content."
+      },
+      {
+        "rank": 5,
+        "score": 0.7489801645278931,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      }
+    ]
+  },
+  {
+    "query_id": "Q017",
+    "target": "business_rules",
+    "question": "Extract all explicitly stated business rules, policies, decision rules, validation rules, or mandatory conditions.",
+    "depends_on": [],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.5583308935165405,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 2,
+        "score": 0.5663498044013977,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 3,
+        "score": 0.6705491542816162,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 4,
+        "score": 0.7027934789657593,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Loan Processing Automation",
+          "section_level": 1,
+          "chunk_index": 1,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Loan Processing Automation\nLoan Processing Automation\nPre-filled sample for Requirements-to-DRS Agentic AI POC\nDocument Control | Details\nDocument Type | Business Requirement Specification (BRS)\nProject | Loan Processing Automation\nVersion | 1.0\nPrepared For | Proof of Concept\nPrepared By | Business Analysis Team\nDate | 03-Aug-2026\nClassification | Sample / Non-production\nImportant: This document contains illustrative data only. Replace sample names and values before formal use."
+      },
+      {
+        "rank": 5,
+        "score": 0.7157561779022217,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      }
+    ]
+  },
+  {
+    "query_id": "Q018",
+    "target": "epics",
+    "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+    "depends_on": [
+      "Q015"
+    ],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.7626520991325378,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 2,
+        "score": 0.8113429546356201,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      },
+      {
+        "rank": 3,
+        "score": 0.8363222479820251,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "9. Functional Requirements",
+          "section_level": 1,
+          "chunk_index": 14,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 9. Functional Requirements\n9. Functional Requirements\nID | Functional Requirement | Priority\nFR-001 | Create, save as draft, edit and submit a corporate or institutional loan application. | Must\nFR-002 | Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information. | Must\nFR-003 | Upload, classify, preview, replace and download loan supporting documents. | Must\nFR-004 | Validate mandatory borrower data and required credit documents before submission. | Must\nFR-005 | Assign and reassign credit workflow tasks to authorized users or groups. | Must\nFR-006 | Record approve, reject, return and conditional-approval decisions with approval conditions. | Must\nFR-007 | Display application stage, pending conditions, owner and aging. | Must\nFR-008 | Send email notifications based on configured loan workflow events. | Should\nFR-009 | Search applications using application ID, borrower, product, status and date range. | Must\nFR-010 | Generate loan volume, status, aging, risk and SLA reports. | Should\nFR-011 | Export authorized loan report results to a standard downloadable format. | Could\nFR-012 | Capture a complete audit history for each loan application. | Must"
+      },
+      {
+        "rank": 4,
+        "score": 0.8531303405761719,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "13. Constraints",
+          "section_level": 1,
+          "chunk_index": 18,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts."
+      },
+      {
+        "rank": 5,
+        "score": 0.8765195608139038,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      }
+    ]
+  },
+  {
+    "query_id": "Q019",
+    "target": "user_stories",
+    "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+    "depends_on": [
+      "Q015"
+    ],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.7306252121925354,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 2,
+        "score": 0.7420704364776611,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 3,
+        "score": 0.7612680792808533,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "9. Functional Requirements",
+          "section_level": 1,
+          "chunk_index": 14,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 9. Functional Requirements\n9. Functional Requirements\nID | Functional Requirement | Priority\nFR-001 | Create, save as draft, edit and submit a corporate or institutional loan application. | Must\nFR-002 | Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information. | Must\nFR-003 | Upload, classify, preview, replace and download loan supporting documents. | Must\nFR-004 | Validate mandatory borrower data and required credit documents before submission. | Must\nFR-005 | Assign and reassign credit workflow tasks to authorized users or groups. | Must\nFR-006 | Record approve, reject, return and conditional-approval decisions with approval conditions. | Must\nFR-007 | Display application stage, pending conditions, owner and aging. | Must\nFR-008 | Send email notifications based on configured loan workflow events. | Should\nFR-009 | Search applications using application ID, borrower, product, status and date range. | Must\nFR-010 | Generate loan volume, status, aging, risk and SLA reports. | Should\nFR-011 | Export authorized loan report results to a standard downloadable format. | Could\nFR-012 | Capture a complete audit history for each loan application. | Must"
+      },
+      {
+        "rank": 4,
+        "score": 0.7642151713371277,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 5,
+        "score": 0.7681662440299988,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "13. Constraints",
+          "section_level": 1,
+          "chunk_index": 18,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts."
+      }
+    ]
+  },
+  {
+    "query_id": "Q020",
+    "target": "acceptance_criteria",
+    "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+    "depends_on": [
+      "Q015",
+      "Q019"
+    ],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.5824716091156006,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "14. Acceptance Criteria",
+          "section_level": 1,
+          "chunk_index": 19,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 14. Acceptance Criteria\n14. Acceptance Criteria\nID | Acceptance Criterion | Mapped Requirement\nAC-001 | Given an authorized Relationship Manager, when mandatory borrower and facility information is entered, then the user can save and submit a loan application. | BR-001 / FR-001\nAC-002 | Given a selected loan product, when the user uploads required financial and borrower documents, then each document is recorded against the application. | BR-002 / FR-003\nAC-003 | Given a missing mandatory financial document, when the user attempts to progress to Credit, then progression is blocked and the missing document is identified. | BR-003 / FR-004\nAC-004 | Given a submitted loan application, when product and risk workflow rules are evaluated, then the appropriate Credit or Operations task is assigned. | BR-004 / FR-005\nAC-005 | Given an assigned credit approver, when the approver selects approve, reject or return, then the decision and approval conditions are recorded and the workflow transitions. | BR-005 / FR-006"
+      },
+      {
+        "rank": 2,
+        "score": 0.6185179352760315,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "14. Acceptance Criteria",
+          "section_level": 1,
+          "chunk_index": 20,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 14. Acceptance Criteria\nAC-006 | Given a configured approval event, when the event occurs, then the intended recipient receives a notification containing the loan application identifier and required action. | BR-006 / FR-008\nAC-007 | Given an authorized user, when the loan application is opened, then stage, owner, aging and outstanding conditions are visible. | BR-007 / FR-007\nAC-008 | Given a saved credit decision, when the audit history is opened, then the user, timestamp, decision and outcome are displayed. | BR-008 / FR-012\nAC-009 | Given search criteria, when the user searches loans, then matching authorized applications are returned and can be filtered. | BR-009 / FR-009\nAC-010 | Given an unresolved approval condition, when the application is placed on hold, then the hold reason, condition and responsible owner are recorded. | BR-010 / FR-004"
+      },
+      {
+        "rank": 3,
+        "score": 0.6575657725334167,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 4,
+        "score": 0.6751303672790527,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "13. Constraints",
+          "section_level": 1,
+          "chunk_index": 18,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts."
+      },
+      {
+        "rank": 5,
+        "score": 0.679136335849762,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      }
+    ]
+  },
+  {
+    "query_id": "Q024",
+    "target": "traceability_matrix",
+    "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+    "depends_on": [
+      "Q004",
+      "Q015",
+      "Q019",
+      "Q020"
+    ],
+    "retrieved_chunks": [
+      {
+        "rank": 1,
+        "score": 0.4264122247695923,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "15. Traceability Matrix",
+          "section_level": 1,
+          "chunk_index": 21,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008"
+      },
+      {
+        "rank": 2,
+        "score": 0.5159177184104919,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "16. POC Extraction Checklist",
+          "section_level": 1,
+          "chunk_index": 22,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review."
+      },
+      {
+        "rank": 3,
+        "score": 0.5866522789001465,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "Document Purpose",
+          "section_level": 1,
+          "chunk_index": 2,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix"
+      },
+      {
+        "rank": 4,
+        "score": 0.6829715371131897,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "BUSINESS REQUIREMENT SPECIFICATION",
+          "section_level": 1,
+          "chunk_index": 0,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION"
+      },
+      {
+        "rank": 5,
+        "score": 0.7131887674331665,
+        "metadata": {
+          "source": "loan_processing_automation_BRS.docx",
+          "source_type": "docx",
+          "section": "13. Constraints",
+          "section_level": 1,
+          "chunk_index": 18,
+          "chunking_strategy": "section_aware_overlap"
+        },
+        "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts."
+      }
+    ]
+  }
+]

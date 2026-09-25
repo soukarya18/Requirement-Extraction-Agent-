@@ -1,0 +1,13 @@
+{
+  "query_id": "Q002",
+  "target": "executive_summary",
+  "question": "Summarize the business initiative, problem or opportunity, proposed solution, and intended outcome as explicitly described in the source documents.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "summary": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting to improve inventory accuracy, reduce stock-outs, and increase operational efficiency.",
+    "source_reference": [
+      "BRD_Inventory_Management_System.pdf, Page 2"
+    ]
+  }
+}

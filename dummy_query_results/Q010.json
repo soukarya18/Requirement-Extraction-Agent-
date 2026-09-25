@@ -1,0 +1,21 @@
+{
+  "query_id": "Q010",
+  "target": "future_state_overview",
+  "question": "Extract the explicitly described future-state capabilities, target operating model, expected behavior, or desired end state.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "overview": "The Inventory Management System aims to reduce stock-outs and improve inventory accuracy.",
+    "capabilities": [
+      "User Login",
+      "Inventory Tracking",
+      "Reporting Dashboard",
+      "Purchase Orders"
+    ],
+    "source_reference": [
+      "BRD_Inventory_Management_System.pdf, Page 3",
+      "BRD_Inventory_Management_System.pdf, Page 2",
+      "BRD_Inventory_Management_System.pdf, Page 2"
+    ]
+  }
+}

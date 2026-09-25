@@ -1,0 +1,72 @@
+{
+  "query_id": "Q023",
+  "target": "clarification_log",
+  "question": "Create clarification questions from the identified missing information and ambiguous statements. Each question should explain why clarification is needed.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "cq_id": "CQ-001",
+      "question": "What is the specific definition of 'stock-outs'?",
+      "reason": "The BRD specifies a target KPI for stock-outs (BO-001), but does not define what constitutes a 'stock-out'. Without a definition, it's impossible to determine if the objective is being met.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+    },
+    {
+      "cq_id": "CQ-002",
+      "question": "What is the specific definition of 'inventory accuracy'?",
+      "reason": "The BRD specifies a target KPI for inventory accuracy (BO-002), but does not define what constitutes 'inventory accuracy'. Without a definition, it's impossible to determine if the objective is being met.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+    },
+    {
+      "cq_id": "CQ-003",
+      "question": "What specific authentication methods are supported for user login (FR-001)?",
+      "reason": "The document states that user login is a 'High' priority functional requirement but does not detail what authentication methods will be supported (e.g., password, MFA, biometrics).",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+    },
+    {
+      "cq_id": "CQ-004",
+      "question": "Can you provide a detailed description of what data is tracked, how it is tracked, and by whom in relation to inventory tracking (FR-002)?",
+      "reason": "The inventory tracking requirement is marked as 'High' priority, but the description lacks detail about what data is tracked and how, making it difficult to assess the scope and implement the requirement.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+    },
+    {
+      "cq_id": "CQ-005",
+      "question": "Can you describe the detailed steps involved in creating, approving, and managing purchase orders (FR-003)?",
+      "reason": "The purchase order functionality is a 'Medium' priority requirement, but the description lacks detail about the involved steps, making it difficult to implement.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+    },
+    {
+      "cq_id": "CQ-006",
+      "question": "What specific reports are available through the Reporting Dashboard (FR-004), and how are they presented?",
+      "reason": "The reporting dashboard requirement is 'High' priority, but the description lacks detail about the reports and their presentation, making it difficult to design.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+    },
+    {
+      "cq_id": "CQ-007",
+      "question": "What specific functionality is included within the 'Limited' access for the 'User' role when viewing reports?",
+      "reason": "The term 'Limited' in the Role Permission Matrix is ambiguous. Clarification is needed to understand the scope of the User role's access to reporting features.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+    },
+    {
+      "cq_id": "CQ-008",
+      "question": "What specific criteria define 'accurate inventory transactions'?",
+      "reason": "The acceptance criteria state that inventory transactions must be accurately recorded but fail to define what constitutes 'accurate'.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Acceptance Criteria"
+    },
+    {
+      "cq_id": "CQ-009",
+      "question": "What constitutes 'critical requirements' in the acceptance criteria?",
+      "reason": "The acceptance criteria specify that 'all critical requirements' must pass UAT, but the document does not define what qualifies as a 'critical requirement'.",
+      "status": "Open",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Acceptance Criteria"
+    }
+  ]
+}

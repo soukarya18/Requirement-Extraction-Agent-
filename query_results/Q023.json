@@ -1,0 +1,128 @@
+{
+  "query_id": "Q023",
+  "target": "clarification_log",
+  "question": "Create clarification questions from the identified missing information and ambiguous statements. Each question should explain why clarification is needed.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "cq_id": "CQ-M1",
+      "question": "What is the business context and problem statement for the loan processing automation?",
+      "reason": "Required to define the business background and the problem the loan processing automation aims to solve, forming the foundation for all downstream requirements.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M2",
+      "question": "What are the objectives and measurable outcomes for this loan processing automation project?",
+      "reason": "Needed to establish clear goals and success criteria that can be validated against the solution.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M3",
+      "question": "What items are in‑scope and out‑of‑scope for the loan processing automation solution?",
+      "reason": "Defines the boundaries of the solution, preventing scope creep and guiding requirement prioritization.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M4",
+      "question": "Who are the stakeholders and what are their roles in the loan processing automation initiative?",
+      "reason": "Identifies who is involved, their responsibilities, and who must approve or use the system.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M5",
+      "question": "What are the high‑level business requirements that the solution must deliver?",
+      "reason": "Specifies the high‑level capabilities the solution must deliver to meet business needs.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M6",
+      "question": "What functional requirements describe the detailed system behavior needed to implement the business requirements?",
+      "reason": "Describes detailed system behavior needed to implement the business requirements.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M7",
+      "question": "What non‑functional requirements (e.g., performance, security, usability) must the solution satisfy?",
+      "reason": "Defines quality attributes such as performance, security, and usability that the solution must satisfy.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M8",
+      "question": "What business rules govern loan processing and decision making?",
+      "reason": "Provides the decision logic and constraints that govern loan processing.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M9",
+      "question": "What assumptions are being made about the loan processing environment and stakeholders?",
+      "reason": "Documents conditions presumed true that affect requirement interpretation and implementation.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M10",
+      "question": "What constraints (technical, regulatory, operational) limit the design of the solution?",
+      "reason": "Identifies technical, regulatory, or operational limits that shape solution design.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M11",
+      "question": "What user stories should be created to translate requirements into actionable development items?",
+      "reason": "Translates requirements into actionable development items aligned with stakeholder needs.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M12",
+      "question": "How should traceability be established from BRS sections to DRS requirements and backlog items?",
+      "reason": "Ensures each requirement can be traced back to its origin for validation, impact analysis, and compliance.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-M13",
+      "question": "Are there any ambiguities, missing information, conflicts, or duplicates that need human review?",
+      "reason": "Highlights areas that need clarification before finalizing the DRS to avoid defects and rework.",
+      "status": "Open",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "cq_id": "CQ-A1",
+      "question": "Can you clarify how risk and credit approvals are currently tracked separately and which approval dependencies are difficult to see?",
+      "reason": "Vague description of how approvals are tracked separately and what specific approval dependencies are difficult to see.",
+      "status": "Open",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "cq_id": "CQ-A2",
+      "question": "What specific \"approval conditions\" exist, how are they followed up manually, and which criteria cause delays in facility setup?",
+      "reason": "Insufficient detail on what constitutes \"approval conditions\", how manual follow‑up is performed, and the criteria that cause delays.",
+      "status": "Open",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "cq_id": "CQ-A3",
+      "question": "What metrics or thresholds define \"cannot reliably identify\" applications approaching their processing SLA, and how is reliability currently measured?",
+      "reason": "Ambiguous definition of \"cannot reliably identify\"; lacks metrics or thresholds for reliability and method of identification.",
+      "status": "Open",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "cq_id": "CQ-A4",
+      "question": "What are the security, format, and governance requirements for exchanging financial statements and supporting documents, and which methods are considered acceptable?",
+      "reason": "Vague about the security, format, and governance of document exchange; does not specify acceptable methods or controls.",
+      "status": "Open",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    }
+  ]
+}

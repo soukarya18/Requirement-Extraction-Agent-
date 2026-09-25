@@ -1,0 +1,19 @@
+{
+  "query_id": "Q013",
+  "target": "dependencies",
+  "question": "Extract all explicitly stated dependencies on teams, systems, vendors, data, approvals, integrations, infrastructure, or other external/internal factors.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "dependency_id": "RR-01",
+      "dependency": "Validation and testing",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    },
+    {
+      "dependency_id": "RR-02",
+      "dependency": "Training program",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "query_id": "Q022",
+  "target": "ambiguous_statements",
+  "question": "Identify statements in the source documents that are ambiguous, contradictory, vague, or insufficiently defined for reliable requirement specification.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "ambiguity_id": "A1",
+      "statement": "Risk and credit approvals are tracked separately, making approval dependencies difficult to see.",
+      "issue": "Vague description of how approvals are tracked separately and what specific approval dependencies are difficult to see.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "ambiguity_id": "A2",
+      "statement": "Approval conditions are followed up manually and can delay facility setup.",
+      "issue": "Insufficient detail on what constitutes \"approval conditions\", how manual follow‑up is performed, and the criteria that cause delays.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "ambiguity_id": "A3",
+      "statement": "Operations cannot reliably identify applications approaching their processing SLA.",
+      "issue": "Ambiguous definition of \"cannot reliably identify\"; lacks metrics or thresholds for reliability and method of identification.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "ambiguity_id": "A4",
+      "statement": "Financial statements and supporting documents are exchanged through email or shared folders.",
+      "issue": "Vague about the security, format, and governance of document exchange; does not specify acceptable methods or controls.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "query_id": "Q006",
+  "target": "out_of_scope",
+  "question": "Extract all explicitly stated items, capabilities, processes, users, systems, or activities that are out of scope.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "item_id": null,
+      "item": "Changes to core lending product configuration.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+    },
+    {
+      "item_id": null,
+      "item": "Automated calculation of interest, fees or repayment schedules.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+    },
+    {
+      "item_id": null,
+      "item": "Maintenance of historical loan master data.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+    },
+    {
+      "item_id": null,
+      "item": "Migration of historical loan applications beyond the agreed POC sample set.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 5.2 Out of Scope"
+    }
+  ]
+}

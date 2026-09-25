@@ -1,0 +1,49 @@
+{
+  "query_id": "EQ001",
+  "target": "business_rules",
+  "question": "Extract every explicit business rule, decision rule, validation rule, policy, threshold, or condition in the BRD that could affect implementation effort.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "rule_id": "RULE-001",
+      "rule_statement": "All mandatory identity and employment documents must be present before verification can be completed.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-002",
+      "rule_statement": "An employee requiring privileged system access requires designated IT access approval in addition to HR approval.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-003",
+      "rule_statement": "A request with missing mandatory information shall be placed on hold and returned to the requestor.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-004",
+      "rule_statement": "Every approval, rejection and return decision shall include a timestamp and decision-maker identity.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-005",
+      "rule_statement": "Access provisioning shall not begin until required HR and Compliance approvals are recorded.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-006",
+      "rule_statement": "A rejection shall require a reason and shall close the active workflow unless reopened by an authorized role.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-007",
+      "rule_statement": "Only authorized users may view or download documents containing personal employee information.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    },
+    {
+      "rule_id": "RULE-008",
+      "rule_statement": "Overdue onboarding tasks shall trigger reminders according to the configured SLA schedule.",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 11. Business Rules"
+    }
+  ]
+}

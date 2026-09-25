@@ -1,0 +1,53 @@
+{
+  "query_id": "Q020",
+  "target": "acceptance_criteria",
+  "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "ac_id": "AC-001",
+      "user_story_id": "US-001",
+      "given": "A user attempts to log into the system",
+      "when": "The user provides valid credentials",
+      "then": "The user is granted access to the inventory management functionality.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "ac_id": "AC-002",
+      "user_story_id": "US-002",
+      "given": "A user accesses the inventory tracking feature",
+      "when": "The user views inventory levels",
+      "then": "Accurate inventory records are displayed.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "ac_id": "AC-003",
+      "user_story_id": "US-003",
+      "given": "A manager needs to replenish inventory",
+      "when": "The manager creates a purchase order",
+      "then": "The purchase order is processed to manage inventory replenishment.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "ac_id": "AC-004",
+      "user_story_id": "US-004",
+      "given": "A user wants to understand inventory performance",
+      "when": "The user views the reporting dashboard",
+      "then": "Insights into inventory performance are displayed.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    }
+  ]
+}

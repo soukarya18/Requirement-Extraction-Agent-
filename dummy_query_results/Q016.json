@@ -1,0 +1,30 @@
+{
+  "query_id": "Q016",
+  "target": "non_functional_requirements",
+  "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "nfr_id": null,
+      "category": "Availability",
+      "requirement": "99.9% uptime",
+      "priority": null,
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    },
+    {
+      "nfr_id": null,
+      "category": "Performance",
+      "requirement": "<3 second response",
+      "priority": null,
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    },
+    {
+      "nfr_id": null,
+      "category": "Security",
+      "requirement": "MFA support",
+      "priority": null,
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    }
+  ]
+}

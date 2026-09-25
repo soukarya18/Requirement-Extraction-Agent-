@@ -1,0 +1,17 @@
+{
+  "query_id": "Q001",
+  "target": "project_metadata",
+  "question": "Extract the project name, document version, preparer, and review status explicitly stated in the source documents.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "project_name": "Loan Processing Automation",
+    "version": "1.0",
+    "prepared_by": "Business Analysis Team",
+    "review_status": null,
+    "source_reference": [
+      "loan_processing_automation_BRS.docx - Document Control section (Context 1)",
+      "loan_processing_automation_BRS.docx - 1. Project Information section (Context 2)"
+    ]
+  }
+}

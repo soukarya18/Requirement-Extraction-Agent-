@@ -1,0 +1,51 @@
+{
+  "query_id": "Q007",
+  "target": "stakeholders",
+  "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Business Sponsor",
+      "responsibility": "Funding, business outcome and executive decisions.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Business Owner",
+      "responsibility": "Process ownership, priorities and acceptance.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Relationship Manager",
+      "responsibility": "Borrower intake and application completeness.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Credit Lead",
+      "responsibility": "Credit assessment and recommendation quality.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Risk Manager",
+      "responsibility": "Risk classification and approval authority.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Loan Administration Lead",
+      "responsibility": "Facility setup and operational completion.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "stakeholder_id": null,
+      "name_or_role": "Business Analyst",
+      "responsibility": "Requirement quality, traceability and clarification.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    }
+  ]
+}

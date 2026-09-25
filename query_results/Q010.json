@@ -1,0 +1,24 @@
+{
+  "query_id": "Q010",
+  "target": "future_state_overview",
+  "question": "Extract the explicitly described future-state capabilities, target operating model, expected behavior, or desired end state.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "overview": null,
+    "capabilities": [
+      "The solution shall notify relevant users when an application is assigned, returned, approved, rejected, conditionally approved, overdue or completed.",
+      "Authorized users shall be able to view application stage, responsible owner, outstanding conditions, aging and next action.",
+      "The solution shall maintain an immutable history of application submissions, financial-data changes, document actions, credit decisions, conditions and status transitions.",
+      "Users shall be able to search loan applications and generate standard reports by status, product, borrower type, risk class, age and owning team.",
+      "The solution shall place an application on hold when mandatory information is missing, a validation fails or an approval condition remains unresolved, and shall record the reason."
+    ],
+    "source_reference": [
+      "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-006)",
+      "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-007)",
+      "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-008)",
+      "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-009)",
+      "loan_processing_automation_BRS.docx - Section 8. Future-State Business Requirements (BR-010)"
+    ]
+  }
+}

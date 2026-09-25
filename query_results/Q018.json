@@ -1,0 +1,61 @@
+{
+  "query_id": "Q018",
+  "target": "epics",
+  "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "epic_id": "EPIC-001",
+      "epic_name": "Loan Application Processing",
+      "description": null,
+      "linked_fr_ids": [
+        "FR-001",
+        "FR-002",
+        "FR-004"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "epic_id": "EPIC-002",
+      "epic_name": "Loan Document Management",
+      "description": null,
+      "linked_fr_ids": [
+        "FR-003"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "epic_id": "EPIC-003",
+      "epic_name": "Credit Workflow Management",
+      "description": null,
+      "linked_fr_ids": [
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "FR-008"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "epic_id": "EPIC-004",
+      "epic_name": "Application Search and Reporting",
+      "description": null,
+      "linked_fr_ids": [
+        "FR-009",
+        "FR-010",
+        "FR-011"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "epic_id": "EPIC-005",
+      "epic_name": "Audit History Capture",
+      "description": null,
+      "linked_fr_ids": [
+        "FR-012"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    }
+  ]
+}

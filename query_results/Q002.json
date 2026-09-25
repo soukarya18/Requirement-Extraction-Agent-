@@ -1,0 +1,14 @@
+{
+  "query_id": "Q002",
+  "target": "executive_summary",
+  "question": "Summarize the business initiative, problem or opportunity, proposed solution, and intended outcome as explicitly described in the source documents.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "summary": "The initiative is a proof‑of‑concept using a pre‑filled Business Requirements Specification (BRS) to demonstrate extraction of business requirements, generation of a Detailed Requirement Specification (DRS), creation of user stories and acceptance criteria, and traceability from business objectives to implementation‑ready backlog items. The problem is that the current loan processing workflow requires duplicate data entry, manual exchange of financial statements and documents via email or shared folders, analysts spending time chasing missing information, separate tracking of risk and credit approvals, manual follow‑up of approval conditions, and an inability to reliably identify applications approaching their processing SLA. The proposed solution is to extract and generate these requirement artifacts as described, establishing traceability to implementation‑ready backlog items. The intended outcome is a set of automated artifacts (DRS, user stories, acceptance criteria) and traceable backlog items that address the identified limitations.",
+    "source_reference": [
+      "loan_processing_automation_BRS.docx - Document Purpose",
+      "loan_processing_automation_BRS.docx - 3. Business Problem Statement"
+    ]
+  }
+}

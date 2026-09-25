@@ -1,0 +1,19 @@
+{
+  "query_id": "Q012",
+  "target": "constraints",
+  "question": "Extract all explicitly stated business, technical, regulatory, resource, timing, budget, platform, or other constraints.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "constraint_id": "BO-001",
+      "constraint": "<2% stock-outs",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+    },
+    {
+      "constraint_id": "BO-002",
+      "constraint": "99% inventory accuracy",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+    }
+  ]
+}

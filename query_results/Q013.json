@@ -1,0 +1,59 @@
+{
+  "query_id": "Q013",
+  "target": "dependencies",
+  "question": "Extract all explicitly stated dependencies on teams, systems, vendors, data, approvals, integrations, infrastructure, or other external/internal factors.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "dependency_id": null,
+      "dependency": "Email",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Shared folders",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Approved Azure services",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Approved data regions and repositories",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "SharePoint",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Teams",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Jira",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Azure DevOps",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Human review",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 13. Constraints"
+    },
+    {
+      "dependency_id": null,
+      "dependency": "Risk and credit approvals",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    }
+  ]
+}

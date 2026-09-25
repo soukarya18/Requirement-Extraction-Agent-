@@ -1,0 +1,8 @@
+{
+  "query_id": "Q014",
+  "target": "risks",
+  "question": "Extract all risks explicitly identified in the source documents, including their descriptions and any stated impacts, likelihoods, or mitigations.",
+  "response_type": "array",
+  "status": "success",
+  "answer": []
+}

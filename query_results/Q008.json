@@ -1,0 +1,51 @@
+{
+  "query_id": "Q008",
+  "target": "personas",
+  "question": "Extract all explicitly identified user personas or user roles and describe their relevant needs or responsibilities.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "persona_id": null,
+      "role": "Business Sponsor",
+      "needs_or_responsibilities": "Funding, business outcome and executive decisions.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Business Owner",
+      "needs_or_responsibilities": "Process ownership, priorities and acceptance.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Relationship Manager",
+      "needs_or_responsibilities": "Borrower intake and application completeness.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Credit Lead",
+      "needs_or_responsibilities": "Credit assessment and recommendation quality.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Risk Manager",
+      "needs_or_responsibilities": "Risk classification and approval authority.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Loan Administration Lead",
+      "needs_or_responsibilities": "Facility setup and operational completion.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    },
+    {
+      "persona_id": null,
+      "role": "Business Analyst",
+      "needs_or_responsibilities": "Requirement quality, traceability and clarification.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 6. Stakeholders"
+    }
+  ]
+}

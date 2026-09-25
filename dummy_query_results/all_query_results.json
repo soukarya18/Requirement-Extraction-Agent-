@@ -1,0 +1,808 @@
+{
+  "Q001": {
+    "query_id": "Q001",
+    "target": "project_metadata",
+    "question": "Extract the project name, document version, preparer, and review status explicitly stated in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "project_name": "Inventory Management System",
+      "version": "1.0",
+      "prepared_by": "M365 Copilot",
+      "review_status": null,
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf:Page 1"
+      ]
+    }
+  },
+  "Q002": {
+    "query_id": "Q002",
+    "target": "executive_summary",
+    "question": "Summarize the business initiative, problem or opportunity, proposed solution, and intended outcome as explicitly described in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "summary": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting to improve inventory accuracy, reduce stock-outs, and increase operational efficiency.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Page 2"
+      ]
+    }
+  },
+  "Q003": {
+    "query_id": "Q003",
+    "target": "business_background",
+    "question": "Extract the business background and context that explain why the initiative is being undertaken.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "background": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting to improve inventory accuracy, reduce stock-outs, and increase operational efficiency.",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, [Page 2], Executive Summary"
+      ]
+    }
+  },
+  "Q004": {
+    "query_id": "Q004",
+    "target": "business_objectives",
+    "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "objective_id": "BO-001",
+        "objective": "Reduce stock-outs",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+      },
+      {
+        "objective_id": "BO-002",
+        "objective": "Improve inventory accuracy",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+      },
+      {
+        "objective_id": null,
+        "objective": "Increase operational efficiency",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+      }
+    ]
+  },
+  "Q005": {
+    "query_id": "Q005",
+    "target": "scope",
+    "question": "Extract the in-scope capabilities, processes, products, users, systems, or activities explicitly included in the initiative.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "in_scope": [
+        "Inventory tracking",
+        "Purchase orders",
+        "Warehouse operations",
+        "Reporting Dashboard",
+        "User Login"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Scope Matrix",
+        "BRD_Inventory_Management_System.pdf, Functional Requirements",
+        "BRD_Inventory_Management_System.pdf, Executive Summary"
+      ]
+    }
+  },
+  "Q006": {
+    "query_id": "Q006",
+    "target": "out_of_scope",
+    "question": "Extract all explicitly stated items, capabilities, processes, users, systems, or activities that are out of scope.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "item_id": "OOS-001",
+        "item": "Payroll",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Scope Matrix"
+      },
+      {
+        "item_id": "OOS-002",
+        "item": "HR management",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Scope Matrix"
+      }
+    ]
+  },
+  "Q007": {
+    "query_id": "Q007",
+    "target": "stakeholders",
+    "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "stakeholder_id": "S-001",
+        "name_or_role": "Operations Manager",
+        "responsibility": "Business Owner",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+      },
+      {
+        "stakeholder_id": "S-002",
+        "name_or_role": "Warehouse Supervisor",
+        "responsibility": "Key User",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+      },
+      {
+        "stakeholder_id": "S-003",
+        "name_or_role": "IT Manager",
+        "responsibility": "Technical Sponsor",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+      },
+      {
+        "stakeholder_id": "S-004",
+        "name_or_role": "Business Analyst",
+        "responsibility": "Initial Draft",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+      }
+    ]
+  },
+  "Q008": {
+    "query_id": "Q008",
+    "target": "personas",
+    "question": "Extract all explicitly identified user personas or user roles and describe their relevant needs or responsibilities.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "persona_id": null,
+        "role": "Admin",
+        "needs_or_responsibilities": [
+          "Create Item",
+          "Approve PO",
+          "View Reports"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+        ]
+      },
+      {
+        "persona_id": null,
+        "role": "Manager",
+        "needs_or_responsibilities": [
+          "Create Item",
+          "Approve PO",
+          "View Reports"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+        ]
+      },
+      {
+        "persona_id": null,
+        "role": "User",
+        "needs_or_responsibilities": [
+          "View Reports (Limited)"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+        ]
+      }
+    ]
+  },
+  "Q009": {
+    "query_id": "Q009",
+    "target": "current_state_summary",
+    "question": "Extract the current-state processes, systems, pain points, limitations, and existing practices explicitly described in the source documents.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "summary": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting.",
+      "pain_points": [
+        "Data migration issues (High impact)",
+        "User adoption (Medium impact)"
+      ],
+      "existing_systems_or_processes": [
+        "View Reports (Limited)"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Executive Summary",
+        "BRD_Inventory_Management_System.pdf, Page 3, Risk Register",
+        "BRD_Inventory_Management_System.pdf, Page 3, View Reports"
+      ]
+    }
+  },
+  "Q010": {
+    "query_id": "Q010",
+    "target": "future_state_overview",
+    "question": "Extract the explicitly described future-state capabilities, target operating model, expected behavior, or desired end state.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "overview": "The Inventory Management System aims to reduce stock-outs and improve inventory accuracy.",
+      "capabilities": [
+        "User Login",
+        "Inventory Tracking",
+        "Reporting Dashboard",
+        "Purchase Orders"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf, Page 3",
+        "BRD_Inventory_Management_System.pdf, Page 2",
+        "BRD_Inventory_Management_System.pdf, Page 2"
+      ]
+    }
+  },
+  "Q011": {
+    "query_id": "Q011",
+    "target": "assumptions",
+    "question": "Extract all assumptions explicitly stated or clearly documented as assumptions in the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "assumption_id": null,
+        "assumption": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 2, Executive Summary"
+      }
+    ]
+  },
+  "Q012": {
+    "query_id": "Q012",
+    "target": "constraints",
+    "question": "Extract all explicitly stated business, technical, regulatory, resource, timing, budget, platform, or other constraints.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "constraint_id": "BO-001",
+        "constraint": "<2% stock-outs",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+      },
+      {
+        "constraint_id": "BO-002",
+        "constraint": "99% inventory accuracy",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+      }
+    ]
+  },
+  "Q013": {
+    "query_id": "Q013",
+    "target": "dependencies",
+    "question": "Extract all explicitly stated dependencies on teams, systems, vendors, data, approvals, integrations, infrastructure, or other external/internal factors.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "dependency_id": "RR-01",
+        "dependency": "Validation and testing",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      },
+      {
+        "dependency_id": "RR-02",
+        "dependency": "Training program",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      }
+    ]
+  },
+  "Q014": {
+    "query_id": "Q014",
+    "target": "risks",
+    "question": "Extract all risks explicitly identified in the source documents, including their descriptions and any stated impacts, likelihoods, or mitigations.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "risk_id": null,
+        "risk": "Data migration issues",
+        "impact": "High",
+        "likelihood": null,
+        "mitigation": "Validation and testing",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      },
+      {
+        "risk_id": null,
+        "risk": "User adoption",
+        "impact": "Medium",
+        "likelihood": null,
+        "mitigation": "Training program",
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      }
+    ]
+  },
+  "Q015": {
+    "query_id": "Q015",
+    "target": "functional_requirements",
+    "question": "Extract every functional requirement explicitly supported by the source documents. For each requirement, capture the requested behavior, actor, trigger, inputs, business logic, outputs, priority, and source reference.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "fr_id": "FR-001",
+        "title": "User Login",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "High",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "fr_id": "FR-002",
+        "title": "Inventory Tracking",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "High",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "fr_id": "FR-003",
+        "title": "Purchase Orders",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "Medium",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "fr_id": "FR-004",
+        "title": "Reporting Dashboard",
+        "description": null,
+        "actor": null,
+        "trigger": null,
+        "input": null,
+        "business_logic": null,
+        "output": null,
+        "priority": "High",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      }
+    ]
+  },
+  "Q016": {
+    "query_id": "Q016",
+    "target": "non_functional_requirements",
+    "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "nfr_id": null,
+        "category": "Availability",
+        "requirement": "99.9% uptime",
+        "priority": null,
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      },
+      {
+        "nfr_id": null,
+        "category": "Performance",
+        "requirement": "<3 second response",
+        "priority": null,
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      },
+      {
+        "nfr_id": null,
+        "category": "Security",
+        "requirement": "MFA support",
+        "priority": null,
+        "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+      }
+    ]
+  },
+  "Q017": {
+    "query_id": "Q017",
+    "target": "business_rules",
+    "question": "Extract all explicitly stated business rules, policies, decision rules, validation rules, or mandatory conditions.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "rule_id": "BO-001",
+        "rule_statement": "Reduce stock-outs",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Business Objectives",
+          "BO-001"
+        ]
+      },
+      {
+        "rule_id": "BO-002",
+        "rule_statement": "Improve inventory accuracy",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Business Objectives",
+          "BO-002"
+        ]
+      }
+    ]
+  },
+  "Q018": {
+    "query_id": "Q018",
+    "target": "epics",
+    "question": "Create epics only from capabilities or requirement groupings supported by the extracted functional requirements. Each epic must represent a coherent high-level capability area.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "epic_id": "EP-001",
+        "epic_name": "User Authentication and Inventory Management",
+        "description": "This epic encompasses the core functionality of user login and inventory tracking, ensuring secure access and accurate record-keeping.",
+        "linked_fr_ids": [
+          "FR-001",
+          "FR-002"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "epic_id": "EP-002",
+        "epic_name": "Procurement and Order Management",
+        "description": "This epic covers the purchase order functionality, streamlining the procurement process.",
+        "linked_fr_ids": [
+          "FR-003"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "epic_id": "EP-003",
+        "epic_name": "Reporting and Analytics",
+        "description": "This epic includes the reporting dashboard functionality, providing insights into inventory data.",
+        "linked_fr_ids": [
+          "FR-004"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      }
+    ]
+  },
+  "Q019": {
+    "query_id": "Q019",
+    "target": "user_stories",
+    "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "story_id": "US-001",
+        "story_title": "User Login",
+        "role": "User",
+        "capability": "Log into the system",
+        "benefit": "Access inventory management functionality",
+        "linked_fr_ids": [
+          "FR-001"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "story_id": "US-002",
+        "story_title": "Track Inventory",
+        "role": "User",
+        "capability": "Track inventory levels",
+        "benefit": "Ensure accurate inventory records",
+        "linked_fr_ids": [
+          "FR-002"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "story_id": "US-003",
+        "story_title": "Create Purchase Orders",
+        "role": "Manager",
+        "capability": "Create purchase orders",
+        "benefit": "Manage inventory replenishment",
+        "linked_fr_ids": [
+          "FR-003"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "story_id": "US-004",
+        "story_title": "View Reporting Dashboard",
+        "role": "User",
+        "capability": "View the reporting dashboard",
+        "benefit": "Gain insights into inventory performance",
+        "linked_fr_ids": [
+          "FR-004"
+        ],
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      }
+    ]
+  },
+  "Q020": {
+    "query_id": "Q020",
+    "target": "acceptance_criteria",
+    "question": "Create acceptance criteria for the extracted user stories using Given/When/Then format. Every criterion must link to a valid user story and be directly supported by the relevant functional requirement or source evidence.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "ac_id": "AC-001",
+        "user_story_id": "US-001",
+        "given": "A user attempts to log into the system",
+        "when": "The user provides valid credentials",
+        "then": "The user is granted access to the inventory management functionality.",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "ac_id": "AC-002",
+        "user_story_id": "US-002",
+        "given": "A user accesses the inventory tracking feature",
+        "when": "The user views inventory levels",
+        "then": "Accurate inventory records are displayed.",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "ac_id": "AC-003",
+        "user_story_id": "US-003",
+        "given": "A manager needs to replenish inventory",
+        "when": "The manager creates a purchase order",
+        "then": "The purchase order is processed to manage inventory replenishment.",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      },
+      {
+        "ac_id": "AC-004",
+        "user_story_id": "US-004",
+        "given": "A user wants to understand inventory performance",
+        "when": "The user views the reporting dashboard",
+        "then": "Insights into inventory performance are displayed.",
+        "source_reference": [
+          "BRD_Inventory_Management_System.pdf",
+          "Functional Requirements"
+        ]
+      }
+    ]
+  },
+  "Q021": {
+    "query_id": "Q021",
+    "target": "missing_information",
+    "question": "Identify information required by the DRS structure that is materially missing from the source documents.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "item_id": "BO-001",
+        "missing_information": "Definition of 'stock-outs'.",
+        "why_needed": "To properly measure and understand the objective's target value.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+      },
+      {
+        "item_id": "BO-002",
+        "missing_information": "Definition of 'inventory accuracy'.",
+        "why_needed": "To properly measure and understand the objective's target value.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+      },
+      {
+        "item_id": "FR-001",
+        "missing_information": "Details about user login including authentication methods and access controls.",
+        "why_needed": "To provide sufficient detail for design and testing.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "item_id": "FR-002",
+        "missing_information": "Detailed description of inventory tracking functionality. What data is tracked, how is it tracked, and by whom?",
+        "why_needed": "To define scope and ensure the requirement is testable.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "item_id": "FR-003",
+        "missing_information": "Details about purchase order functionality.  What steps are involved in creating, approving, and managing purchase orders?",
+        "why_needed": "To define scope and ensure the requirement is testable.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "item_id": "FR-004",
+        "missing_information": "Detailed description of reporting dashboard functionality.  What reports are available, and how are they presented?",
+        "why_needed": "To define scope and ensure the requirement is testable.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "item_id": "RolePermissionMatrix",
+        "missing_information": "Detailed description of 'Limited' access for 'User' role for 'View Reports' feature.",
+        "why_needed": "To define scope of permissions and access control.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+      },
+      {
+        "item_id": "AcceptanceCriteria",
+        "missing_information": "Details of what constitutes accurate inventory transactions.",
+        "why_needed": "To define the criteria for UAT success.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Acceptance Criteria"
+      }
+    ]
+  },
+  "Q022": {
+    "query_id": "Q022",
+    "target": "ambiguous_statements",
+    "question": "Identify statements in the source documents that are ambiguous, contradictory, vague, or insufficiently defined for reliable requirement specification.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "ambiguity_id": "A001",
+        "statement": "Limited",
+        "issue": "The term 'Limited' is vague and lacks specificity regarding the scope of functionality or access.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 3"
+      },
+      {
+        "ambiguity_id": "A002",
+        "statement": "All critical requirements must pass UAT and inventory transactions must be accurately recorded.",
+        "issue": "The term 'critical requirements' is not defined, creating ambiguity about which requirements are subject to this acceptance criterion.",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Page 3"
+      }
+    ]
+  },
+  "Q023": {
+    "query_id": "Q023",
+    "target": "clarification_log",
+    "question": "Create clarification questions from the identified missing information and ambiguous statements. Each question should explain why clarification is needed.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "cq_id": "CQ-001",
+        "question": "What is the specific definition of 'stock-outs'?",
+        "reason": "The BRD specifies a target KPI for stock-outs (BO-001), but does not define what constitutes a 'stock-out'. Without a definition, it's impossible to determine if the objective is being met.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+      },
+      {
+        "cq_id": "CQ-002",
+        "question": "What is the specific definition of 'inventory accuracy'?",
+        "reason": "The BRD specifies a target KPI for inventory accuracy (BO-002), but does not define what constitutes 'inventory accuracy'. Without a definition, it's impossible to determine if the objective is being met.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Business Objectives"
+      },
+      {
+        "cq_id": "CQ-003",
+        "question": "What specific authentication methods are supported for user login (FR-001)?",
+        "reason": "The document states that user login is a 'High' priority functional requirement but does not detail what authentication methods will be supported (e.g., password, MFA, biometrics).",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "cq_id": "CQ-004",
+        "question": "Can you provide a detailed description of what data is tracked, how it is tracked, and by whom in relation to inventory tracking (FR-002)?",
+        "reason": "The inventory tracking requirement is marked as 'High' priority, but the description lacks detail about what data is tracked and how, making it difficult to assess the scope and implement the requirement.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "cq_id": "CQ-005",
+        "question": "Can you describe the detailed steps involved in creating, approving, and managing purchase orders (FR-003)?",
+        "reason": "The purchase order functionality is a 'Medium' priority requirement, but the description lacks detail about the involved steps, making it difficult to implement.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "cq_id": "CQ-006",
+        "question": "What specific reports are available through the Reporting Dashboard (FR-004), and how are they presented?",
+        "reason": "The reporting dashboard requirement is 'High' priority, but the description lacks detail about the reports and their presentation, making it difficult to design.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Functional Requirements"
+      },
+      {
+        "cq_id": "CQ-007",
+        "question": "What specific functionality is included within the 'Limited' access for the 'User' role when viewing reports?",
+        "reason": "The term 'Limited' in the Role Permission Matrix is ambiguous. Clarification is needed to understand the scope of the User role's access to reporting features.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Role Permission Matrix"
+      },
+      {
+        "cq_id": "CQ-008",
+        "question": "What specific criteria define 'accurate inventory transactions'?",
+        "reason": "The acceptance criteria state that inventory transactions must be accurately recorded but fail to define what constitutes 'accurate'.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Acceptance Criteria"
+      },
+      {
+        "cq_id": "CQ-009",
+        "question": "What constitutes 'critical requirements' in the acceptance criteria?",
+        "reason": "The acceptance criteria specify that 'all critical requirements' must pass UAT, but the document does not define what qualifies as a 'critical requirement'.",
+        "status": "Open",
+        "source_reference": "BRD_Inventory_Management_System.pdf, Acceptance Criteria"
+      }
+    ]
+  },
+  "Q024": {
+    "query_id": "Q024",
+    "target": "traceability_matrix",
+    "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+    "response_type": "array",
+    "status": "success",
+    "answer": [
+      {
+        "trace_id": "T-001",
+        "business_objective": "BO-001",
+        "functional_requirement": "FR-002",
+        "user_story": "US-002",
+        "acceptance_criteria": "AC-002"
+      },
+      {
+        "trace_id": "T-002",
+        "business_objective": "BO-002",
+        "functional_requirement": "FR-004",
+        "user_story": "US-004",
+        "acceptance_criteria": "AC-004"
+      },
+      {
+        "trace_id": "T-003",
+        "business_objective": null,
+        "functional_requirement": "FR-003",
+        "user_story": "US-003",
+        "acceptance_criteria": "AC-003"
+      },
+      {
+        "trace_id": "T-004",
+        "business_objective": null,
+        "functional_requirement": "FR-001",
+        "user_story": "US-001",
+        "acceptance_criteria": "AC-001"
+      }
+    ]
+  },
+  "Q025": {
+    "query_id": "Q025",
+    "target": "review_recommendations",
+    "question": "Provide review recommendations based only on missing information, ambiguities, requirement quality issues, traceability gaps, or unsupported elements identified in the source and extracted DRS data.",
+    "response_type": "array",
+    "status": "failed",
+    "answer": null,
+    "error": "Expecting ',' delimiter: line 25 column 4 (char 1911)",
+    "raw_llm_response": "```json\n[\n  {\n    \"recommendation_id\": \"R-001\",\n    \"recommendation\": \"Clarify the definition of 'stock-outs' to enable proper measurement of the objective's target value.\",\n    \"reason\": \"The BRD specifies a target KPI for stock-outs (BO-001), but the document does not define what constitutes a 'stock-out'. Without a definition, it's impossible to determine if the objective is being met.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Business Objectives\"\n  },\n  {\n    \"recommendation_id\": \"R-002\",\n    \"recommendation\": \"Clarify the definition of 'inventory accuracy' to enable proper measurement of the objective's target value.\",\n    \"reason\": \"The BRD specifies a target KPI for inventory accuracy (BO-002), but the document does not define what constitutes 'inventory accuracy'. Without a definition, it's impossible to determine if the objective is being met.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Business Objectives\"\n  },\n  {\n    \"recommendation_id\": \"R-003\",\n    \"recommendation\": \"Define what specific authentication methods are supported for user login (FR-001).\",\n    \"reason\": \"The document states that user login is a 'High' priority functional requirement but does not detail what authentication methods will be supported (e.g., password, MFA, biometrics).\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Functional Requirements\"\n  },\n  {\n    \"recommendation_id\": \"R-004\",\n    \"recommendation\": \"Provide a detailed description of what data is tracked, how it is tracked, and by whom in relation to inventory tracking (FR-002).\",\n    \"reason\": \"The inventory tracking requirement is marked as 'High' priority, but the description lacks detail about what data is tracked and how, making it difficult to assess the scope and implement the requirement.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Functional Requirements\"\n  },\n  {\n    "
+  },
+  "Q026": {
+    "query_id": "Q026",
+    "target": "review_status",
+    "question": "Determine the appropriate review status from the source documents and extraction results, considering whether there are unresolved ambiguities, missing information, or traceability/validation issues.",
+    "response_type": "object",
+    "status": "success",
+    "answer": {
+      "query_id": "Q025",
+      "target": "review_recommendations",
+      "question": "Provide review recommendations based only on missing information, ambiguities, requirement quality issues, traceability gaps, or unsupported elements identified in the source and extracted DRS data.",
+      "response_type": "array",
+      "status": "failed",
+      "answer": null,
+      "error": "Expecting ',' delimiter: line 25 column 4 (char 1911)",
+      "raw_llm_response": "```json\n[\n  {\n    \"recommendation_id\": \"R-001\",\n    \"recommendation\": \"Clarify the definition of 'stock-outs' to enable proper measurement of the objective's target value.\",\n    \"reason\": \"The BRD specifies a target KPI for stock-outs (BO-001), but the document does not define what constitutes a 'stock-out'. Without a definition, it's impossible to determine if the objective is being met.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Business Objectives\"\n  },\n  {\n    \"recommendation_id\": \"R-002\",\n    \"recommendation\": \"Clarify the definition of 'inventory accuracy' to enable proper measurement of the objective's target value.\",\n    \"reason\": \"The BRD specifies a target KPI for inventory accuracy (BO-002), but the document does not define what constitutes 'inventory accuracy'. Without a definition, it’s impossible to determine if the objective is being met.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Business Objectives\"\n  },\n  {\n    \"recommendation_id\": \"R-003\",\n    \"recommendation\": \"Define what specific authentication methods are supported for user login (FR-001).\",\n    \"reason\": \"The document states that user login is a 'High' priority functional requirement but does not detail what authentication methods will be supported (e.g., password, MFA, biometrics).\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Functional Requirements\"\n  },\n  {\n    \"recommendation_id\": \"R-004\",\n    \"recommendation\": \"Provide a detailed description of what data is tracked, how it is tracked, and by whom in relation to inventory tracking (FR-002).\",\n    \"reason\": \"The inventory tracking requirement is marked as 'High' priority, but the description lacks detail about what data is tracked and how, making it difficult to assess the scope and implement the requirement.\",\n    \"source_reference\": \"BRD_Inventory_Management_System.pdf, Functional Requirements\"\n  },\n  {\n    "
+    }
+  }
+}

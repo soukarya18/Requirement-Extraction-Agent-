@@ -1,0 +1,65 @@
+{
+  "query_id": "Q016",
+  "target": "non_functional_requirements",
+  "question": "Extract every explicitly stated non-functional requirement, including its category, requirement statement, priority, and source reference.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "nfr_id": "NFR-001",
+      "category": "Availability",
+      "requirement": "The production solution shall target 99.9% monthly service availability, excluding agreed maintenance windows.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-002",
+      "category": "Performance",
+      "requirement": "For normal operating load, standard application pages shall respond within 3 seconds for 95% of requests.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-003",
+      "category": "Capacity",
+      "requirement": "The solution shall support up to 500 concurrent users and allow future scaling.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-004",
+      "category": "Security",
+      "requirement": "Access shall use corporate authentication and role-based authorization with least-privilege principles.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-005",
+      "category": "Privacy",
+      "requirement": "Borrower, financial and collateral information shall be handled in accordance with applicable data protection and organizational privacy requirements.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-006",
+      "category": "Auditability",
+      "requirement": "Credit and workflow events shall be logged with user, timestamp, action, decision and outcome.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-007",
+      "category": "Retention",
+      "requirement": "Loan processing records shall be retained for seven years unless a different approved schedule applies.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    },
+    {
+      "nfr_id": "NFR-008",
+      "category": "Accessibility",
+      "requirement": "Core user journeys shall support accessible keyboard navigation and readable screen content.",
+      "priority": null,
+      "source_reference": "loan_processing_automation_BRS.docx - Section 10. Non-Functional Requirements"
+    }
+  ]
+}

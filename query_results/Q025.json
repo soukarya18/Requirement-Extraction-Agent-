@@ -1,0 +1,99 @@
+{
+  "query_id": "Q025",
+  "target": "review_recommendations",
+  "question": "Provide review recommendations based only on missing information, ambiguities, requirement quality issues, traceability gaps, or unsupported elements identified in the source and extracted DRS data.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "recommendation_id": "R1",
+      "recommendation": "Provide the Business context and problem statement for the loan processing automation.",
+      "reason": "The source checklist requires a business context and problem statement, but it is not present in the extracted DRS.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R2",
+      "recommendation": "Define the Objectives and measurable outcomes for the project.",
+      "reason": "The checklist lists objectives and measurable outcomes as required, yet they are missing from the current documentation.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R3",
+      "recommendation": "Specify In‑scope and out‑of‑scope items for the solution.",
+      "reason": "In‑scope and out‑of‑scope items are identified as needed in the checklist but are absent from the extracted data.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R4",
+      "recommendation": "Identify all Stakeholders and their roles in the initiative.",
+      "reason": "Stakeholder identification is required by the checklist and is currently missing.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R5",
+      "recommendation": "Document the high‑level Business requirements the solution must deliver.",
+      "reason": "Business requirements are listed as a required output but are not present in the DRS.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R6",
+      "recommendation": "Capture detailed Functional requirements describing system behavior.",
+      "reason": "Functional requirements are required by the checklist and are missing from the current artefacts.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R7",
+      "recommendation": "Specify Non‑functional requirements such as performance, security, and usability.",
+      "reason": "The checklist calls for non‑functional requirements, which are not provided in the extracted data.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R8",
+      "recommendation": "Record the Business rules governing loan processing and decision making.",
+      "reason": "Business rules are required by the checklist but are absent from the DRS.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R9",
+      "recommendation": "Document Assumptions underlying the loan processing environment and stakeholder expectations.",
+      "reason": "Assumptions are listed as needed in the checklist and are currently missing.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R10",
+      "recommendation": "Capture all Constraints (technical, regulatory, operational) that limit solution design.",
+      "reason": "Constraints are required by the checklist; only a subset is present in Context 3, indicating gaps.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R11",
+      "recommendation": "Create User stories that translate requirements into actionable development items.",
+      "reason": "User stories are a required output per the checklist but are not present in the current artefacts.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R12",
+      "recommendation": "Establish source‑linked traceability from BRS sections to DRS requirements and backlog items.",
+      "reason": "The checklist mandates source‑linked traceability, which is not demonstrated in the existing traceability matrix.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "recommendation_id": "R13",
+      "recommendation": "Clarify the ambiguous statements identified as A1‑A4 in the Business Problem Statement.",
+      "reason": "Ambiguities regarding approval tracking, manual follow‑up, SLA identification, and document exchange were flagged as needing clarification.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 3. Business Problem Statement"
+    },
+    {
+      "recommendation_id": "R14",
+      "recommendation": "Add testable Acceptance Criteria for traceability entries where it is currently null (e.g., T‑001, T‑004, T‑006, T‑009, T‑011).",
+      "reason": "The traceability matrix shows missing acceptance criteria for several trace IDs, which are required for validation.",
+      "source_reference": "Q024 traceability matrix"
+    },
+    {
+      "recommendation_id": "R15",
+      "recommendation": "Link each Functional requirement in the traceability matrix to the specific BRS section it originates from.",
+      "reason": "The current matrix lacks explicit references to BRS sections, violating the checklist requirement for source‑linked traceability.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    }
+  ]
+}

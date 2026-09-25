@@ -1,0 +1,69 @@
+{
+  "query_id": "EQ005",
+  "target": "acceptance_criteria",
+  "question": "Extract every explicit acceptance criteria mentioned in the document.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "criterion_id": "AC-001",
+      "criterion": "Given an authorized Hiring Manager, when mandatory employee and employment information is entered, then the user can save and submit an onboarding request.",
+      "related_requirement_id": "BR-001 / FR-001",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 19)"
+    },
+    {
+      "criterion_id": "AC-002",
+      "criterion": "Given a selected employee type, when the user uploads required identity and employment documents, then each document is recorded against the request.",
+      "related_requirement_id": "BR-002 / FR-003",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 19)"
+    },
+    {
+      "criterion_id": "AC-003",
+      "criterion": "Given a missing mandatory identity document, when the user attempts to progress the request, then progression is blocked and the missing document is identified.",
+      "related_requirement_id": "BR-003 / FR-004",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 19)"
+    },
+    {
+      "criterion_id": "AC-004",
+      "criterion": "Given a submitted onboarding request, when role and location workflow rules are evaluated, then the appropriate HR or Compliance task is assigned.",
+      "related_requirement_id": "BR-004 / FR-005",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 19)"
+    },
+    {
+      "criterion_id": "AC-005",
+      "criterion": "Given an assigned approver, when the approver selects approve, reject or return, then the decision and comments are recorded and the workflow transitions.",
+      "related_requirement_id": "BR-005 / FR-006",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 19)"
+    },
+    {
+      "criterion_id": "AC-006",
+      "criterion": "Given a configured approval event, when the event occurs, then the intended recipient receives a notification containing the loan application identifier and required action.",
+      "related_requirement_id": "BR-006 / FR-008",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 20)"
+    },
+    {
+      "criterion_id": "AC-007",
+      "criterion": "Given an authorized user, when the loan application is opened, then stage, owner, aging and outstanding conditions are visible.",
+      "related_requirement_id": "BR-007 / FR-007",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 20)"
+    },
+    {
+      "criterion_id": "AC-008",
+      "criterion": "Given a saved credit decision, when the audit history is opened, then the user, timestamp, decision and outcome are displayed.",
+      "related_requirement_id": "BR-008 / FR-012",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 20)"
+    },
+    {
+      "criterion_id": "AC-009",
+      "criterion": "Given search criteria, when the user searches loans, then matching authorized applications are returned and can be filtered.",
+      "related_requirement_id": "BR-009 / FR-009",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 20)"
+    },
+    {
+      "criterion_id": "AC-010",
+      "criterion": "Given a failed verification, when the request is placed on hold, then the hold reason and responsible owner are recorded.",
+      "related_requirement_id": "BR-010 / FR-004",
+      "source_reference": "employee_onboarding_automation_BRS.docx - Section 14. Acceptance Criteria (chunk 20)"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "query_id": "Q004",
+  "target": "business_objectives",
+  "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "objective_id": "BO-01",
+      "objective": "Reduce end-to-end loan processing cycle time.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+    },
+    {
+      "objective_id": "BO-02",
+      "objective": "Reduce manual operational effort.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+    },
+    {
+      "objective_id": "BO-03",
+      "objective": "Improve application status visibility.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+    },
+    {
+      "objective_id": "BO-04",
+      "objective": "Strengthen credit and risk control adherence.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+    },
+    {
+      "objective_id": "BO-05",
+      "objective": "Provide full auditability.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 4. Business Objectives"
+    }
+  ]
+}

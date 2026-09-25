@@ -1,0 +1,87 @@
+{
+  "query_id": "Q021",
+  "target": "missing_information",
+  "question": "Identify information required by the DRS structure that is materially missing from the source documents.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "item_id": "M1",
+      "missing_information": "Business context and problem statement",
+      "why_needed": "Required to define the business background and the problem the loan processing automation aims to solve, forming the foundation for all downstream requirements.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M2",
+      "missing_information": "Objectives and measurable outcomes",
+      "why_needed": "Needed to establish clear goals and success criteria that can be validated against the solution.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M3",
+      "missing_information": "In-scope and out-of-scope items",
+      "why_needed": "Defines the boundaries of the solution, preventing scope creep and guiding requirement prioritization.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M4",
+      "missing_information": "Stakeholders and roles",
+      "why_needed": "Identifies who is involved, their responsibilities, and who must approve or use the system.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M5",
+      "missing_information": "Business requirements",
+      "why_needed": "Specifies the high‑level capabilities the solution must deliver to meet business needs.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M6",
+      "missing_information": "Functional requirements",
+      "why_needed": "Describes detailed system behavior needed to implement the business requirements.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M7",
+      "missing_information": "Non‑functional requirements",
+      "why_needed": "Defines quality attributes such as performance, security, and usability that the solution must satisfy.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M8",
+      "missing_information": "Business rules",
+      "why_needed": "Provides the decision logic and constraints that govern loan processing.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M9",
+      "missing_information": "Assumptions",
+      "why_needed": "Documents conditions presumed true that affect requirement interpretation and implementation.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M10",
+      "missing_information": "Constraints",
+      "why_needed": "Identifies technical, regulatory, or operational limits that shape solution design.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M11",
+      "missing_information": "User stories",
+      "why_needed": "Translates requirements into actionable development items aligned with stakeholder needs.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M12",
+      "missing_information": "Source‑linked traceability from BRS sections to DRS requirements and backlog items",
+      "why_needed": "Ensures each requirement can be traced back to its origin for validation, impact analysis, and compliance.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    },
+    {
+      "item_id": "M13",
+      "missing_information": "Ambiguities, missing information, conflicts and duplicates requiring human review",
+      "why_needed": "Highlights areas that need clarification before finalizing the DRS to avoid defects and rework.",
+      "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+    }
+  ]
+}

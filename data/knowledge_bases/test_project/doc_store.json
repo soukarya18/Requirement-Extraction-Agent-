@@ -1,0 +1,36 @@
+{
+  "BRD_Inventory_Management_System.pdf": [
+    {
+      "content": "[Page 1]\nBusiness Requirements Document​\nInventory Management System \nVersion 1.0​\nPrepared by: M365 Copilot​\nDate: 26 Aug 2026",
+      "metadata": {
+        "source": "BRD_Inventory_Management_System.pdf",
+        "source_type": "pdf",
+        "chunk_index": 0
+      }
+    },
+    {
+      "content": "[Page 2]\nExecutive Summary \nThe Inventory Management System will centralize inventory tracking, purchasing, \nwarehouse operations, and reporting. \nBusiness Objectives \nImprove inventory accuracy, reduce stock-outs, and increase operational efficiency. \nDocument Control \nVersion \nDate \nAuthor \nDescription \n1.0 \n26-Aug-2026 \nBusiness Analyst \nInitial Draft \nStakeholders \nStakeholder \nRole \nPriority \nOperations Manager \nBusiness Owner \nHigh \nWarehouse Supervisor \nKey User \nHigh \nIT Manager \nTechnical Sponsor \nMedium \nBusiness Objectives \nID \nObjective \nKPI \nBO-001 \nReduce stock-outs \n<2%",
+      "metadata": {
+        "source": "BRD_Inventory_Management_System.pdf",
+        "source_type": "pdf",
+        "chunk_index": 1
+      }
+    },
+    {
+      "content": "Business Objectives \nID \nObjective \nKPI \nBO-001 \nReduce stock-outs \n<2% \nBO-002 \nImprove inventory accuracy \n99% \nScope Matrix \nIn Scope \nOut of Scope \nInventory tracking \nPayroll \nPurchase orders \nHR management \nFunctional Requirements \nReq ID \nRequirement \nPriority \nFR-001 \nUser Login \nHigh \nFR-002 \nInventory Tracking \nHigh \nFR-003 \nPurchase Orders \nMedium \nFR-004 \nReporting Dashboard \nHigh \nRole Permission Matrix \nFeature \nAdmin \nManager \nUser \nCreate Item \nYes \nYes \nNo \nApprove PO \nYes \nYes \nNo",
+      "metadata": {
+        "source": "BRD_Inventory_Management_System.pdf",
+        "source_type": "pdf",
+        "chunk_index": 2
+      }
+    },
+    {
+      "content": "[Page 3]\nView Reports \nYes \nYes \nLimited \nNon Functional Requirements \nCategory \nRequirement \nAvailability \n99.9% uptime \nPerformance \n<3 second response \nSecurity \nMFA support \nRisk Register \nRisk \nImpact \nMitigation \nData migration issues \nHigh \nValidation and testing \nUser adoption \nMedium \nTraining program \nAcceptance Criteria \nAll critical requirements must pass UAT and inventory transactions must be accurately \nrecorded.",
+      "metadata": {
+        "source": "BRD_Inventory_Management_System.pdf",
+        "source_type": "pdf",
+        "chunk_index": 3
+      }
+    }
+  ]
+}

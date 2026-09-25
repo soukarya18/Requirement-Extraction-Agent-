@@ -1,0 +1,52 @@
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-huggingface
+
+faiss-cpu
+
+pymupdf
+python-docx
+
+sentence-transformers
+
+faster-whisper
+
+# Web application
+streamlit
+
+# Document parsing / generation
+PyMuPDF
+python-docx
+
+
+
+
+
+# Structured LLM response validation
+pydantic
+
+# Environment/configuration helpers
+python-dotenv
+
+# LLM integrations
+# Groq is used by the current setup (e.g. gpt-oss-120b on Groq).
+langchain-groq
+groq
+
+# OpenAI integration is kept because the project can use OpenAI-compatible
+# LLM/embedding implementations from the same query/embedding architecture.
+langchain-openai
+openai
+
+# Tokenization utility commonly used by LangChain/OpenAI integrations
+tiktoken
+
+# Numerical dependency commonly used by embedding/vector-store components
+numpy
+
+dash>=2.17
+dash-bootstrap-components>=1.5
+python-docx>=1.1
+# Plus whatever your existing backend already depends on
+# (src/, modules/, chatbot_feature/, estimation_generation/, FAISS/embeddings libs, etc.)

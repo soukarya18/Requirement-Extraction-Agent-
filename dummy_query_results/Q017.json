@@ -1,0 +1,27 @@
+{
+  "query_id": "Q017",
+  "target": "business_rules",
+  "question": "Extract all explicitly stated business rules, policies, decision rules, validation rules, or mandatory conditions.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "rule_id": "BO-001",
+      "rule_statement": "Reduce stock-outs",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Business Objectives",
+        "BO-001"
+      ]
+    },
+    {
+      "rule_id": "BO-002",
+      "rule_statement": "Improve inventory accuracy",
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Business Objectives",
+        "BO-002"
+      ]
+    }
+  ]
+}

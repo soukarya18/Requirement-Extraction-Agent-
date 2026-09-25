@@ -1,0 +1,37 @@
+{
+  "query_id": "Q024",
+  "target": "traceability_matrix",
+  "question": "Build a traceability matrix linking business objectives to functional requirements, functional requirements to user stories, and user stories to acceptance criteria, using only IDs that exist in the extracted results.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "trace_id": "T-001",
+      "business_objective": "BO-001",
+      "functional_requirement": "FR-002",
+      "user_story": "US-002",
+      "acceptance_criteria": "AC-002"
+    },
+    {
+      "trace_id": "T-002",
+      "business_objective": "BO-002",
+      "functional_requirement": "FR-004",
+      "user_story": "US-004",
+      "acceptance_criteria": "AC-004"
+    },
+    {
+      "trace_id": "T-003",
+      "business_objective": null,
+      "functional_requirement": "FR-003",
+      "user_story": "US-003",
+      "acceptance_criteria": "AC-003"
+    },
+    {
+      "trace_id": "T-004",
+      "business_objective": null,
+      "functional_requirement": "FR-001",
+      "user_story": "US-001",
+      "acceptance_criteria": "AC-001"
+    }
+  ]
+}

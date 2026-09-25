@@ -1,0 +1,14 @@
+{
+  "query_id": "Q011",
+  "target": "assumptions",
+  "question": "Extract all assumptions explicitly stated or clearly documented as assumptions in the source documents.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "assumption_id": null,
+      "assumption": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting.",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 2, Executive Summary"
+    }
+  ]
+}

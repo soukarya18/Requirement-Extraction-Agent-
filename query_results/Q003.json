@@ -1,0 +1,11 @@
+{
+  "query_id": "Q003",
+  "target": "business_background",
+  "question": "Extract a dedicated business background mentioned in the given document . If no dedicated business background or current business context is explicitly stated in the source documents, return null.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "background": "The organization currently processes corporate and institutional loan requests through email, spreadsheets and manual credit work queues. Relationship Managers collect borrower information and financial documents, after which Operations, Credit, Risk, Compliance and Loan Administration perform separate checks before a facility can be approved and set up. Information is repeatedly keyed into downstream records.\nA typical loan request takes twelve business days from initial submission to facility setup. Delays are concentrated around incomplete borrower packs, financial spreading, credit review, risk approval and follow-up on approval conditions. Management has limited real-time visibility of where an application is waiting.",
+    "source_reference": "loan_processing_automation_BRS.docx - Section 2. Business Background"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "query_id": "Q017",
+  "target": "business_rules",
+  "question": "Extract all explicitly stated business rules",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "rule_id": "RULE-001",
+      "rule_statement": "All mandatory borrower and credit documents must be present before credit review can be completed.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-002",
+      "rule_statement": "A High Risk loan requires Risk Manager approval in addition to the applicable Credit approval.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-003",
+      "rule_statement": "An application with missing mandatory information shall be placed on hold and returned to the requestor.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-004",
+      "rule_statement": "Every approval, rejection, return and conditional approval shall include timestamp, decision-maker identity and decision details.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-005",
+      "rule_statement": "Loan facility setup shall not begin until required Credit, Risk and Compliance approvals are recorded and mandatory conditions are satisfied.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-006",
+      "rule_statement": "A rejection shall require a reason and shall close the active workflow unless reopened by an authorized role.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-007",
+      "rule_statement": "Only authorized users may view or download borrower financial and collateral documents.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    },
+    {
+      "rule_id": "RULE-008",
+      "rule_statement": "Overdue credit and approval tasks shall trigger reminders according to the configured SLA schedule.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 11"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "query_id": "Q006",
+  "target": "out_of_scope",
+  "question": "Extract all explicitly stated items, capabilities, processes, users, systems, or activities that are out of scope.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "item_id": "OOS-001",
+      "item": "Payroll",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Scope Matrix"
+    },
+    {
+      "item_id": "OOS-002",
+      "item": "HR management",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Scope Matrix"
+    }
+  ]
+}

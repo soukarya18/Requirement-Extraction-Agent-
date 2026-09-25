@@ -1,0 +1,34 @@
+{
+  "query_id": "Q011",
+  "target": "assumptions",
+  "question": "Extract all assumptions explicitly stated or clearly documented as assumptions in the source documents.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "assumption_id": null,
+      "assumption": "All POC users have valid corporate identities.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+    },
+    {
+      "assumption_id": null,
+      "assumption": "Credit scoring, KYC and risk services can be represented by mock services if live APIs are unavailable.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+    },
+    {
+      "assumption_id": null,
+      "assumption": "Email notification infrastructure is available for integration or simulation.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+    },
+    {
+      "assumption_id": null,
+      "assumption": "POC loan documents use synthetic or anonymized data only.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+    },
+    {
+      "assumption_id": null,
+      "assumption": "Business users will provide feedback and acceptance decisions for the POC scenarios.",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 12. Assumptions"
+    }
+  ]
+}

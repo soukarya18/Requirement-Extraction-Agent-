@@ -1,0 +1,25 @@
+{
+  "query_id": "Q014",
+  "target": "risks",
+  "question": "Extract all risks explicitly identified in the source documents, including their descriptions and any stated impacts, likelihoods, or mitigations.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "risk_id": null,
+      "risk": "Data migration issues",
+      "impact": "High",
+      "likelihood": null,
+      "mitigation": "Validation and testing",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    },
+    {
+      "risk_id": null,
+      "risk": "User adoption",
+      "impact": "Medium",
+      "likelihood": null,
+      "mitigation": "Training program",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 3]"
+    }
+  ]
+}

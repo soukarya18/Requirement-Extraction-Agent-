@@ -1,0 +1,12 @@
+{
+  "query_id": "Q026",
+  "target": "review_status",
+  "question": "Determine the appropriate review status from the source documents and extracted DRS results, considering unresolved missing information, ambiguities, traceability gaps, validation issues, and review recommendations. Use the extracted results directly; do not invent a review status or assume that missing information is resolved.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "status": "Requires Human Review",
+    "reason": "The DRS still has multiple missing information items, ambiguous statements, traceability gaps, and unmet review recommendations, indicating that the artefacts are not yet complete or validated.",
+    "source_reference": "Context 1: Section 16. POC Extraction Checklist"
+  }
+}

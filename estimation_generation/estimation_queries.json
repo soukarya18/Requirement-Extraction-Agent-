@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.0",
+  "execution_model": {"mode": "sequential_queries", "description": "Extract only the BRD facts needed for an explainable delivery estimate."},
+  "global_rules": [
+    "Use only information explicitly supported by the current BRD knowledge base.",
+    "Do not invent workflows, screens, APIs, integrations, data changes, security controls, or test activities.",
+    "Preserve source IDs and terminology where supplied.",
+    "Return an empty array when no matching source-supported items exist.",
+    "Every source_reference must identify evidence for that item."
+  ],
+  "queries": [
+    {"query_id": "EQ001", "target": "business_rules", "question": "Extract every explicit business rule, decision rule, validation rule, policy, threshold, or condition in the BRD that could affect implementation effort.", "response_type": "array", "response_schema": {"rule_id": "string|null", "rule_statement": "string", "source_reference": "string|array|null"}, "rules": ["Keep each rule separate.", "Do not convert ordinary requirements into business rules."], "depends_on": []},
+
+    {"query_id": "EQ002", "target": "business_requirements", "question": "Extract every Future State Business Requirements mentioned in the document .", "response_type": "array", "response_schema": {"rule_id": "string|null", "rule_statement": "string", "source_reference": "string|array|null"}, "rules": ["Keep each requirements separate."], "depends_on": []},
+
+    {"query_id": "EQ003", "target": "functional_requirements", "question": "Extract every explicit functional requirement from the BRD. Capture the requested capability, actor when stated, workflow or trigger when stated, integrations or APIs when stated, and source reference.", "response_type": "array", "response_schema": {"requirement_id": "string|null", "capability": "string", "actor": "string|null", "workflow_or_trigger": "string|null", "integration_or_api": "string|array|null", "source_reference": "string|array|null"}, "rules": ["Do not infer screens, APIs, or workflow steps from a requirement title.", "Use null for unsupported attributes."], "depends_on": []},
+    {"query_id": "EQ004", "target": "non_functional_requirements", "question": "Extract every explicit non functional requirements mentioned in the document .", "response_type": "array", "response_schema": {"requirement_id": "string|null", "category": "string|null", "requirement": "string", "source_reference": "string|array|null"}, "rules": ["Do not infer non-functional requirements from normal functional behavior."], "depends_on": []},
+    {"query_id": "EQ005", "target": "acceptance_criteria", "question": "Extract every explicit acceptance criteria mentioned in the document.", "response_type": "array", "response_schema": {"criterion_id": "string|null", "criterion": "string", "related_requirement_id": "string|null", "source_reference": "string|array|null"}, "rules": ["Do not generate new Given When Then criteria when the BRD does not provide them.", "Keep criteria separate from business rules."], "depends_on": []}
+  ]
+}

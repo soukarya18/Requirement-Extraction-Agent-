@@ -1,0 +1,141 @@
+{
+  "query_id": "Q019",
+  "target": "user_stories",
+  "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "story_id": "US-FR-001",
+      "story_title": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+      "role": null,
+      "capability": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-001"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-002",
+      "story_title": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+      "role": null,
+      "capability": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-002"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-003",
+      "story_title": "Upload, classify, preview, replace and download loan supporting documents.",
+      "role": null,
+      "capability": "Upload, classify, preview, replace and download loan supporting documents.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-003"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-004",
+      "story_title": "Validate mandatory borrower data and required credit documents before submission.",
+      "role": null,
+      "capability": "Validate mandatory borrower data and required credit documents before submission.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-004"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-005",
+      "story_title": "Assign and reassign credit workflow tasks to authorized users or groups.",
+      "role": null,
+      "capability": "Assign and reassign credit workflow tasks to authorized users or groups.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-005"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-006",
+      "story_title": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+      "role": null,
+      "capability": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-006"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-007",
+      "story_title": "Display application stage, pending conditions, owner and aging.",
+      "role": null,
+      "capability": "Display application stage, pending conditions, owner and aging.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-007"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-008",
+      "story_title": "Send email notifications based on configured loan workflow events.",
+      "role": null,
+      "capability": "Send email notifications based on configured loan workflow events.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-008"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-009",
+      "story_title": "Search applications using application ID, borrower, product, status and date range.",
+      "role": null,
+      "capability": "Search applications using application ID, borrower, product, status and date range.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-009"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-010",
+      "story_title": "Generate loan volume, status, aging, risk and SLA reports.",
+      "role": null,
+      "capability": "Generate loan volume, status, aging, risk and SLA reports.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-010"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-011",
+      "story_title": "Export authorized loan report results to a standard downloadable format.",
+      "role": null,
+      "capability": "Export authorized loan report results to a standard downloadable format.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-011"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "story_id": "US-FR-012",
+      "story_title": "Capture a complete audit history for each loan application.",
+      "role": null,
+      "capability": "Capture a complete audit history for each loan application.",
+      "benefit": null,
+      "linked_fr_ids": [
+        "FR-012"
+      ],
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    }
+  ]
+}

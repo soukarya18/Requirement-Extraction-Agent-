@@ -1,0 +1,22 @@
+{
+  "query_id": "Q009",
+  "target": "current_state_summary",
+  "question": "Extract the current-state processes, systems, pain points, limitations, and existing practices explicitly described in the source documents.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "summary": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting.",
+    "pain_points": [
+      "Data migration issues (High impact)",
+      "User adoption (Medium impact)"
+    ],
+    "existing_systems_or_processes": [
+      "View Reports (Limited)"
+    ],
+    "source_reference": [
+      "BRD_Inventory_Management_System.pdf, Executive Summary",
+      "BRD_Inventory_Management_System.pdf, Page 3, Risk Register",
+      "BRD_Inventory_Management_System.pdf, Page 3, View Reports"
+    ]
+  }
+}

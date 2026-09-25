@@ -1,0 +1,21 @@
+{
+  "query_id": "Q022",
+  "target": "ambiguous_statements",
+  "question": "Identify statements in the source documents that are ambiguous, contradictory, vague, or insufficiently defined for reliable requirement specification.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "ambiguity_id": "A001",
+      "statement": "Limited",
+      "issue": "The term 'Limited' is vague and lacks specificity regarding the scope of functionality or access.",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 3"
+    },
+    {
+      "ambiguity_id": "A002",
+      "statement": "All critical requirements must pass UAT and inventory transactions must be accurately recorded.",
+      "issue": "The term 'critical requirements' is not defined, creating ambiguity about which requirements are subject to this acceptance criterion.",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 3"
+    }
+  ]
+}

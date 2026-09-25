@@ -1,0 +1,65 @@
+{
+  "query_id": "Q019",
+  "target": "user_stories",
+  "question": "Generate user stories only from the extracted functional requirements, using the format: As a <Role>, I want <Capability>, so that <Benefit>. Link every story to one or more valid functional requirements.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "story_id": "US-001",
+      "story_title": "User Login",
+      "role": "User",
+      "capability": "Log into the system",
+      "benefit": "Access inventory management functionality",
+      "linked_fr_ids": [
+        "FR-001"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "story_id": "US-002",
+      "story_title": "Track Inventory",
+      "role": "User",
+      "capability": "Track inventory levels",
+      "benefit": "Ensure accurate inventory records",
+      "linked_fr_ids": [
+        "FR-002"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "story_id": "US-003",
+      "story_title": "Create Purchase Orders",
+      "role": "Manager",
+      "capability": "Create purchase orders",
+      "benefit": "Manage inventory replenishment",
+      "linked_fr_ids": [
+        "FR-003"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    },
+    {
+      "story_id": "US-004",
+      "story_title": "View Reporting Dashboard",
+      "role": "User",
+      "capability": "View the reporting dashboard",
+      "benefit": "Gain insights into inventory performance",
+      "linked_fr_ids": [
+        "FR-004"
+      ],
+      "source_reference": [
+        "BRD_Inventory_Management_System.pdf",
+        "Functional Requirements"
+      ]
+    }
+  ]
+}

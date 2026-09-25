@@ -1,0 +1,707 @@
+{
+  "schema_version": "3.1",
+  "template": {
+    "name": "Jira Epic, User Story and Bug Templates",
+    "version": "canonical-8-page-template",
+    "source_template": "Jira_template.docx",
+    "is_static": true
+  },
+  "execution_model": {
+    "mode": "focused_independent_queries",
+    "description": "Each query is intended for similarity retrieval against the active knowledge base. Queries use source document terminology and source identifiers. Internal Jira IDs are generated outside the LLM."
+  },
+  "global_rules": [
+    "Use only the source documents in the active knowledge base as authority for project facts.",
+    "The Jira template provides output structure and guidance only; placeholders and examples are not project facts.",
+    "Keep each retrieval question focused on one information need.",
+    "Prefer the exact vocabulary and section terminology used in the source document.",
+    "Do not invent project facts, actors, benefits, priorities, releases, story points, assignees, labels, components, dependencies, risks, assumptions, rules, metrics, or relationships.",
+    "Preserve source IDs, wording, dates, numbers, priorities, conditions, and measurable details.",
+    "Use null for unsupported scalar values and [] where an array has no supported items.",
+    "Every source reference must support the specific returned value.",
+    "Never ask the LLM to generate internal Jira Story IDs or Jira Epic keys.",
+    "Use source requirement IDs such as FR-001 as the stable story join key; the assembler creates US-FR-001."
+  ],
+  "queries": [
+    {
+      "query_id": "JQ001",
+      "target": "epic_name",
+      "question": "What is the name of the main business capability, solution area, or initiative described in the source?",
+      "response_type": "object",
+      "response_schema": {
+        "epic_name": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer a capability or solution name explicitly stated in the source.",
+        "Do not use a business objective ID as the Epic Name.",
+        "Do not copy a template example value."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ002",
+      "target": "epic_summary",
+      "question": "What is the summary of this initiative or solution?",
+      "response_type": "object",
+      "response_schema": {
+        "summary": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer the business background, project purpose, problem statement, and future-state description.",
+        "Return a concise source-grounded summary."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ003",
+      "target": "business_objective",
+      "question": "What business objectives is this initiative trying to achieve?",
+      "response_type": "array",
+      "response_schema": {
+        "objective_id": "string|null",
+        "business_objective": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Business Objectives section.",
+        "Preserve objective IDs and wording."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ004",
+      "target": "business_problem",
+      "question": "What business problem is this initiative trying to solve, or what opportunity is identified?",
+      "response_type": "object",
+      "response_schema": {
+        "business_problem_or_opportunity": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer the Business Problem Statement and Business Background.",
+        "Do not turn future-state requirements into the problem statement."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ005",
+      "target": "epic_benefit",
+      "question": "What business benefit or expected outcome is described for this initiative?",
+      "response_type": "object",
+      "response_schema": {
+        "hypothesis_or_benefit": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use explicitly described benefits or outcomes.",
+        "Do not invent a benefit."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ006",
+      "target": "in_scope",
+      "question": "What capabilities, processes, or activities are explicitly in scope?",
+      "response_type": "object",
+      "response_schema": {
+        "in_scope": "array",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the explicit In Scope section.",
+        "Return each scope item separately."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ007",
+      "target": "out_of_scope",
+      "question": "What capabilities, processes, or activities are explicitly out of scope?",
+      "response_type": "object",
+      "response_schema": {
+        "out_of_scope": "array",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the explicit Out of Scope section.",
+        "Do not classify constraints or risks as out of scope unless the source does."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ008",
+      "target": "epic_description",
+      "question": "What solution, future-state capability, or business process is described for this initiative?",
+      "response_type": "object",
+      "response_schema": {
+        "description": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer the Future-State Business Requirements section.",
+        "Do not introduce technical implementation details."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ009",
+      "target": "stakeholders",
+      "question": "Who are the stakeholders, user roles, or personas identified in the source, and what responsibility or interest is stated for each?",
+      "response_type": "array",
+      "response_schema": {
+        "persona_or_stakeholder": "string",
+        "role_or_interest": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer the Stakeholders section.",
+        "Do not infer requirement-level relationships."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ010",
+      "target": "success_measures",
+      "question": "What success measures, KPIs, targets, or measurable outcomes are stated?",
+      "response_type": "array",
+      "response_schema": {
+        "measure_id": "string|null",
+        "measure": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Prefer the Business Objectives section.",
+        "Preserve numerical targets exactly."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ011",
+      "target": "dependencies",
+      "question": "What dependencies are explicitly stated for this initiative?",
+      "response_type": "array",
+      "response_schema": {
+        "dependency": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only statements explicitly identified as dependencies."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ012",
+      "target": "risks",
+      "question": "What risks are explicitly stated for this initiative?",
+      "response_type": "array",
+      "response_schema": {
+        "risk": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only statements explicitly identified as risks."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ013",
+      "target": "assumptions",
+      "question": "What assumptions are explicitly stated for this initiative?",
+      "response_type": "array",
+      "response_schema": {
+        "assumption": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the explicit Assumptions section.",
+        "Return only explicit assumptions."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ014",
+      "target": "epic_priority",
+      "question": "What priority is explicitly stated for this initiative or Epic?",
+      "response_type": "object",
+      "response_schema": {
+        "priority": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Do not infer Epic priority from individual FR priorities."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ015",
+      "target": "epic_release",
+      "question": "What target release or fix version is explicitly stated for this initiative?",
+      "response_type": "object",
+      "response_schema": {
+        "target_release": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when no release or fix version is stated."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ016",
+      "target": "epic_labels_components",
+      "question": "What labels or components are explicitly stated for this initiative?",
+      "response_type": "object",
+      "response_schema": {
+        "labels_or_components": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when none are explicitly stated.",
+        "Do not invent Jira labels or components."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ017",
+      "target": "source_references",
+      "question": "What source document sections, requirement IDs, or other references support the Epic information?",
+      "response_type": "array",
+      "response_schema": {
+        "source_reference": "string"
+      },
+      "rules": [
+        "Return only references present in the source."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ018",
+      "target": "epic_acceptance_criteria",
+      "question": "What acceptance criteria are explicitly stated for the capabilities represented by this Epic?",
+      "response_type": "array",
+      "response_schema": {
+        "ac_id": "string|null",
+        "given": "string",
+        "when": "string",
+        "then": "string",
+        "evidence": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the dedicated Acceptance Criteria section.",
+        "Preserve AC IDs and Given/When/Then meaning.",
+        "Do not invent Epic acceptance criteria."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ019",
+      "target": "story_core",
+      "question": "What functional requirements are listed in the Functional Requirements section?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "story_title": "string",
+        "capability": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return one item for each functional requirement ID.",
+        "Use the FR ID exactly as source_requirement_id, such as FR-001.",
+        "Keep story_title and capability close to the requirement wording.",
+        "Do not generate a Jira Story ID."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ020",
+      "target": "story_persona",
+      "question": "Which user role or actor is explicitly associated with each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "persona": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Functional Requirements and Current Process sections first.",
+        "Use Stakeholders or Acceptance Criteria only when they explicitly identify the actor for the FR.",
+        "Use the FR ID as source_requirement_id."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ021",
+      "target": "story_description",
+      "question": "What does each functional requirement say the system shall allow, support, provide, or do?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "description": "string|null",
+        "business_objective": "string|null",
+        "source_requirement": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Functional Requirements wording as the story description.",
+        "Return a business objective only when an explicit mapping is stated.",
+        "Use the FR ID as source_requirement_id."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ022",
+      "target": "story_priority",
+      "question": "What priority is listed for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "priority": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Read the Priority value from the Functional Requirements section.",
+        "Do not infer priority.",
+        "Use the FR ID as source_requirement_id."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ023",
+      "target": "story_points",
+      "question": "What story points are explicitly stated for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "story_points": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when story points are not stated.",
+        "Do not estimate story points."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ024",
+      "target": "story_release",
+      "question": "What sprint, release, or fix version is explicitly stated for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "sprint_or_fix_version": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when not explicitly stated.",
+        "Do not invent a sprint or release."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ025",
+      "target": "story_labels_components",
+      "question": "What components or labels are explicitly stated for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "component_or_labels": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when not explicitly stated.",
+        "Do not invent Jira labels or components."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ026",
+      "target": "story_assignee",
+      "question": "Who is explicitly assigned to each functional requirement or story?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "assignee": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when no assignee is stated.",
+        "Do not infer an assignee from the persona."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ027",
+      "target": "story_dependencies",
+      "question": "What dependency is explicitly associated with each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "dependency": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only explicit story-level dependencies.",
+        "Do not copy the entire project dependency list to every story."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ028",
+      "target": "story_ux_references",
+      "question": "What UX, API, attachment, or supporting artefact reference is explicitly mentioned for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "reference": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only explicit references.",
+        "Do not invent design or API artefacts."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ029",
+      "target": "story_clarification_status",
+      "question": "What unresolved clarification, ambiguity, or missing requirement detail is explicitly identified for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "clarification_status": "string|null",
+        "open_question": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only explicit unresolved issues.",
+        "Do not turn missing Jira planning fields into clarification issues."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ030",
+      "target": "story_preconditions",
+      "question": "What must be true before each functional requirement can be performed or the process can proceed?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "precondition": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Search the functional requirement, current/future process, business rules, and acceptance criteria for explicit conditions.",
+        "Do not invent technical preconditions."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ031",
+      "target": "story_primary_flow",
+      "question": "What normal process steps are described for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "primary_flow": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Current Process and Future-State Business Requirements sections.",
+        "Tie the returned steps to the FR.",
+        "Do not invent implementation steps."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ032",
+      "target": "story_alternate_flow",
+      "question": "What alternative process path is explicitly described for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "alternate_flow": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return null when no explicit alternative path is described.",
+        "Do not invent an alternative path."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ033",
+      "target": "story_exceptions",
+      "question": "What exception, failure, hold, rejection, or error behavior is explicitly described for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "exception_scenario": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use Business Rules, Future-State Business Requirements, and Acceptance Criteria.",
+        "Do not invent generic technical failures."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ034",
+      "target": "story_business_rules",
+      "question": "Which business rule applies to each functional requirement, and what does the rule say?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "business_rule_id": "string|null",
+        "business_rule": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Business Rules section and explicit FR mappings.",
+        "Return the rule only when its applicability to the FR is supported.",
+        "Do not classify NFRs or constraints as business rules."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ035",
+      "target": "story_data_requirements",
+      "question": "What data, fields, documents, or information are explicitly required by each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "data_requirement": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use explicit data items from Functional Requirements and related source sections.",
+        "Do not infer fields from a requirement title."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ036",
+      "target": "story_security_compliance",
+      "question": "What security, privacy, access-control, audit, or compliance requirement explicitly applies to each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "consideration": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use only clearly applicable source requirements.",
+        "Do not copy every global security requirement to every story.",
+        "Do not add generic best practices."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ037",
+      "target": "story_nfr",
+      "question": "What non-functional requirement explicitly applies to each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "nfr_id": "string",
+        "non_functional_requirement": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the NFR section and any explicit applicability evidence.",
+        "Do not attach unrelated NFRs to every story."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ038",
+      "target": "story_open_questions",
+      "question": "What unresolved business question or missing information is explicitly identified for each functional requirement?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "open_question": "string",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Return only explicitly unresolved questions or missing information.",
+        "Do not invent questions because a template field is empty."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ039",
+      "target": "story_acceptance_criteria",
+      "question": "What acceptance criterion is mapped to each functional requirement, and what are its Given, When, and Then conditions?",
+      "response_type": "array",
+      "response_schema": {
+        "source_requirement_id": "string",
+        "ac_id": "string|null",
+        "scenario": "string|null",
+        "given": "string",
+        "when": "string",
+        "then": "string",
+        "priority": "string|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the dedicated Acceptance Criteria section.",
+        "Use the Mapped Requirement value to associate the AC with the FR.",
+        "Preserve AC IDs and Given/When/Then wording.",
+        "Do not invent acceptance criteria."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ040",
+      "target": "bug_candidates",
+      "question": "Does the source describe an actual defect, failed behavior, or actual-versus-expected discrepancy that could be recorded as a Jira bug?",
+      "response_type": "array",
+      "response_schema": {
+        "bug_id": "string",
+        "summary": "string",
+        "environment": "string|null",
+        "preconditions": "string|array|null",
+        "steps_to_reproduce": "string|array|null",
+        "expected_result": "string|null",
+        "actual_result": "string|null",
+        "severity": "string|null",
+        "priority": "string|null",
+        "frequency": "string|null",
+        "affected_requirement_or_story": "string|array|null",
+        "evidence": "string|array|null",
+        "workaround": "string|null",
+        "acceptance_or_retest_criteria": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Create a bug candidate only when an actual/current defect or discrepancy is explicitly documented.",
+        "Do not convert future-state requirements into bugs.",
+        "Do not use template examples as evidence.",
+        "Return [] when the source documents expected behavior but no actual defect.",
+        "Incident details that are absent from the source must remain null."
+      ],
+      "depends_on": []
+    },
+    {
+      "query_id": "JQ041",
+      "target": "traceability",
+      "question": "What relationships are explicitly shown in the source traceability matrix between business objectives, business requirements, functional requirements, and acceptance criteria?",
+      "response_type": "array",
+      "response_schema": {
+        "objective": "string|null",
+        "business_requirement": "string|array|null",
+        "functional_requirement": "string|array|null",
+        "acceptance_criteria": "string|array|null",
+        "source_reference": "string|array|null"
+      },
+      "rules": [
+        "Use the Traceability Matrix as the primary source.",
+        "Preserve the source IDs and mappings.",
+        "Do not invent Jira IDs."
+      ],
+      "depends_on": []
+    }
+  ]
+}

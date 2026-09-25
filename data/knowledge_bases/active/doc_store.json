@@ -1,0 +1,257 @@
+{
+  "employee_onboarding_automation_BRS.docx": [
+    {
+      "content": "Section: BUSINESS REQUIREMENT SPECIFICATION\nBUSINESS REQUIREMENT SPECIFICATION",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "BUSINESS REQUIREMENT SPECIFICATION",
+        "section_level": 1,
+        "chunk_index": 0,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: Employee Onboarding Automation\nEmployee Onboarding Automation\nPre-filled sample for Requirements-to-DRS Agentic AI POC\nDocument Control | Details\nDocument Type | Business Requirement Specification (BRS)\nProject | Employee Onboarding Automation\nVersion | 1.0\nPrepared For | Proof of Concept\nPrepared By | Business Analysis Team\nDate | 03-Aug-2026\nClassification | Sample / Non-production\nImportant: This document contains illustrative data only. Replace sample names and values before formal use.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "Employee Onboarding Automation",
+        "section_level": 1,
+        "chunk_index": 1,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: Document Purpose\nDocument Purpose\nThis pre-filled BRS provides realistic source content for a POC that extracts business requirements, generates a Detailed Requirement Specification (DRS), creates user stories and acceptance criteria, and establishes traceability from business objectives to implementation-ready backlog items.\nSection | Content\n1 | Project Information\n2 | Business Background\n3 | Business Problem Statement\n4 | Business Objectives\n5 | Scope\n6 | Stakeholders\n7 | Current Process\n8 | Future-State Business Requirements\n9 | Functional Requirements\n10 | Non-Functional Requirements\n11 | Business Rules\n12 | Assumptions\n13 | Constraints\n14 | Acceptance Criteria\n15 | Traceability Matrix",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "Document Purpose",
+        "section_level": 1,
+        "chunk_index": 2,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 1. Project Information\n1. Project Information\nField | Value\nProject Name | Employee Onboarding Automation\nCustomer | Global Investment Banking Division\nBusiness Owner | Head of Operations\nSponsor | Chief Operating Officer\nVersion | 1.0\nPrepared By | Business Analyst\nDate | 03-Aug-2026",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "1. Project Information",
+        "section_level": 1,
+        "chunk_index": 3,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 2. Business Background\n2. Business Background\nThe organization currently manages employee onboarding through email, HR spreadsheets and separate IT and Facilities request queues. Hiring Managers submit new-hire information and documents, after which HR Operations, Compliance, IT Access, Facilities and Payroll perform separate checks and setup activities. Employee data is repeatedly entered into different records.\nA typical employee onboarding cycle takes seven business days from request submission to readiness for the employee's first day. Delays are concentrated around incomplete identity or employment documents, background or compliance verification, access approvals and equipment provisioning. Managers have limited visibility into outstanding onboarding tasks.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "2. Business Background",
+        "section_level": 1,
+        "chunk_index": 4,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 3. Business Problem Statement\n3. Business Problem Statement\nThe current process has the following limitations:\nNew-hire personal and employment data are re-entered between HR, IT and Facilities processes.\nIdentity, tax and employment documents are exchanged through email or shared folders.\nHR Operations spends time chasing missing information from hiring managers.\nAccess approvals and provisioning dependencies are tracked separately from HR onboarding.\nEquipment and workplace setup tasks are followed up manually and can delay employee readiness.\nManagers cannot reliably identify new hires approaching their onboarding SLA.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "3. Business Problem Statement",
+        "section_level": 1,
+        "chunk_index": 5,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 4. Business Objectives\n4. Business Objectives\nID | Objective | Success Measure\nBO-01 | Reduce end-to-end employee onboarding cycle time. | Reduce average cycle time from 7 business days to 2 business days.\nBO-02 | Reduce manual operational effort. | Achieve at least 60% reduction in manual onboarding effort.\nBO-03 | Improve onboarding status visibility. | Provide role-based, near-real-time onboarding status and aging views.\nBO-04 | Strengthen onboarding compliance adherence. | Prevent access provisioning when required identity, employment or compliance checks are incomplete.\nBO-05 | Provide full auditability. | Capture timestamped onboarding changes, document actions, approvals and provisioning decisions.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "4. Business Objectives",
+        "section_level": 1,
+        "chunk_index": 6,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 5. Scope\n5. Scope",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "5. Scope",
+        "section_level": 1,
+        "chunk_index": 7,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 5.1 In Scope\n5.1 In Scope\nNew employee onboarding requests\nEmployee, employment and manager data capture\nIdentity, tax and employment document upload and validation\nCompliance verification and access approval routing\nIT, equipment and workplace setup task tracking\nOnboarding status notifications, dashboards and standard reports\nRole-based approval, rejection and return actions",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "5.1 In Scope",
+        "section_level": 2,
+        "chunk_index": 8,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 5.2 Out of Scope\n5.2 Out of Scope\nChanges to payroll calculation logic.\nChanges to enterprise identity platform configuration.\nMaintenance of existing employee master data.\nMigration of historical onboarding records beyond the agreed POC sample set.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "5.2 Out of Scope",
+        "section_level": 2,
+        "chunk_index": 9,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 6. Stakeholders\n6. Stakeholders\nRole | Sample Representative | Interest / Responsibility | Influence\nBusiness Sponsor | COO | Funding, business outcome and executive decisions. | High\nBusiness Owner | Head of Lending Operations | Process ownership, priorities and acceptance. | High\nRelationship Manager | John Smith | Borrower intake and application completeness. | High\nCredit Lead | Sarah Brown | Credit assessment and recommendation quality. | High\nRisk Manager | David Wilson | Risk classification and approval authority. | High\nLoan Administration Lead | Operations Team | Facility setup and operational completion. | Medium\nBusiness Analyst | POC BA | Requirement quality, traceability and clarification. | Medium",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "6. Stakeholders",
+        "section_level": 1,
+        "chunk_index": 10,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 7. Current Process\n7. Current Process\nStep | Current Activity\n1 | Hiring Manager submits employee details and supporting documents to HR Operations by email or shared folder.\n2 | HR Operations checks completeness and re-enters employee information into onboarding trackers.\n3 | HR or Compliance performs identity, employment and required screening checks.\n4 | IT determines required system access and equipment based on employee role.\n5 | Approvers communicate approval, rejection or additional-information requests through email.\n6 | IT and Facilities complete access, equipment and workplace setup after required approvals.\n7 | HR and Hiring Manager are notified when the employee is ready for onboarding completion.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "7. Current Process",
+        "section_level": 1,
+        "chunk_index": 11,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 8. Future-State Business Requirements\n8. Future-State Business Requirements\nBR-001  Employee Onboarding Registration\nThe solution shall allow authorized Hiring Managers and HR Operations users to create, save and submit a new employee onboarding request through a web-based interface.\nBR-002  Employee Document Upload\nThe solution shall support upload of identity evidence, employment contracts, tax documents, certifications and other configured onboarding documents.\nBR-003  Mandatory Employee Document Validation\nThe solution shall verify that mandatory identity and employment documents for the selected employee type and jurisdiction are available before verification can be completed.\nBR-004  Onboarding Workflow Management\nThe solution shall route onboarding tasks to HR Operations, Compliance, IT Access and Facilities according to configured role, location and employment rules.\nBR-005  Onboarding Approval Actions\nAuthorized approvers shall be able to approve, reject or return an onboarding request for additional information, with mandatory comments where configured.\nBR-006  Onboarding Notifications",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "8. Future-State Business Requirements",
+        "section_level": 1,
+        "chunk_index": 12,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 8. Future-State Business Requirements\nBR-006  Onboarding Notifications\nThe solution shall notify relevant users when a task is assigned, returned, approved, rejected, overdue or completed.\nBR-007  Onboarding Status Visibility\nAuthorized users shall be able to view onboarding stage, responsible owner, outstanding tasks, aging and next action.\nBR-008  Onboarding Audit Trail\nThe solution shall maintain an immutable history of submissions, employee-data changes, document actions, approvals, provisioning decisions and status transitions.\nBR-009  Onboarding Search and Reporting\nUsers shall be able to search onboarding requests and generate standard reports by status, age, employee type, location and owning team.\nBR-010  Onboarding Exception Handling\nThe solution shall place an onboarding request on hold when mandatory information is missing or a verification fails, and shall record the reason.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "8. Future-State Business Requirements",
+        "section_level": 1,
+        "chunk_index": 13,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 9. Functional Requirements\n9. Functional Requirements\nID | Functional Requirement | Priority\nFR-001 | Create, save as draft, edit and submit an employee onboarding request. | Must\nFR-002 | Capture employee, employment, manager, location, start date, role and department information. | Must\nFR-003 | Upload, classify, preview, replace and download onboarding supporting documents. | Must\nFR-004 | Validate mandatory employee fields and required identity or employment documents before submission. | Must\nFR-005 | Assign and reassign onboarding tasks to authorized users or groups. | Must\nFR-006 | Record approve, reject, return and request-information decisions. | Must\nFR-007 | Display onboarding stage, pending tasks, owner and aging. | Must\nFR-008 | Send email notifications based on configurable onboarding events. | Should\nFR-009 | Search onboarding requests using request ID, employee name, department, status and date range. | Must\nFR-010 | Generate onboarding volume, status, aging and SLA reports. | Should\nFR-011 | Export authorized onboarding report results to a standard downloadable format. | Could\nFR-012 | Capture a complete audit history for each onboarding request. | Must",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "9. Functional Requirements",
+        "section_level": 1,
+        "chunk_index": 14,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 10. Non-Functional Requirements\n10. Non-Functional Requirements\nID | Category | Requirement\nNFR-001 | Availability | The production solution shall target 99.9% monthly service availability, excluding agreed maintenance windows.\nNFR-002 | Performance | For normal operating load, standard application pages shall respond within 3 seconds for 95% of requests.\nNFR-003 | Capacity | The solution shall support up to 500 concurrent users and allow future scaling.\nNFR-004 | Security | Access shall use corporate authentication and role-based authorization with least-privilege principles.\nNFR-005 | Privacy | Borrower, financial and collateral information shall be handled in accordance with applicable data protection and organizational privacy requirements.\nNFR-006 | Auditability | Credit and workflow events shall be logged with user, timestamp, action, decision and outcome.\nNFR-007 | Retention | Loan processing records shall be retained for seven years unless a different approved schedule applies.\nNFR-008 | Accessibility | Core user journeys shall support accessible keyboard navigation and readable screen content.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "10. Non-Functional Requirements",
+        "section_level": 1,
+        "chunk_index": 15,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 11. Business Rules\n11. Business Rules\nRule ID | Business Rule\nRULE-001 | All mandatory identity and employment documents must be present before verification can be completed.\nRULE-002 | An employee requiring privileged system access requires designated IT access approval in addition to HR approval.\nRULE-003 | A request with missing mandatory information shall be placed on hold and returned to the requestor.\nRULE-004 | Every approval, rejection and return decision shall include a timestamp and decision-maker identity.\nRULE-005 | Access provisioning shall not begin until required HR and Compliance approvals are recorded.\nRULE-006 | A rejection shall require a reason and shall close the active workflow unless reopened by an authorized role.\nRULE-007 | Only authorized users may view or download documents containing personal employee information.\nRULE-008 | Overdue onboarding tasks shall trigger reminders according to the configured SLA schedule.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "11. Business Rules",
+        "section_level": 1,
+        "chunk_index": 16,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 12. Assumptions\n12. Assumptions\nAll POC users have valid corporate identities.\nCredit scoring, KYC and risk services can be represented by mock services if live APIs are unavailable.\nEmail notification infrastructure is available for integration or simulation.\nPOC loan documents use synthetic or anonymized data only.\nBusiness users will provide feedback and acceptance decisions for the POC scenarios.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "12. Assumptions",
+        "section_level": 1,
+        "chunk_index": 17,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 13. Constraints\n13. Constraints\nThe target solution shall use approved Azure services and organizational development standards.\nBorrower and financial data shall remain within approved data regions and repositories.\nThe POC shall not use production lending credentials or confidential customer data.\nAccess to SharePoint, Teams, Jira or Azure DevOps is subject to approved permissions and DLP controls.\nHuman review is required before generated DRS and backlog items are treated as approved artefacts.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "13. Constraints",
+        "section_level": 1,
+        "chunk_index": 18,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 14. Acceptance Criteria\n14. Acceptance Criteria\nID | Acceptance Criterion | Mapped Requirement\nAC-001 | Given an authorized Hiring Manager, when mandatory employee and employment information is entered, then the user can save and submit an onboarding request. | BR-001 / FR-001\nAC-002 | Given a selected employee type, when the user uploads required identity and employment documents, then each document is recorded against the request. | BR-002 / FR-003\nAC-003 | Given a missing mandatory identity document, when the user attempts to progress the request, then progression is blocked and the missing document is identified. | BR-003 / FR-004\nAC-004 | Given a submitted onboarding request, when role and location workflow rules are evaluated, then the appropriate HR or Compliance task is assigned. | BR-004 / FR-005\nAC-005 | Given an assigned approver, when the approver selects approve, reject or return, then the decision and comments are recorded and the workflow transitions. | BR-005 / FR-006",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "14. Acceptance Criteria",
+        "section_level": 1,
+        "chunk_index": 19,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 14. Acceptance Criteria\nAC-006 | Given a configured approval event, when the event occurs, then the intended recipient receives a notification containing the loan application identifier and required action. | BR-006 / FR-008\nAC-007 | Given an authorized user, when the loan application is opened, then stage, owner, aging and outstanding conditions are visible. | BR-007 / FR-007\nAC-008 | Given a saved credit decision, when the audit history is opened, then the user, timestamp, decision and outcome are displayed. | BR-008 / FR-012\nAC-009 | Given search criteria, when the user searches loans, then matching authorized applications are returned and can be filtered. | BR-009 / FR-009\nAC-010 | Given a failed verification, when the request is placed on hold, then the hold reason and responsible owner are recorded. | BR-010 / FR-004",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "14. Acceptance Criteria",
+        "section_level": 1,
+        "chunk_index": 20,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 15. Traceability Matrix\n15. Traceability Matrix\nBusiness Objective | Business Requirement | Functional / NFR | Acceptance Criteria\nBO-01 | BR-004, BR-006, BR-007 | FR-005, FR-007, FR-008 | AC-004, AC-006, AC-007\nBO-02 | BR-001, BR-003, BR-004 | FR-001, FR-004, FR-005 | AC-001, AC-003, AC-004\nBO-03 | BR-007, BR-009 | FR-007, FR-009, FR-010 | AC-007, AC-009\nBO-04 | BR-003, BR-005, BR-010 | FR-004, FR-006, NFR-005 | AC-003, AC-005, AC-010\nBO-05 | BR-008 | FR-012, NFR-006, NFR-007 | AC-008",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "15. Traceability Matrix",
+        "section_level": 1,
+        "chunk_index": 21,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    },
+    {
+      "content": "Section: 16. POC Extraction Checklist\n16. POC Extraction Checklist\nThe POC should demonstrate that the agent can identify and generate the following outputs from this BRS:\nBusiness context and problem statement.\nObjectives and measurable outcomes.\nIn-scope and out-of-scope items.\nStakeholders and roles.\nBusiness, functional and non-functional requirements.\nBusiness rules, assumptions and constraints.\nUser stories and testable acceptance criteria.\nSource-linked traceability from BRS section to DRS requirement and backlog item.\nAmbiguities, missing information, conflicts and duplicates requiring human review.",
+      "metadata": {
+        "source": "employee_onboarding_automation_BRS.docx",
+        "source_type": "docx",
+        "section": "16. POC Extraction Checklist",
+        "section_level": 1,
+        "chunk_index": 22,
+        "chunking_strategy": "section_aware_overlap"
+      }
+    }
+  ]
+}

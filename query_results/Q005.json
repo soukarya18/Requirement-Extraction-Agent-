@@ -1,0 +1,11 @@
+{
+  "query_id": "Q005",
+  "target": "scope",
+  "question": "Extract the in-scope capabilities, processes, products, users, systems, or activities explicitly included in the initiative.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "in_scope": [],
+    "source_reference": null
+  }
+}

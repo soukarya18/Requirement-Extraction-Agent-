@@ -1,0 +1,24 @@
+{
+  "query_id": "Q004",
+  "target": "business_objectives",
+  "question": "Extract all explicitly stated business objectives, goals, or intended business outcomes from the source documents.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "objective_id": "BO-001",
+      "objective": "Reduce stock-outs",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+    },
+    {
+      "objective_id": "BO-002",
+      "objective": "Improve inventory accuracy",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+    },
+    {
+      "objective_id": null,
+      "objective": "Increase operational efficiency",
+      "source_reference": "BRD_Inventory_Management_System.pdf, [Page 2]"
+    }
+  ]
+}

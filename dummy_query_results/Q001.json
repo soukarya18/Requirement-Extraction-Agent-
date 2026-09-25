@@ -1,0 +1,16 @@
+{
+  "query_id": "Q001",
+  "target": "project_metadata",
+  "question": "Extract the project name, document version, preparer, and review status explicitly stated in the source documents.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "project_name": "Inventory Management System",
+    "version": "1.0",
+    "prepared_by": "M365 Copilot",
+    "review_status": null,
+    "source_reference": [
+      "BRD_Inventory_Management_System.pdf:Page 1"
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "query_id": "Q015",
+  "target": "functional_requirements",
+  "question": "Extract every functional requirement explicitly supported by the source documents. For each requirement, capture the requested behavior, actor, trigger, inputs, business logic, outputs, priority, and source reference. Do not invent details for fields that are not explicitly supported.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "fr_id": "FR-001",
+      "title": "Create, save as draft, edit and submit a corporate or institutional loan application.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-002",
+      "title": "Capture borrower, facility, requested amount, currency, tenor, product, collateral and financial information.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-003",
+      "title": "Upload, classify, preview, replace and download loan supporting documents.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-004",
+      "title": "Validate mandatory borrower data and required credit documents before submission.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-005",
+      "title": "Assign and reassign credit workflow tasks to authorized users or groups.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-006",
+      "title": "Record approve, reject, return and conditional-approval decisions with approval conditions.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-007",
+      "title": "Display application stage, pending conditions, owner and aging.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-008",
+      "title": "Send email notifications based on configured loan workflow events.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Should",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-009",
+      "title": "Search applications using application ID, borrower, product, status and date range.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-010",
+      "title": "Generate loan volume, status, aging, risk and SLA reports.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Should",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-011",
+      "title": "Export authorized loan report results to a standard downloadable format.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Could",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    },
+    {
+      "fr_id": "FR-012",
+      "title": "Capture a complete audit history for each loan application.",
+      "description": null,
+      "actor": null,
+      "trigger": null,
+      "input": null,
+      "business_logic": null,
+      "output": null,
+      "priority": "Must",
+      "source_reference": "loan_processing_automation_BRS.docx - Section 9. Functional Requirements"
+    }
+  ]
+}

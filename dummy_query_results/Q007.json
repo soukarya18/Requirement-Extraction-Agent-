@@ -1,0 +1,33 @@
+{
+  "query_id": "Q007",
+  "target": "stakeholders",
+  "question": "Extract all stakeholders explicitly identified in the source documents and their roles or responsibilities in relation to the initiative.",
+  "response_type": "array",
+  "status": "success",
+  "answer": [
+    {
+      "stakeholder_id": "S-001",
+      "name_or_role": "Operations Manager",
+      "responsibility": "Business Owner",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+    },
+    {
+      "stakeholder_id": "S-002",
+      "name_or_role": "Warehouse Supervisor",
+      "responsibility": "Key User",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+    },
+    {
+      "stakeholder_id": "S-003",
+      "name_or_role": "IT Manager",
+      "responsibility": "Technical Sponsor",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+    },
+    {
+      "stakeholder_id": "S-004",
+      "name_or_role": "Business Analyst",
+      "responsibility": "Initial Draft",
+      "source_reference": "BRD_Inventory_Management_System.pdf, Page 2"
+    }
+  ]
+}

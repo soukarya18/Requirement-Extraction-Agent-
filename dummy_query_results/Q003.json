@@ -1,0 +1,13 @@
+{
+  "query_id": "Q003",
+  "target": "business_background",
+  "question": "Extract the business background and context that explain why the initiative is being undertaken.",
+  "response_type": "object",
+  "status": "success",
+  "answer": {
+    "background": "The Inventory Management System will centralize inventory tracking, purchasing, warehouse operations, and reporting to improve inventory accuracy, reduce stock-outs, and increase operational efficiency.",
+    "source_reference": [
+      "BRD_Inventory_Management_System.pdf, [Page 2], Executive Summary"
+    ]
+  }
+}
