@@ -205,8 +205,8 @@ def _find_estimation_artifact(folder: Path) -> Optional[Path]:
         [
             path for path in folder.iterdir()
             if path.is_file()
-            and path.suffix.lower() == ".docx"
-            and "estimation" in path.stem.lower()
+            and path.suffix.lower() == ".xlsx"
+            and path.name.lower() == "generated_estimation.xlsx"
         ],
         key=lambda path: path.name.lower(),
     )
@@ -275,9 +275,7 @@ DEFAULT_STATE: Dict[str, Any] = {
     "drs_md": None,
     "jira_word": None,
     "jira_md": None,
-    "estimation_word": None,
-    "estimation_md": None,
-    "complexity_score": None,
+    "estimation_xlsx": None,
     "chat_history": [],
     "chat_job": None,
 }
@@ -306,13 +304,21 @@ def artifact_card(title: str, status: str, path: Optional[str], download_id: str
     children = [
         html.Div(title, className="artifact-name"),
         html.Div(
-            [html.Span("Ready", className="ready") if ready else status],
+            [
+                html.Button(
+                    "Ready — Download Excel",
+                    id={"type": "estimation-download", "path": str(path)},
+                    className="artifact-ready-download",
+                )
+                if ready and output_type == "estimation"
+                else (html.Span("Ready", className="ready") if ready else status)
+            ],
             className="artifact-status",
         ),
     ]
-    if ready:
+    if ready and output_type != "estimation":
         children.append(button(label, download_id, kind="secondary"))
-    else:
+    elif not ready:
         children.append(html.Div("Not generated yet", className="artifact-empty"))
     return html.Div(children, className=f"artifact-card {output_type}")
 
@@ -350,7 +356,7 @@ def nav_panel(state: Dict[str, Any]):
                 className=f"nav-button {'active' if active == 'estimation' else ''}",
             ),
             html.Div(
-                "Estimation is currently a workspace channel only.",
+                "Create module-level person-day estimates from the processed BRD.",
                 className="small-note nav-note",
             ),
         ],
@@ -486,12 +492,10 @@ def requirements_view(state: Dict[str, Any]):
 def estimation_view(state: Dict[str, Any]):
     ready = state.get("ingestion_status") == "done"
     status = state.get("estimation_status", "idle")
-    score = state.get("complexity_score")
     if status == "running":
         banner = status_banner("Extracting BRD evidence and calculating the weighted complexity score...", "info")
     elif status == "done":
-        score_text = f" Final complexity score: {score:.2f} / 5.00" if isinstance(score, (int, float)) else ""
-        banner = status_banner(f"Estimation generation completed.{score_text}", "success")
+        banner = status_banner("Estimation generation completed.", "success")
     elif status == "error":
         banner = status_banner(f"Estimation generation failed: {state.get('estimation_error') or 'Unknown error'}", "error")
     else:
@@ -515,6 +519,12 @@ def estimation_view(state: Dict[str, Any]):
                         "Generating Estimation..." if status == "running" else "Generate Estimation",
                         "generate-estimation", kind="primary",
                         disabled=(not ready or status == "running"),
+                    ),
+                    dcc.Checklist(
+                        id="qa-support",
+                        options=[{"label": "QA support is provided", "value": "included"}],
+                        value=[],
+                        className="qa-support-checklist",
                     ),
                     html.Div(className="spacer"),
                     banner,
@@ -593,9 +603,8 @@ def output_panel(state: Dict[str, Any]):
         ]
     else:
         content = [
-            html.Div("Estimation Documents", className="output-subheading"),
-            artifact_card("Estimation Word", "Not generated", state.get("estimation_word"), "download-estimation-word", "Download Word"),
-            artifact_card("Estimation Markdown", "Not generated", state.get("estimation_md"), "download-estimation-md", "Download Markdown"),
+            html.Div("Estimation Report", className="output-subheading"),
+            artifact_card("Estimation Excel", "Not generated", state.get("estimation_xlsx"), "download-estimation-xlsx", "Download Excel", output_type="estimation"),
         ]
 
     return html.Div(
@@ -826,11 +835,12 @@ def generate_jira_action(_n_clicks, session_data, state):
 @app.callback(
     Output("app-state", "data", allow_duplicate=True),
     Input("generate-estimation", "n_clicks"),
+    State("qa-support", "value"),
     State("session-store", "data"),
     State("app-state", "data"),
     prevent_initial_call=True,
 )
-def generate_estimation_action(_n_clicks, session_data, state):
+def generate_estimation_action(_n_clicks, qa_support_values, session_data, state):
     # Ignore the initial component-insertion event; only a real click starts estimation.
     if not _n_clicks:
         raise PreventUpdate
@@ -845,7 +855,10 @@ def generate_estimation_action(_n_clicks, session_data, state):
             session_data["session_uid"],
             "estimation",
             _backend_callable("estimation_generation.pipeline", "generate_estimation"),
-            {"brs_name": Path(brd).stem},
+            {
+                "brs_name": Path(brd).stem,
+                "qa_support": bool(qa_support_values and "included" in qa_support_values),
+            },
         )
         state["estimation_status"] = "running"
         state["estimation_error"] = None
@@ -976,15 +989,9 @@ def poll_jobs(_n_intervals, session_data, state):
             state["estimation_status"] = status
             state["estimation_error"] = error
             if status == "done":
-                word = _result_path(result)
-                md = _result_markdown(result)
-                if word:
-                    state["estimation_word"] = str(word)
-                if md:
-                    state["estimation_md"] = str(md)
-                score = getattr(result, "final_complexity_score", None)
-                if isinstance(score, (int, float)):
-                    state["complexity_score"] = float(score)
+                workbook = _result_path(result)
+                if workbook:
+                    state["estimation_xlsx"] = str(workbook)
             changed = True
         elif job_name.startswith("chat:"):
             message_id = job_name.split(":", 1)[1]
@@ -1020,7 +1027,7 @@ def poll_jobs(_n_intervals, session_data, state):
                     elif name == "jira":
                         state["jira_word"] = str(path)
                     elif name == "estimation":
-                        state["estimation_word"] = str(path)
+                        state["estimation_xlsx"] = str(path)
                     changed = True
 
     if not changed:
@@ -1045,8 +1052,6 @@ def _send_path(path: Optional[str]):
               Input("download-drs-md", "n_clicks"),
               Input("download-jira-word", "n_clicks"),
               Input("download-jira-md", "n_clicks"),
-              Input("download-estimation-word", "n_clicks"),
-              Input("download-estimation-md", "n_clicks"),
               State("app-state", "data"),
               prevent_initial_call=True)
 def download_artifact(*args):
@@ -1062,11 +1067,26 @@ def download_artifact(*args):
         "download-drs-md": "drs_md",
         "download-jira-word": "jira_word",
         "download-jira-md": "jira_md",
-        "download-estimation-word": "estimation_word",
-        "download-estimation-md": "estimation_md",
     }
     key = ctx.triggered_id
     return _send_path(state.get(mapping.get(key, "")))
+
+
+@app.callback(
+    Output("file-download", "data", allow_duplicate=True),
+    Input({"type": "estimation-download", "path": ALL}, "n_clicks"),
+    prevent_initial_call=True,
+)
+def download_estimation(_clicks):
+    """Download the estimation from the right-side ready link."""
+    if not isinstance(_clicks, list) or not any(
+        isinstance(value, (int, float)) and value > 0 for value in _clicks
+    ):
+        raise PreventUpdate
+    triggered = ctx.triggered_id
+    if not isinstance(triggered, dict):
+        raise PreventUpdate
+    return _send_path(triggered.get("path"))
 
 
 @app.callback(

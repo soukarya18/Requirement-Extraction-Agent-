@@ -4,7 +4,11 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import shutil
+import subprocess
+import sys
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict
@@ -13,8 +17,7 @@ from modules.embeddings import get_embeddings
 from modules.knowledge_base import KnowledgeBase
 from src.query_engine.query_executer import QueryExecutor
 
-from estimation_generation.document_builder import write_estimation_report
-from estimation_generation.scoring import calculate_weighted_score, score_requirements
+from estimation_generation.estimator import generate_estimate
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,12 +35,10 @@ TOP_K = 5
 class EstimationGenerationResult:
     success: bool
     generated_document: str
-    generated_markdown: str
     merged_results: str
     successful_queries: int
     failed_queries: int
     total_queries: int
-    final_complexity_score: float
     message: str
 
 
@@ -81,7 +82,56 @@ def _merge_results() -> Dict[str, Dict[str, Any]]:
     return merged
 
 
-def generate_estimation(brs_name: str) -> EstimationGenerationResult:
+def _build_workbook(
+    *,
+    brs_name: str,
+    rows: list,
+    conditions: list[str],
+    overall_effort: object,
+    qa_support: bool,
+    output_path: Path,
+) -> None:
+    """Invoke the artifact-tool Excel builder with serializable estimate data."""
+    runtime_root = Path.home() / ".cache" / "codex-runtimes" / "codex-primary-runtime" / "dependencies"
+    bundled_node = runtime_root / "node" / "bin" / "node.exe"
+    node_executable = os.environ.get("NODE_EXECUTABLE") or (
+        str(bundled_node) if bundled_node.is_file() else shutil.which("node")
+    )
+    if not node_executable:
+        raise RuntimeError("Node.js is required to generate the Excel estimation report.")
+    builder = Path(__file__).resolve().parent / "workbook_builder.cjs"
+    payload = {
+        "brs_name": brs_name,
+        "qa_support": qa_support,
+        "rows": [row.__dict__ for row in rows],
+        "overall_effort": overall_effort.__dict__,
+        "conditions": conditions,
+    }
+    with tempfile.TemporaryDirectory(prefix="brd_estimation_") as temp_dir:
+        input_path = Path(temp_dir) / "estimate.json"
+        input_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
+        environment = os.environ.copy()
+        node_modules = environment.get("CODEX_NODE_MODULES") or str(
+            runtime_root / "node" / "node_modules"
+        )
+        if node_modules:
+            environment["NODE_PATH"] = node_modules
+        try:
+            subprocess.run(
+                [node_executable, str(builder), str(input_path), str(output_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+                env=environment,
+            )
+        except FileNotFoundError as exc:
+            raise RuntimeError("Node.js is required to generate the Excel estimation report.") from exc
+        except subprocess.CalledProcessError as exc:
+            details = (exc.stderr or exc.stdout or str(exc)).strip()
+            raise RuntimeError(f"Excel estimation report generation failed: {details}") from exc
+
+
+def generate_estimation(brs_name: str, qa_support: bool = False) -> EstimationGenerationResult:
     """Generate a BRD-only estimation report for the active knowledge base."""
     if not ACTIVE_KB_DIR.is_dir():
         raise FileNotFoundError("No active knowledge base found. Upload and process a BRD first.")
@@ -100,8 +150,28 @@ def generate_estimation(brs_name: str) -> EstimationGenerationResult:
         raise RuntimeError("Estimation cannot be scored because one or more BRD evidence queries failed.")
     merged = _merge_results()
     extraction_answers = {query_id: result["answer"] for query_id, result in merged.items()}
-    factors = score_requirements(executor.llm, extraction_answers)
-    final_score = calculate_weighted_score(factors)
+    estimate = generate_estimate(
+        executor.llm,
+        extraction_answers,
+        qa_support,
+        diagnostics_dir=RESULTS_DIR,
+    )
     output_dir = BASE_DIR / "output" / Path(brs_name).stem
-    docx_path, markdown_path = write_estimation_report(output_dir, Path(brs_name).stem, factors, final_score)
-    return EstimationGenerationResult(True, str(docx_path), str(markdown_path), str(MERGED_RESULTS_PATH), successful, len(results) - successful, len(results), final_score, "BRD estimation generated successfully.")
+    workbook_path = output_dir / "generated_estimation.xlsx"
+    _build_workbook(
+        brs_name=Path(brs_name).stem,
+        rows=estimate.rows,
+        conditions=estimate.conditions,
+        overall_effort=estimate.overall_effort,
+        qa_support=qa_support,
+        output_path=workbook_path,
+    )
+    return EstimationGenerationResult(
+        True,
+        str(workbook_path),
+        str(MERGED_RESULTS_PATH),
+        successful,
+        len(results) - successful,
+        len(results),
+        "BRD estimation generated successfully.",
+    )

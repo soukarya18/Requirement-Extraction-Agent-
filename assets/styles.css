@@ -184,6 +184,7 @@ button:disabled { cursor: not-allowed; opacity: .55; }
 .output-subheading { color: var(--text); font-size: .85rem; font-weight: 750; margin: 16px 0 8px; }
 .artifact-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 11px; margin-bottom: 9px; }
 .artifact-name { font-weight: 700; font-size: .88rem; }
+.artifact-ready-download { border: 0; padding: 0; background: transparent; color: #16713c; font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
 .artifact-status { color: var(--muted); font-size: .74rem; margin: 4px 0 8px; }
 .artifact-card .btn { min-height: 34px; }
 .artifact-empty { color: var(--muted); background: #fafcfb; border: 1px dashed var(--border); border-radius: 8px; padding: 8px; font-size: .76rem; text-align: center; }
