@@ -91,15 +91,9 @@ def _build_workbook(
     qa_support: bool,
     output_path: Path,
 ) -> None:
-    """Invoke the artifact-tool Excel builder with serializable estimate data."""
-    runtime_root = Path.home() / ".cache" / "codex-runtimes" / "codex-primary-runtime" / "dependencies"
-    bundled_node = runtime_root / "node" / "bin" / "node.exe"
-    node_executable = os.environ.get("NODE_EXECUTABLE") or (
-        str(bundled_node) if bundled_node.is_file() else shutil.which("node")
-    )
-    if not node_executable:
-        raise RuntimeError("Node.js is required to generate the Excel estimation report.")
-    builder = Path(__file__).resolve().parent / "workbook_builder.cjs"
+    """Invoke the openpyxl Excel builder with serializable estimate data."""
+    python_executable = os.environ.get("PYTHON_EXECUTABLE") or sys.executable
+    builder = Path(__file__).resolve().parent / "workbook_builder.py"
     payload = {
         "brs_name": brs_name,
         "qa_support": qa_support,
@@ -110,22 +104,15 @@ def _build_workbook(
     with tempfile.TemporaryDirectory(prefix="brd_estimation_") as temp_dir:
         input_path = Path(temp_dir) / "estimate.json"
         input_path.write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
-        environment = os.environ.copy()
-        node_modules = environment.get("CODEX_NODE_MODULES") or str(
-            runtime_root / "node" / "node_modules"
-        )
-        if node_modules:
-            environment["NODE_PATH"] = node_modules
         try:
             subprocess.run(
-                [node_executable, str(builder), str(input_path), str(output_path)],
+                [python_executable, str(builder), str(input_path), str(output_path)],
                 check=True,
                 capture_output=True,
                 text=True,
-                env=environment,
             )
         except FileNotFoundError as exc:
-            raise RuntimeError("Node.js is required to generate the Excel estimation report.") from exc
+            raise RuntimeError("Python is required to generate the Excel estimation report.") from exc
         except subprocess.CalledProcessError as exc:
             details = (exc.stderr or exc.stdout or str(exc)).strip()
             raise RuntimeError(f"Excel estimation report generation failed: {details}") from exc

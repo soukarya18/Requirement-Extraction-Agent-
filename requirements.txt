@@ -48,5 +48,6 @@ numpy
 dash>=2.17
 dash-bootstrap-components>=1.5
 python-docx>=1.1
+openpyxl>=3.1
 # Plus whatever your existing backend already depends on
 # (src/, modules/, chatbot_feature/, estimation_generation/, FAISS/embeddings libs, etc.)

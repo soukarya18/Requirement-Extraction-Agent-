@@ -161,17 +161,19 @@ class QueryExecutor:
         self,
         question: str,
         query_id: str,
+        candidate_top_k: Optional[int] = None,
     ) -> List[Tuple[Document, float]]:
         """Retrieve the first-stage candidate pool from FAISS."""
+        candidate_top_k = candidate_top_k or self.candidate_top_k
         logger.info(
             "%s | FAISS RETRIEVAL START | candidate_top_k=%d",
             query_id,
-            self.candidate_top_k,
+            candidate_top_k,
         )
 
         results = self.knowledge_base.similarity_search_with_score(
             query=question,
-            k=self.candidate_top_k,
+            k=candidate_top_k,
         )
 
         logger.info(
@@ -201,10 +203,12 @@ class QueryExecutor:
         question: str,
         query_id: str,
         candidates: List[Tuple[Document, float]],
+        top_k: Optional[int] = None,
     ) -> List[Tuple[Document, float]]:
         """Rerank FAISS candidates with the BGE cross-encoder."""
         if not candidates:
             return []
+        top_k = top_k or self.top_k
 
         documents = [document for document, _ in candidates]
         passages = [document.page_content for document in documents]
@@ -214,7 +218,7 @@ class QueryExecutor:
             "%s | BGE RERANKING START | candidates=%d | final_top_k=%d",
             query_id,
             len(candidates),
-            self.top_k,
+            top_k,
         )
 
         inputs = self.reranker_tokenizer(
@@ -246,7 +250,7 @@ class QueryExecutor:
             reverse=True,
         )
 
-        final_results = reranked[: self.top_k]
+        final_results = reranked[:top_k]
 
         logger.info(
             "%s | BGE RERANKING COMPLETE | final_chunks=%d",
@@ -274,17 +278,21 @@ class QueryExecutor:
         self,
         question: str,
         query_id: str,
+        top_k: Optional[int] = None,
     ) -> List[Document]:
         """Retrieve candidates with FAISS, rerank them with BGE, then return final chunks."""
+        top_k = top_k or self.top_k
         candidates = self._retrieve_candidates(
             question=question,
             query_id=query_id,
+            candidate_top_k=max(self.candidate_top_k, top_k),
         )
 
         reranked = self._rerank_candidates(
             question=question,
             query_id=query_id,
             candidates=candidates,
+            top_k=top_k,
         )
 
         documents = [document for document, _ in reranked]
@@ -376,6 +384,22 @@ class QueryExecutor:
     # Dependencies
     # ------------------------------------------------------------------
 
+    @staticmethod
+    def _has_supported_content(value: Any) -> bool:
+        """Return whether a result contains usable, non-placeholder data."""
+
+        if value is None:
+            return False
+        if isinstance(value, str):
+            return value.strip().lower() not in {
+                "", "not found", "n/a", "none", "null", "unknown"
+            }
+        if isinstance(value, dict):
+            return any(QueryExecutor._has_supported_content(item) for item in value.values())
+        if isinstance(value, (list, tuple, set)):
+            return any(QueryExecutor._has_supported_content(item) for item in value)
+        return True
+
     def _get_dependency_results(
         self,
         query: QueryDefinition,
@@ -387,8 +411,8 @@ class QueryExecutor:
         retrieved source chunks are intentionally excluded to reduce prompt
         size and prevent dependency context from growing unnecessarily.
 
-        Failed or otherwise unavailable dependencies do not block execution of
-        the current query; they are represented explicitly as unavailable.
+        Only successful dependencies with a non-empty answer are forwarded.
+        This prevents empty results from being mistaken for supporting evidence.
         """
 
         dependency_ids = query.get(
@@ -401,37 +425,33 @@ class QueryExecutor:
         for dependency_id in dependency_ids:
             result = self.completed_results.get(dependency_id)
 
-            if result is None:
+            if result is None or result.get("status") != "success":
                 logger.warning(
-                    "%s | dependency %s unavailable: result not found",
+                    "%s | dependency %s unavailable: result missing or failed",
                     query["query_id"],
                     dependency_id,
                 )
-                dependency_results[dependency_id] = {
-                    "query_id": dependency_id,
-                    "target": None,
-                    "answer": "[Dependency result unavailable]",
-                }
                 continue
 
-            status = result.get("status")
+            answer = result.get("answer")
+            # ``validate_answer`` returns the schema value itself.  Array
+            # responses are therefore lists, while object responses are
+            # dictionaries; neither is wrapped in a ``{"value": ...}``
+            # envelope.  Inspect the answer directly so both shapes work.
+            if not self._has_supported_content(answer):
+                logger.info(
+                    "%s | dependency %s skipped: answer has no usable content",
+                    query["query_id"],
+                    dependency_id,
+                )
+                continue
+
             dependency_results[dependency_id] = {
                 "query_id": dependency_id,
                 "target": result.get("target"),
-                "answer": (
-                    result.get("answer")
-                    if status == "success"
-                    else "[Dependency result unavailable]"
-                ),
+                "status": "found",
+                "answer": answer,
             }
-
-            if status != "success":
-                logger.warning(
-                    "%s | dependency %s unavailable: status=%s",
-                    query["query_id"],
-                    dependency_id,
-                    status,
-                )
 
         return dependency_results
 
@@ -444,6 +464,7 @@ class QueryExecutor:
         query: QueryDefinition,
         context: str,
         dependency_results: Dict[str, Dict[str, Any]],
+        dependency_fallback: bool = False,
     ) -> ChatPromptTemplate:
         """Build the LLM prompt for one extraction query."""
 
@@ -471,6 +492,30 @@ class QueryExecutor:
 
         if not dependency_results:
             dependency_text = "No previous query results were provided."
+
+        if dependency_fallback:
+            dependency_guidance = (
+                "The initial extraction did not produce a supported value from direct retrieval. "
+                "Use the FOUND PREVIOUS QUERY RESULTS as evidence for this fallback. If those "
+                "answers support the requested section, synthesize the requested output from them, "
+                "preserving source facts and identifiers and avoiding unsupported details. This is "
+                "appropriate for derived sections such as executive summaries, epics, user stories, "
+                "traceability, and review recommendations. Carry forward the dependencies' source "
+                "references for every derived fact. If the dependencies do not support a value, keep "
+                "it null or empty. Do not use outside knowledge."
+            )
+        elif dependency_results:
+            dependency_guidance = (
+                "The previous query results below are included only when their answer contains "
+                "usable content and are marked FOUND. Use them as supporting evidence, especially "
+                "when direct retrieval does not contain useful evidence. They may support a derived "
+                "section, but do not add facts beyond their answers and source references."
+            )
+        else:
+            dependency_guidance = (
+                "No found dependency answers are available. Do not synthesize facts from missing "
+                "dependencies; use direct source evidence only."
+            )
 
         return  ChatPromptTemplate.from_template(
     """
@@ -509,6 +554,9 @@ RESPONSE SCHEMA:
 PREVIOUS QUERY RESULTS:
 {dependency_results}
 
+DEPENDENCY USE GUIDANCE:
+{dependency_guidance}
+
 CURRENT SOURCE EVIDENCE:
 {context}
 
@@ -530,7 +578,9 @@ Rules:
 9. If a value is not supported, use null or an empty array when allowed by
    the response schema. Do not fill gaps with guesses.
 10. Treat previous query results as derived context, not as permission to
-    invent additional relationships.
+    invent additional relationships. They may be used when direct retrieval is
+    empty or unhelpful only when marked FOUND and supported by their source
+    references.
 11. When current source evidence conflicts with a previous query result,
     prefer the current source evidence.
 12. Preserve source terminology, IDs, numbers, and measurable values.
@@ -558,8 +608,53 @@ Return ONLY the JSON response.
             response_type=query["response_type"],
             response_schema=response_schema,
             dependency_results=dependency_text,
+            dependency_guidance=dependency_guidance,
             context=context,
         )
+
+    def _try_dependency_fallback(
+        self,
+        query: QueryDefinition,
+        dependency_results: Dict[str, Dict[str, Any]],
+    ) -> Optional[Any]:
+        """Retry an empty extraction once using only usable dependency answers."""
+
+        if not dependency_results:
+            return None
+
+        query_id = query["query_id"]
+        prompt = self._build_prompt(
+            query=query,
+            context=(
+                "No useful direct source evidence was established for this requirement. "
+                "Use only the found dependency answers and their source references."
+            ),
+            dependency_results=dependency_results,
+            dependency_fallback=True,
+        )
+
+        try:
+            logger.info(
+                "%s | dependency fallback started | dependencies=%s",
+                query_id,
+                list(dependency_results),
+            )
+            response = (prompt | self.llm).invoke({})
+            fallback_json = self._extract_json(str(response.content))
+            fallback_answer = validate_answer(
+                answer=fallback_json,
+                response_type=query["response_type"],
+                response_schema=query["response_schema"],
+                query_id=query_id,
+            )
+            if self._has_supported_content(fallback_answer):
+                logger.info("%s | dependency fallback produced a supported value", query_id)
+                return fallback_answer
+            logger.info("%s | dependency fallback remained empty", query_id)
+        except Exception:
+            logger.exception("%s | dependency fallback failed; retaining initial empty result", query_id)
+
+        return None
 
     # ------------------------------------------------------------------
     # JSON parsing
@@ -652,6 +747,7 @@ Return ONLY the JSON response.
         documents = self._retrieve_context(
             question=query["question"],
             query_id=query_id,
+            top_k=int(query.get("retrieval_top_k", self.top_k)),
         )
 
         context = self._build_context(
@@ -852,6 +948,17 @@ Return ONLY the JSON response.
                     query_id,
                     attempt,
                 )
+
+                if (
+                    not self._has_supported_content(validated_answer)
+                    and dependency_results
+                ):
+                    dependency_answer = self._try_dependency_fallback(
+                        query=query,
+                        dependency_results=dependency_results,
+                    )
+                    if dependency_answer is not None:
+                        validated_answer = dependency_answer
 
                 return {
                     "query_id": query_id,
